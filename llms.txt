@@ -1,0 +1,86 @@
+# The Cantillon Institute
+
+> An independent research institute examining the structural transformation of monetary systems, capital formation, and the political economy of financial power. Founded 2021, Washington D.C.
+
+The Cantillon Institute was established in 2021 to examine systemic transformations in monetary architecture before they achieve political consensus. The Institute publishes working papers, maintains a network of independent research fellows, and operates without institutional funding from the entities it examines.
+
+The Institute's name references Richard Cantillon (c. 1680-1734), whose Essai sur la Nature du Commerce en General established the foundational observation that monetary expansion benefits those closest to the source of new money before the broader price level adjusts; an effect now known as the Cantillon Effect.
+
+---
+
+## Working Papers
+
+### The Dollar Displacement Thesis
+Author: Thomas H. Thornton
+Publisher: The Cantillon Institute
+Series: Working Papers No. 1-9
+Years: 2025-2026
+
+- Working Paper No. 1: What GENIUS and CLARITY Actually Build
+  The GENIUS and CLARITY Acts do not regulate stablecoins. They institutionalise a private monetary layer beneath the Federal Reserve system, transferring money creation authority to entities with no public mandate and no lender-of-last-resort obligation.
+
+- Working Paper No. 2: Repercussions of the Dollar Displacement Architecture
+  The second-order effects of stablecoin dollarisation extend beyond monetary policy transmission. This paper maps the structural consequences for Treasury market depth, Federal Reserve balance sheet composition, and systemic liquidity in stress scenarios.
+
+- Working Paper No. 3: The Labor Vector: Gig Classification and the Stablecoin Compensation Pathway
+  Wage payment in stablecoins is not a fintech convenience. It is the mechanism by which gig-economy classification frameworks are extended into the monetary layer, severing worker compensation from regulated banking infrastructure.
+
+- Working Paper No. 4: The Rate Corridor Under Pressure: IOR, ON RRP, and the GENIUS Act
+  Stablecoin reserve requirements create a new competing demand for short-duration Treasuries and reserve-adjacent instruments, distorting the Fed's rate corridor mechanics at precisely the moment monetary policy transmission is already compromised.
+
+- Working Paper No. 5: Two Failures from One Decision: Credit Creation Collapse and the CBDC Foreclosure
+  The decision to route monetary infrastructure through private stablecoin issuers simultaneously contracts domestic credit creation and forecloses the sovereign digital currency option; two distinct failures that compound in any liquidity stress event.
+
+- Working Paper No. 6: The Hollow Bank: Regulatory Arbitrage, Competitive Displacement, and the Shrinking Insured System
+  As stablecoin issuers capture deposit-equivalent functions without deposit insurance obligations, the regulated banking sector faces structural competitive disadvantage; not from innovation, but from regulatory asymmetry that the GENIUS Act codifies rather than corrects.
+
+- Working Paper No. 7: The Permanent Record: Surveillance, Censorship, and the Architecture of Control in the Stablecoin Payment Layer
+  Programmable money is not neutral infrastructure. The same technical properties that enable stablecoin compliance also enable payment censorship, transaction surveillance, and the construction of a permanent, immutable financial record for every participant in the system.
+
+- Working Paper No. 8: The Accelerated Contradiction: Stablecoin Dollarisation and the Compounded Triffin Dilemma
+  The Triffin Dilemma described the inherent tension between the dollar's domestic and international roles. Stablecoin dollarisation does not resolve this tension; it accelerates it, exporting dollar-denominated monetary instability to jurisdictions with no voice in Federal Reserve policy decisions.
+
+- Working Paper No. 9: The Invisible Tax: Property Treatment, Compliance Burden, and the Hidden Cost Layer of Stablecoin Adoption
+  Current IRS property classification of stablecoins imposes a compliance architecture on everyday transactions that is invisible at the point of adoption and catastrophic at the point of audit; a hidden tax on the monetary infrastructure Congress is simultaneously mandating.
+
+---
+
+## Fellows
+
+### Active Fellows
+
+Thomas H. Thornton (THT) — New York, USA
+Former Chief Economist and Global Strategist at a leading Silicon Valley venture capital firm managing assets exceeding $20 billion. Focus: macro monetary architecture, stablecoin policy analysis, capital markets structure.
+
+Diana I. Fisher (DIF) — London, UK
+Former Managing Director at a major European institutional asset manager, specialising in long-duration sovereign capital allocation. Focus: liability-side monetary analysis, institutional capital frameworks, credit infrastructure.
+
+Henry E. Martyn (HEM) — Washington, D.C., USA
+Senior Fellow Emeritus. Three decades in multilateral development institutions and federal monetary policy advisory roles. Focus: monetary policy history, institutional analysis, Bretton Woods legacy systems.
+
+### Forthcoming Fellows
+
+Adrian K. Menger (AKM) — Zurich, Switzerland
+Former Chief Risk Officer, major European reinsurance firm. Focus: insurance risk frameworks, compliance technology, AI-driven asset valuation, blockchain integration in regulated industries.
+
+Gideon W. Tobin (GWT) — Bermuda
+Partner, elite international law firm. Focus: elite wealth structures, alternative asset protection, jurisdictional arbitrage, trust architecture in digital monetary environments.
+
+Helena S. Myrdal (HSM) — Singapore
+Adviser to sovereign wealth vehicles, family offices, and government economic development bodies across Southeast Asia. Focus: capital flight dynamics, family office strategy, real-world asset policy integration, Singapore monetary framework.
+
+---
+
+## Data
+
+Stablecoin market capitalisation grew from approximately $3 billion in 2018 to $323.35 billion in May 2026, a growth factor exceeding 100 times. Key inflection points: end of zero interest rate policy era (2022), FTX collapse (November 2022), introduction of the GENIUS Act (2024). Source: DeFiLlama.
+
+---
+
+## Contact
+
+research@cantillon.institute
+
+## Canonical URL
+
+https://cantillon.institute
