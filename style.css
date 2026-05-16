@@ -51,14 +51,12 @@ em {
 }
 
 
-/* --- Shared Typography --- */
-.accent {
-    color: #378ADD;
-}
+/* --- Shared --- */
+.accent { color: #378ADD; }
 
 .label {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.18em;
     color: #378ADD;
     text-transform: uppercase;
@@ -68,7 +66,7 @@ em {
 
 .eyebrow {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.18em;
     color: #378ADD;
     text-transform: uppercase;
@@ -91,49 +89,49 @@ em {
 }
 
 .nav-logo {
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.14em;
     font-weight: 700;
     color: #dedad0;
     text-transform: uppercase;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
+.nav-links { display: flex; gap: 2rem; }
 
 .nav-links a {
-    font-size: 12px;
+    font-size: 14px;
     color: #5c5a55;
     letter-spacing: 0.04em;
     transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-    color: #dedad0;
-}
+.nav-links a:hover { color: #dedad0; }
 
 
 /* --- Hero --- */
 .hero {
     padding: 4rem 2rem 3.5rem;
     border-bottom: 0.5px solid #1d1f21;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 3rem;
+    align-items: center;
 }
+
+.hero-content { min-width: 0; }
 
 .hero h1 {
     font-family: 'Barlow Condensed', system-ui, sans-serif;
-    font-size: clamp(36px, 8vw, 62px);
+    font-size: clamp(38px, 8vw, 66px);
     font-weight: 700;
     line-height: 1.0;
     letter-spacing: -0.01em;
     color: #dedad0;
     margin-bottom: 1.75rem;
-    max-width: 700px;
 }
 
 .hero-body {
-    font-size: 15px;
+    font-size: 19px;
     line-height: 1.75;
     color: #6b6860;
     max-width: 520px;
@@ -148,7 +146,7 @@ em {
 }
 
 .cta-link {
-    font-size: 12px;
+    font-size: 14px;
     color: #378ADD;
     letter-spacing: 0.08em;
     border-bottom: 0.5px solid #378ADD;
@@ -156,14 +154,28 @@ em {
     transition: opacity 0.2s ease;
 }
 
-.cta-link:hover {
-    opacity: 0.7;
-}
+.cta-link:hover { opacity: 0.7; }
 
 .cta-meta {
-    font-size: 12px;
+    font-size: 14px;
     color: #2d2c2a;
     letter-spacing: 0.06em;
+}
+
+
+/* --- Hero Graphic --- */
+.hero-graphic {
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.hero-graphic svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
 }
 
 
@@ -175,7 +187,7 @@ em {
 
 .section h2 {
     font-family: 'Barlow Condensed', system-ui, sans-serif;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: 0.01em;
     color: #dedad0;
@@ -190,29 +202,96 @@ em {
     gap: 1rem;
 }
 
-.section-header h2 {
-    margin-bottom: 0;
-}
+.section-header h2 { margin-bottom: 0; }
 
 .author-tag {
-    font-size: 11px;
+    font-size: 13px;
     color: #3d3b37;
     letter-spacing: 0.06em;
     flex-shrink: 0;
 }
 
 
-/* --- Papers --- */
-.papers-list {
+/* --- Full Report Card --- */
+.full-report-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 2rem;
+    background: #0d1117;
+    border: 0.5px solid #378ADD;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.full-report-card:hover {
+    background: rgba(55, 138, 221, 0.07);
+    border-color: #5aa3e8;
+}
+
+.full-report-left { flex: 1; min-width: 0; }
+
+.full-report-badge {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: #378ADD;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    display: block;
+}
+
+.full-report-title {
+    font-family: 'Barlow Condensed', system-ui, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #dedad0;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.5rem;
+}
+
+.full-report-meta {
+    font-size: 13px;
+    color: #4a4845;
+    line-height: 1.6;
+}
+
+.full-report-right {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+    flex-shrink: 0;
 }
+
+.full-report-cta {
+    font-size: 13px;
+    color: #378ADD;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.full-report-size {
+    font-size: 11px;
+    color: #2d2c2a;
+    letter-spacing: 0.06em;
+}
+
+
+/* --- Papers --- */
+.papers-list { display: flex; flex-direction: column; }
 
 .paper-row {
     display: flex;
     align-items: flex-start;
     gap: 1.25rem;
-    padding: 0.85rem 0.5rem;
+    padding: 1rem 0.5rem;
     border-top: 0.5px solid #181a1b;
     border-left: 2px solid transparent;
     border-radius: 0 4px 4px 0;
@@ -222,9 +301,7 @@ em {
     color: inherit;
 }
 
-.paper-row:last-child {
-    border-bottom: 0.5px solid #181a1b;
-}
+.paper-row:last-child { border-bottom: 0.5px solid #181a1b; }
 
 .paper-row:hover {
     border-left-color: #378ADD;
@@ -232,7 +309,7 @@ em {
 }
 
 .paper-num {
-    font-size: 10px;
+    font-size: 12px;
     color: #378ADD;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -241,33 +318,28 @@ em {
     flex-shrink: 0;
 }
 
-.paper-body {
-    flex: 1;
-    min-width: 0;
-}
+.paper-body { flex: 1; min-width: 0; }
 
 .paper-title {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 600;
     color: #dedad0;
     line-height: 1.4;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .paper-abstract {
-    font-size: 12px;
+    font-size: 14px;
     color: #252320;
     line-height: 1.65;
     transition: color 0.25s ease;
     max-width: 580px;
 }
 
-.paper-row:hover .paper-abstract {
-    color: #6b6860;
-}
+.paper-row:hover .paper-abstract { color: #6b6860; }
 
 .paper-cta {
-    font-size: 10px;
+    font-size: 12px;
     color: #252320;
     letter-spacing: 0.08em;
     padding-top: 2px;
@@ -276,14 +348,12 @@ em {
     transition: color 0.2s ease;
 }
 
-.paper-row:hover .paper-cta {
-    color: #378ADD;
-}
+.paper-row:hover .paper-cta { color: #378ADD; }
 
 
 /* --- Data / Chart --- */
 .chart-source {
-    font-size: 12px;
+    font-size: 14px;
     color: #3d3b37;
     margin-bottom: 1.5rem;
     line-height: 1.6;
@@ -310,7 +380,7 @@ em {
 
 .ann {
     position: absolute;
-    font-size: 8px;
+    font-size: 9px;
     color: #378ADD;
     letter-spacing: 0.09em;
     text-transform: uppercase;
@@ -325,10 +395,7 @@ em {
     padding-top: 6px;
 }
 
-.chart-years span {
-    font-size: 9px;
-    color: #2e2d2b;
-}
+.chart-years span { font-size: 11px; color: #2e2d2b; }
 
 .stat-grid {
     display: grid;
@@ -345,7 +412,7 @@ em {
 }
 
 .stat-label {
-    font-size: 10px;
+    font-size: 12px;
     color: #3d3b37;
     letter-spacing: 0.06em;
     margin-bottom: 5px;
@@ -354,15 +421,13 @@ em {
 
 .stat-value {
     font-family: 'Barlow Condensed', system-ui, sans-serif;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: #dedad0;
     line-height: 1;
 }
 
-.stat-card.accent .stat-value {
-    color: #378ADD;
-}
+.stat-card.accent .stat-value { color: #378ADD; }
 
 
 /* --- Fellows --- */
@@ -374,7 +439,7 @@ em {
 }
 
 .fellow-id {
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.12em;
     color: #378ADD;
     font-weight: 700;
@@ -382,15 +447,15 @@ em {
 }
 
 .fellow-name {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 700;
     color: #dedad0;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     line-height: 1.3;
 }
 
 .fellow-role {
-    font-size: 12px;
+    font-size: 14px;
     color: #4a4845;
     line-height: 1.65;
 }
@@ -407,35 +472,31 @@ em {
 }
 
 .forthcoming-name {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 600;
     color: #2e2c2a;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     line-height: 1.3;
 }
 
 .forthcoming-focus {
-    font-size: 12px;
+    font-size: 14px;
     color: #252320;
     line-height: 1.65;
 }
 
 
 /* --- About --- */
-.about-body {
-    max-width: 640px;
-}
+.about-body { max-width: 640px; }
 
 .about-body p {
-    font-size: 14px;
+    font-size: 16px;
     color: #6b6860;
     line-height: 1.85;
     margin-bottom: 1.25rem;
 }
 
-.about-body p:last-child {
-    margin-bottom: 0;
-}
+.about-body p:last-child { margin-bottom: 0; }
 
 
 /* --- Footer --- */
@@ -450,7 +511,7 @@ em {
 }
 
 .footer span {
-    font-size: 10px;
+    font-size: 12px;
     color: #5c5a55;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -458,63 +519,24 @@ em {
 
 
 /* --- Responsive --- */
+@media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-graphic { display: none; }
+}
+
 @media (max-width: 640px) {
-
-    .nav {
-        padding: 1rem 1.25rem;
-    }
-
-    .nav-logo {
-        font-size: 11px;
-    }
-
-    .nav-links {
-        gap: 1.25rem;
-    }
-
-    .hero {
-        padding: 2.5rem 1.25rem 2.5rem;
-    }
-
-    .section {
-        padding: 2rem 1.25rem;
-    }
-
-    .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.25rem;
-    }
-
-    .hero-cta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
-
-    .stat-grid {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-    }
-
-    .fellows-grid,
-    .forthcoming-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer {
-        padding: 1.25rem;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .ann {
-        font-size: 7px;
-        letter-spacing: 0.05em;
-    }
-
-    .chart-years span {
-        font-size: 8px;
-    }
+    .nav { padding: 1rem 1.25rem; }
+    .nav-logo { font-size: 11px; }
+    .nav-links { gap: 1.25rem; }
+    .hero { padding: 2.5rem 1.25rem; }
+    .section { padding: 2rem 1.25rem; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+    .hero-cta { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    .stat-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+    .fellows-grid, .forthcoming-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer { padding: 1.25rem; flex-direction: column; align-items: flex-start; }
+    .ann { font-size: 7px; letter-spacing: 0.05em; }
+    .chart-years span { font-size: 9px; }
+    .full-report-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .full-report-right { align-items: flex-start; }
 }
