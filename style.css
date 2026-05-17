@@ -275,7 +275,7 @@ em { font-style: italic; }
 .stat-card.accent .stat-value { color: #378ADD; }
 
 /* --- Fellows index --- */
-.fellows-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; }
+.fellows-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-bottom: 3rem; }
 .fellow-id { font-size: 12px; letter-spacing: 0.12em; color: #378ADD; font-weight: 700; margin-bottom: 0.6rem; }
 .fellow-name { font-size: 17px; font-weight: 700; color: #dedad0; margin-bottom: 6px; line-height: 1.3; transition: color 0.2s ease; }
 .fellow-card-link { display: block; text-decoration: none; color: inherit; }
