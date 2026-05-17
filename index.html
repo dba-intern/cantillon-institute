@@ -178,73 +178,75 @@
 
             <div class="hero-graphic" aria-hidden="true">
                 <!--
-                    Wireframe globe with axial tilt.
-                    Projection centered approximately 25N, 25W (Atlantic view).
-                    Cities: New York, Washington D.C., Bermuda, London, Zurich, Singapore.
-                    Singapore appears near the far horizon (geographically correct from Atlantic view).
-                    Globe group rotated -22deg to show axial tilt.
+                    Wireframe globe. Axial tilt -22deg.
+                    City dots spread for visual clarity; geography exaggerated intentionally.
+                    New York: upper left quadrant
+                    Washington D.C.: mid left, below NY
+                    Bermuda: lower left, clear separation from DC
+                    London: upper right, clear gap from Zurich
+                    Zurich: mid right, below London
+                    Singapore: far right horizon, dimmed
                 -->
                 <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-
                     <g transform="rotate(-22, 150, 150)">
 
                         <!-- Globe silhouette -->
                         <circle cx="150" cy="150" r="124" fill="none" stroke="#378ADD" stroke-width="0.8" stroke-opacity="0.45"/>
 
-                        <!-- Latitude lines: 60S, 30S, Equator, 30N, 60N -->
+                        <!-- Latitude lines -->
                         <ellipse cx="150" cy="257" rx="62" ry="11" fill="none" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.18"/>
                         <ellipse cx="150" cy="212" rx="107" ry="18" fill="none" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.22"/>
                         <ellipse cx="150" cy="150" rx="124" ry="21" fill="none" stroke="#378ADD" stroke-width="0.55" stroke-opacity="0.32"/>
-                        <ellipse cx="150" cy="88" rx="107" ry="18" fill="none" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.22"/>
-                        <ellipse cx="150" cy="43" rx="62" ry="11" fill="none" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.18"/>
+                        <ellipse cx="150" cy="88"  rx="107" ry="18" fill="none" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.22"/>
+                        <ellipse cx="150" cy="43"  rx="62"  ry="11" fill="none" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.18"/>
 
-                        <!-- Longitude lines: 3 meridians -->
-                        <ellipse cx="150" cy="150" rx="20" ry="124" fill="none" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.22"/>
-                        <ellipse cx="150" cy="150" rx="88" ry="124" fill="none" stroke="#378ADD" stroke-width="0.35" stroke-opacity="0.18"/>
-                        <ellipse cx="150" cy="150" rx="116" ry="124" fill="none" stroke="#378ADD" stroke-width="0.3" stroke-opacity="0.13"/>
+                        <!-- Longitude lines -->
+                        <ellipse cx="150" cy="150" rx="20"  ry="124" fill="none" stroke="#378ADD" stroke-width="0.4"  stroke-opacity="0.22"/>
+                        <ellipse cx="150" cy="150" rx="88"  ry="124" fill="none" stroke="#378ADD" stroke-width="0.35" stroke-opacity="0.18"/>
+                        <ellipse cx="150" cy="150" rx="116" ry="124" fill="none" stroke="#378ADD" stroke-width="0.3"  stroke-opacity="0.13"/>
 
-                        <!-- Axis: pole to pole -->
+                        <!-- Axis pole to pole -->
                         <line x1="150" y1="14" x2="150" y2="286" stroke="#378ADD" stroke-width="0.6" stroke-opacity="0.35" stroke-dasharray="3,4"/>
 
                         <!-- Pole markers -->
-                        <circle cx="150" cy="26" r="2.5" fill="none" stroke="#378ADD" stroke-width="0.8" stroke-opacity="0.5"/>
+                        <circle cx="150" cy="26"  r="2.5" fill="none" stroke="#378ADD" stroke-width="0.8" stroke-opacity="0.5"/>
                         <circle cx="150" cy="274" r="2.5" fill="none" stroke="#378ADD" stroke-width="0.8" stroke-opacity="0.35"/>
 
                         <!-- CITY DOTS: hollow ring + center fill -->
+                        <!-- Positions exaggerated for visual separation -->
 
-                        <!-- New York (40.7N, 74W) -->
-                        <circle cx="88" cy="92" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
-                        <circle cx="88" cy="92" r="1.8" fill="#378ADD" fill-opacity="0.9"/>
+                        <!-- New York: upper left, pushed north -->
+                        <circle cx="78"  cy="78"  r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
+                        <circle cx="78"  cy="78"  r="1.8" fill="#378ADD" fill-opacity="0.9"/>
 
-                        <!-- Washington D.C. (38.9N, 77W) -->
-                        <circle cx="82" cy="98" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
-                        <circle cx="82" cy="98" r="1.8" fill="#378ADD" fill-opacity="0.9"/>
+                        <!-- Washington D.C.: mid left, clear gap below NY -->
+                        <circle cx="68"  cy="118" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
+                        <circle cx="68"  cy="118" r="1.8" fill="#378ADD" fill-opacity="0.9"/>
 
-                        <!-- Bermuda (32.3N, 64.7W) -->
-                        <circle cx="100" cy="118" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
-                        <circle cx="100" cy="118" r="1.8" fill="#378ADD" fill-opacity="0.9"/>
+                        <!-- Bermuda: lower left cluster, pushed southeast into open space -->
+                        <circle cx="108" cy="152" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
+                        <circle cx="108" cy="152" r="1.8" fill="#378ADD" fill-opacity="0.9"/>
 
-                        <!-- London (51.5N, 0) -->
-                        <circle cx="180" cy="80" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
-                        <circle cx="180" cy="80" r="1.8" fill="#378ADD" fill-opacity="0.9"/>
+                        <!-- London: upper right, pushed further north and right -->
+                        <circle cx="196" cy="70"  r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
+                        <circle cx="196" cy="70"  r="1.8" fill="#378ADD" fill-opacity="0.9"/>
 
-                        <!-- Zurich (47.4N, 8.5E) -->
-                        <circle cx="196" cy="86" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
-                        <circle cx="196" cy="86" r="1.8" fill="#378ADD" fill-opacity="0.9"/>
+                        <!-- Zurich: mid right, clear gap below London -->
+                        <circle cx="218" cy="108" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.2" stroke-opacity="0.85"/>
+                        <circle cx="218" cy="108" r="1.8" fill="#378ADD" fill-opacity="0.9"/>
 
-                        <!-- Singapore (1.3N, 103.8E) near far horizon, dimmed -->
-                        <circle cx="258" cy="148" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.0" stroke-opacity="0.38"/>
-                        <circle cx="258" cy="148" r="1.8" fill="#378ADD" fill-opacity="0.38"/>
+                        <!-- Singapore: far right horizon, dimmed -->
+                        <circle cx="262" cy="152" r="4.5" fill="none" stroke="#378ADD" stroke-width="1.0" stroke-opacity="0.38"/>
+                        <circle cx="262" cy="152" r="1.8" fill="#378ADD" fill-opacity="0.38"/>
 
-                        <!-- Subtle connector lines between cities -->
-                        <line x1="88" y1="92" x2="82" y2="98" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.22"/>
-                        <line x1="82" y1="98" x2="100" y2="118" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.18"/>
-                        <line x1="88" y1="92" x2="180" y2="80" stroke="#378ADD" stroke-width="0.35" stroke-opacity="0.12" stroke-dasharray="2,3"/>
-                        <line x1="180" y1="80" x2="196" y2="86" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.22"/>
-                        <line x1="196" y1="86" x2="258" y2="148" stroke="#378ADD" stroke-width="0.3" stroke-opacity="0.1" stroke-dasharray="2,4"/>
+                        <!-- Connector lines: subtle, dashed across Atlantic -->
+                        <line x1="78"  y1="78"  x2="68"  y2="118" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.2"/>
+                        <line x1="68"  y1="118" x2="108" y2="152" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.18"/>
+                        <line x1="78"  y1="78"  x2="196" y2="70"  stroke="#378ADD" stroke-width="0.35" stroke-opacity="0.1" stroke-dasharray="2,4"/>
+                        <line x1="196" y1="70"  x2="218" y2="108" stroke="#378ADD" stroke-width="0.4" stroke-opacity="0.2"/>
+                        <line x1="218" y1="108" x2="262" y2="152" stroke="#378ADD" stroke-width="0.3" stroke-opacity="0.1" stroke-dasharray="2,4"/>
 
                     </g>
-
                 </svg>
             </div>
         </section>
