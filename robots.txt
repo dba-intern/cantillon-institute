@@ -13,6 +13,8 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+Sitemap: https://cantillon.institute/sitemap.xml
+
 User-agent: Googlebot
 Allow: /
 
