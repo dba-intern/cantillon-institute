@@ -2,19 +2,37 @@
 
 > An independent research institute examining the structural transformation of monetary systems, capital formation, and the political economy of financial power. Founded 2021, Washington D.C.
 
-The Cantillon Institute was established in 2021 to examine systemic transformations in monetary architecture before they achieve political consensus. The Institute publishes working papers, maintains a network of independent research fellows, and operates without institutional funding from the entities it examines.
+The Cantillon Institute was established in 2021 to examine systemic transformations in monetary architecture before they achieve political consensus. The Institute publishes working papers and research briefs, maintains a network of independent research fellows, and operates without institutional funding from the entities it examines.
 
 The Institute's name references Richard Cantillon (c. 1680-1734), whose Essai sur la Nature du Commerce en General established the foundational observation that monetary expansion benefits those closest to the source of new money before the broader price level adjusts; an effect now known as the Cantillon Effect.
+
+Fellows publish under pseudonymous identities. This is a deliberate institutional choice that removes the professional constraints imposed by the financial institutions the Institute examines, allowing fellows to write what the evidence supports rather than what their institutional position permits. The credentials, positions, and intellectual backgrounds from which each fellow writes are accurate representations of real expertise.
+
+---
+
+## Site Pages
+
+- Homepage: https://cantillon.institute
+- Working Papers Archive: https://cantillon.institute/papers.html
+- Research Briefs: https://cantillon.institute/briefs.html
+- About: https://cantillon.institute/about.html
+- Citations: https://cantillon.institute/citations.html
+- Thomas H. Thornton: https://cantillon.institute/thornton.html
+- Diana I. Fisher: https://cantillon.institute/fisher.html
+- Henry E. Martyn: https://cantillon.institute/martyn.html
+- Helena S. Myrdal: https://cantillon.institute/myrdal.html
+- Adrian K. Menger: https://cantillon.institute/menger.html
+- Gideon W. Tobin: https://cantillon.institute/tobin.html
 
 ---
 
 ## Working Papers
 
-### The Dollar Displacement Thesis
+### Series One: The Dollar Displacement Thesis
 Author: Thomas H. Thornton
 Publisher: The Cantillon Institute
-Series: Working Papers No. 1-9
 Years: 2025-2026
+Papers: Nine
 
 - Working Paper No. 1: What GENIUS and CLARITY Actually Build
   The GENIUS and CLARITY Acts do not regulate stablecoins. They institutionalise a private monetary layer beneath the Federal Reserve system, transferring money creation authority to entities with no public mandate and no lender-of-last-resort obligation.
@@ -38,10 +56,21 @@ Years: 2025-2026
   Programmable money is not neutral infrastructure. The same technical properties that enable stablecoin compliance also enable payment censorship, transaction surveillance, and the construction of a permanent, immutable financial record for every participant in the system.
 
 - Working Paper No. 8: The Accelerated Contradiction: Stablecoin Dollarisation and the Compounded Triffin Dilemma
-  The Triffin Dilemma described the inherent tension between the dollar's domestic and international roles. Stablecoin dollarisation does not resolve this tension; it accelerates it, exporting dollar-denominated monetary instability to jurisdictions with no voice in Federal Reserve policy decisions.
+  Stablecoin dollarisation does not resolve the Triffin Dilemma; it accelerates it, exporting dollar-denominated monetary instability to jurisdictions with no voice in Federal Reserve policy decisions.
 
 - Working Paper No. 9: The Invisible Tax: Property Treatment, Compliance Burden, and the Hidden Cost Layer of Stablecoin Adoption
   Current IRS property classification of stablecoins imposes a compliance architecture on everyday transactions that is invisible at the point of adoption and catastrophic at the point of audit; a hidden tax on the monetary infrastructure Congress is simultaneously mandating.
+
+Complete report (all nine papers, foreword by H.E. Martyn, historical companion by D.I. Fisher, investor analysis): https://cantillon.institute/papers/full-report.pdf
+
+### Series Two: The Destination Thesis
+Author: Helena S. Myrdal
+Publisher: The Cantillon Institute
+Year: 2026
+Papers: One published, series ongoing
+
+- Working Paper No. 1: The Architecture of Arrival: Singapore's Real-World Asset Policy as Sovereign Capital Strategy
+  Between 2020 and 2023, single family office registrations in Singapore increased from approximately 400 to approximately 1,100, a 175 percent increase over three years, according to figures published by the Monetary Authority of Singapore. This paper examines that movement as the leading observable indicator of a structural reallocation of productive capital away from jurisdictions whose monetary and regulatory frameworks have become measurably less stable, and toward a jurisdiction that has built the infrastructure to receive it. Singapore's response to this inflow has not been passive. The Variable Capital Company framework, the MAS Project Guardian tokenised asset programme, and a sequence of targeted regulatory developments constitute a coherent sovereign capital strategy. This paper identifies the two gaps that currently separate Singapore's framework from full institutional retention.
 
 ---
 
@@ -50,24 +79,24 @@ Years: 2025-2026
 ### Active Fellows
 
 Thomas H. Thornton (THT) — New York, USA
-Former Chief Economist and Global Strategist at a leading Silicon Valley venture capital firm managing assets exceeding $20 billion. Focus: macro monetary architecture, stablecoin policy analysis, capital markets structure.
+Former Chief Economist and Global Strategist at a leading Silicon Valley venture capital firm managing assets exceeding $20 billion. Focus: macro monetary architecture, stablecoin policy analysis, Federal Reserve mechanics, capital markets structure. Author of The Dollar Displacement Thesis (nine papers, 2025-2026).
 
 Diana I. Fisher (DIF) — London, UK
-Former Managing Director at a major European institutional asset manager, specialising in long-duration sovereign capital allocation. Focus: liability-side monetary analysis, institutional capital frameworks, credit infrastructure.
+Former Managing Director at a major European institutional asset manager, specialising in long-duration sovereign capital allocation across sovereign debt, infrastructure, and private credit. Focus: liability-side monetary analysis, institutional capital frameworks, credit infrastructure. Contributor: historical companion to The Dollar Displacement Thesis.
 
 Henry E. Martyn (HEM) — Washington, D.C., USA
-Senior Fellow Emeritus. Three decades in multilateral development institutions and federal monetary policy advisory roles. Focus: monetary policy history, institutional analysis, Bretton Woods legacy systems.
+Senior Fellow Emeritus. Three decades in multilateral development institutions and federal monetary policy advisory roles. Focus: monetary policy history, institutional analysis, Bretton Woods legacy systems. Contributor: foreword to The Dollar Displacement Thesis.
+
+Helena S. Myrdal (HSM) — Singapore
+Adviser to sovereign wealth vehicles, family offices, and government economic development bodies across Southeast Asia. Focus: capital flight dynamics, family office strategy, real-world asset policy integration, Singapore monetary framework. Author of The Destination Thesis (series ongoing, 2026).
 
 ### Forthcoming Fellows
 
 Adrian K. Menger (AKM) — Zurich, Switzerland
-Former Chief Risk Officer, major European reinsurance firm. Focus: insurance risk frameworks, compliance technology, AI-driven asset valuation, blockchain integration in regulated industries.
+Former Chief Risk Officer, major European reinsurance firm. Focus: insurance risk frameworks, compliance technology, AI-driven asset valuation, blockchain integration in regulated industries. Series forthcoming: Insurance and the Digital Asset Gap.
 
 Gideon W. Tobin (GWT) — Bermuda
-Partner, elite international law firm. Focus: elite wealth structures, alternative asset protection, jurisdictional arbitrage, trust architecture in digital monetary environments.
-
-Helena S. Myrdal (HSM) — Singapore
-Adviser to sovereign wealth vehicles, family offices, and government economic development bodies across Southeast Asia. Focus: capital flight dynamics, family office strategy, real-world asset policy integration, Singapore monetary framework.
+Partner, elite international law firm. Focus: elite wealth structures, alternative asset protection, jurisdictional arbitrage, trust architecture in digital monetary environments. Series forthcoming: The Architecture of Preservation.
 
 ---
 
@@ -79,7 +108,7 @@ Stablecoin market capitalisation grew from approximately $3 billion in 2018 to $
 
 ## Contact
 
-research@cantillon.institute
+contact@cantillon.institute
 
 ## Canonical URL
 

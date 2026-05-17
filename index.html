@@ -10,7 +10,6 @@
     <meta property="og:description" content="Independent research in monetary architecture, capital formation, and financial power.">
     <meta property="og:url" content="https://cantillon.institute">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="The Cantillon Institute">
     <meta property="og:image" content="https://cantillon.institute/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -24,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"ResearchOrganization","name":"The Cantillon Institute","url":"https://cantillon.institute","foundingDate":"2021","description":"An independent research institute examining the structural transformation of monetary systems, capital formation, and the political economy of financial power.","location":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Washington","addressRegion":"D.C.","addressCountry":"US"}},"member":[{"@type":"Person","name":"Thomas H. Thornton","jobTitle":"Research Fellow","workLocation":"New York, USA"},{"@type":"Person","name":"Diana I. Fisher","jobTitle":"Senior Research Fellow","workLocation":"London, UK"},{"@type":"Person","name":"Henry E. Martyn","jobTitle":"Senior Fellow Emeritus","workLocation":"Washington, D.C., USA"},{"@type":"Person","name":"Helena S. Myrdal","jobTitle":"Fellow","workLocation":"Singapore"}]}
+    {"@context":"https://schema.org","@type":"ResearchOrganization","name":"The Cantillon Institute","url":"https://cantillon.institute","foundingDate":"2021","description":"An independent research institute examining the structural transformation of monetary systems, capital formation, and the political economy of financial power.","location":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Washington","addressRegion":"D.C.","addressCountry":"US"}},"contactPoint":{"@type":"ContactPoint","email":"contact@cantillon.institute"},"member":[{"@type":"Person","name":"Thomas H. Thornton","jobTitle":"Research Fellow","workLocation":"New York, USA"},{"@type":"Person","name":"Diana I. Fisher","jobTitle":"Senior Research Fellow","workLocation":"London, UK"},{"@type":"Person","name":"Henry E. Martyn","jobTitle":"Senior Fellow Emeritus","workLocation":"Washington, D.C., USA"},{"@type":"Person","name":"Helena S. Myrdal","jobTitle":"Fellow","workLocation":"Singapore"}]}
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -34,8 +33,9 @@
             <a href="/" class="nav-logo">The Cantillon Institute</a>
             <div class="nav-links">
                 <a href="papers.html">Papers</a>
+                <a href="briefs.html">Briefs</a>
                 <a href="#fellows">Fellows</a>
-                <a href="#about">About</a>
+                <a href="about.html">About</a>
             </div>
         </nav>
     </header>
@@ -96,7 +96,6 @@
                 </div>
                 <a href="papers.html" style="font-size:12px;color:#378ADD;letter-spacing:0.08em;border-bottom:0.5px solid #378ADD;padding-bottom:2px;flex-shrink:0;">View all papers &#8594;</a>
             </div>
-
             <a href="papers/full-report.pdf" class="full-report-card" aria-label="Download the complete Dollar Displacement Thesis report as PDF">
                 <div class="full-report-left">
                     <span class="full-report-badge">Complete Report</span>
@@ -108,9 +107,7 @@
                     <span class="full-report-size">Full document</span>
                 </div>
             </a>
-
             <div class="papers-list" role="list">
-
                 <a href="papers/myrdal-paper-01.pdf" class="paper-row" role="listitem">
                     <span class="paper-num">New</span>
                     <div class="paper-body">
@@ -120,7 +117,6 @@
                     </div>
                     <span class="paper-cta">PDF &#8595;</span>
                 </a>
-
                 <a href="papers/paper-01.pdf" class="paper-row" role="listitem">
                     <span class="paper-num">No.&nbsp;1</span>
                     <div class="paper-body">
@@ -130,7 +126,6 @@
                     </div>
                     <span class="paper-cta">PDF &#8595;</span>
                 </a>
-
                 <a href="papers/paper-09.pdf" class="paper-row" role="listitem">
                     <span class="paper-num">No.&nbsp;9</span>
                     <div class="paper-body">
@@ -140,26 +135,34 @@
                     </div>
                     <span class="paper-cta">PDF &#8595;</span>
                 </a>
-
             </div>
-
             <div class="papers-view-all">
                 <a href="papers.html">View all 10 papers &#8594;</a>
             </div>
         </section>
 
+        <div class="subscribe-section" id="subscribe">
+            <p class="label">Stay Current</p>
+            <h2 class="subscribe-heading">RECEIVE NEW PAPERS AND BRIEFS</h2>
+            <p class="subscribe-desc">The Cantillon Institute publishes without a fixed schedule. New working papers and research briefs are distributed to subscribers when they appear.</p>
+            <form name="subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="subscribe-form" action="/subscribe-success.html">
+                <input type="hidden" name="form-name" value="subscribe">
+                <p style="display:none;"><label>Do not fill this out: <input name="bot-field"></label></p>
+                <div class="subscribe-row">
+                    <input type="email" name="email" placeholder="your@email.com" required class="subscribe-input" aria-label="Email address">
+                    <button type="submit" class="subscribe-button">Subscribe</button>
+                </div>
+                <p class="subscribe-note">No marketing. No frequency commitment. New research only.</p>
+            </form>
+        </div>
+
         <section class="section" id="data" aria-labelledby="data-heading">
             <p class="label">Data in Context</p>
             <h2 id="data-heading">STABLECOIN MARKET CAPITALISATION, 2018&#8211;2026</h2>
             <p class="chart-source">The Institute's thesis predates Congressional action. The trajectory was visible before the legislation. Source: DeFiLlama, May 2026.</p>
-            <div class="chart-container" role="img" aria-label="Stablecoin market capitalisation grew from approximately 3 billion dollars in 2018 to 323.35 billion dollars in May 2026, a growth factor exceeding 100 times.">
+            <div class="chart-container" role="img" aria-label="Stablecoin market capitalisation grew from approximately 3 billion dollars in 2018 to 323.35 billion dollars in May 2026.">
                 <svg viewBox="0 0 800 175" preserveAspectRatio="none" class="chart-svg" aria-hidden="true">
-                    <defs>
-                        <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#378ADD" stop-opacity="0.18"/>
-                            <stop offset="100%" stop-color="#378ADD" stop-opacity="0.01"/>
-                        </linearGradient>
-                    </defs>
+                    <defs><linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#378ADD" stop-opacity="0.18"/><stop offset="100%" stop-color="#378ADD" stop-opacity="0.01"/></linearGradient></defs>
                     <polyline points="0,170 100,168 200,163 280,142 325,112 365,93 415,110 465,106 530,98 605,78 675,52 735,28 800,10" fill="none" stroke="#378ADD" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
                     <polygon points="0,170 100,168 200,163 280,142 325,112 365,93 415,110 465,106 530,98 605,78 675,52 735,28 800,10 800,172 0,172" fill="url(#chartGrad)"/>
                     <line x1="342" y1="0" x2="342" y2="170" stroke="#378ADD" stroke-width="0.5" stroke-opacity="0.35" stroke-dasharray="4,4" vector-effect="non-scaling-stroke"/>
@@ -229,8 +232,8 @@
             <p class="label">About</p>
             <h2 id="about-heading" class="sr-only">About the Cantillon Institute</h2>
             <div class="about-body">
-                <p>The Cantillon Institute was established in 2021 to examine systemic transformations in monetary architecture before they achieve political consensus. The Institute publishes working papers, maintains a network of independent research fellows, and operates without institutional funding from the entities it examines.</p>
-                <p>The Institute's name references Richard Cantillon (c. 1680&#8211;1734), whose <em>Essai sur la Nature du Commerce en G&#233;n&#233;ral</em> established the foundational observation that monetary expansion benefits those closest to the source of new money before the broader price level adjusts; an effect now known as the Cantillon Effect.</p>
+                <p>The Cantillon Institute was established in 2021 to examine systemic transformations in monetary architecture before they achieve political consensus. The Institute publishes working papers and research briefs, maintains a network of independent research fellows, and operates without institutional funding from the entities it examines.</p>
+                <p>The Institute's name references Richard Cantillon (c. 1680&#8211;1734), whose <em>Essai sur la Nature du Commerce en G&#233;n&#233;ral</em> established the foundational observation that monetary expansion benefits those closest to the source of new money before the broader price level adjusts; an effect now known as the Cantillon Effect. <a href="about.html" style="color:#378ADD;border-bottom:0.5px solid #378ADD;padding-bottom:1px;">Read more &#8594;</a></p>
             </div>
         </section>
 
