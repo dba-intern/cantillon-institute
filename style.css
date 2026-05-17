@@ -108,7 +108,7 @@ em {
 .nav-links a:hover { color: #dedad0; }
 
 
-/* --- Hero --- */
+/* --- Homepage hero --- */
 .hero {
     padding: 4rem 2rem 3.5rem;
     border-bottom: 0.5px solid #1d1f21;
@@ -166,7 +166,7 @@ em {
 }
 
 
-/* --- Hero Graphic --- */
+/* --- Hero graphic (globe) --- */
 .hero-graphic {
     height: 340px;
     display: flex;
@@ -181,7 +181,7 @@ em {
 }
 
 
-/* --- Sections --- */
+/* --- General sections --- */
 .section {
     padding: 2.5rem 2rem;
     border-bottom: 0.5px solid #1d1f21;
@@ -214,7 +214,7 @@ em {
 }
 
 
-/* --- Full Report Card --- */
+/* --- Full report card --- */
 .full-report-card {
     display: flex;
     align-items: center;
@@ -286,7 +286,7 @@ em {
 }
 
 
-/* --- Papers --- */
+/* --- Papers list --- */
 .papers-list { display: flex; flex-direction: column; }
 
 .paper-row {
@@ -353,9 +353,7 @@ em {
 .paper-row:hover .paper-cta { color: #378ADD; }
 
 
-/* --- Data / Chart --- */
-
-/* Source line beneath chart heading */
+/* --- Data chart --- */
 .chart-source {
     font-size: 14px;
     color: #6b6860;
@@ -393,17 +391,13 @@ em {
     transform: translateX(-50%);
 }
 
-/* Year labels beneath chart */
 .chart-years {
     display: flex;
     justify-content: space-between;
     padding-top: 6px;
 }
 
-.chart-years span {
-    font-size: 11px;
-    color: #5c5a55;
-}
+.chart-years span { font-size: 11px; color: #5c5a55; }
 
 .stat-grid {
     display: grid;
@@ -419,7 +413,6 @@ em {
     padding: 1rem 1.1rem;
 }
 
-/* Stat card label above the number */
 .stat-label {
     font-size: 12px;
     color: #5c5a55;
@@ -439,7 +432,7 @@ em {
 .stat-card.accent .stat-value { color: #378ADD; }
 
 
-/* --- Fellows --- */
+/* --- Fellows index (homepage) --- */
 .fellows-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -461,7 +454,11 @@ em {
     color: #dedad0;
     margin-bottom: 6px;
     line-height: 1.3;
+    transition: color 0.2s ease;
 }
+
+.fellow-card-link { display: block; text-decoration: none; color: inherit; }
+.fellow-card-link:hover .fellow-name { color: #378ADD; }
 
 .fellow-role {
     font-size: 14px;
@@ -480,12 +477,16 @@ em {
     gap: 2.5rem;
 }
 
+.forthcoming-card-link { display: block; text-decoration: none; color: inherit; }
+.forthcoming-card-link:hover .forthcoming-name { color: #378ADD; }
+
 .forthcoming-name {
     font-size: 17px;
     font-weight: 600;
     color: #2e2c2a;
     margin-bottom: 6px;
     line-height: 1.3;
+    transition: color 0.2s ease;
 }
 
 .forthcoming-focus {
@@ -493,6 +494,132 @@ em {
     color: #252320;
     line-height: 1.65;
 }
+
+
+/* --- Fellow biography pages --- */
+.fellow-page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.fellow-header {
+    padding: 4.5rem 0 3.5rem;
+    border-bottom: 0.5px solid #1d1f21;
+}
+
+.fellow-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.fellow-initials {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: #378ADD;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.fellow-location {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #3d3b37;
+    text-transform: uppercase;
+}
+
+.fellow-header h1 {
+    font-family: 'Barlow Condensed', system-ui, sans-serif;
+    font-size: clamp(38px, 6vw, 58px);
+    font-weight: 700;
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: #dedad0;
+    margin-bottom: 1rem;
+}
+
+.fellow-header-role {
+    font-size: 16px;
+    color: #5c5a55;
+    line-height: 1.7;
+    max-width: 560px;
+    margin-bottom: 1.75rem;
+}
+
+.fellow-focus-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.focus-tag {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #378ADD;
+    border: 0.5px solid #1d3a52;
+    border-radius: 3px;
+    padding: 4px 10px;
+    text-transform: uppercase;
+}
+
+.fellow-bio-section {
+    padding: 4rem 0;
+    border-bottom: 0.5px solid #1d1f21;
+}
+
+.fellow-bio-section p {
+    font-size: 17px;
+    color: #9a9690;
+    line-height: 1.95;
+    margin-bottom: 1.75rem;
+    max-width: 660px;
+}
+
+.fellow-bio-section p:last-child { margin-bottom: 0; }
+
+.fellow-papers-section {
+    padding: 3rem 0;
+    border-bottom: 0.5px solid #1d1f21;
+}
+
+.fellow-papers-section h2 {
+    font-family: 'Barlow Condensed', system-ui, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #dedad0;
+    margin-bottom: 1.5rem;
+}
+
+.forthcoming-notice {
+    padding: 1.5rem;
+    border: 0.5px solid #1d1f21;
+    border-radius: 6px;
+    background: #0d0e0f;
+}
+
+.forthcoming-notice p {
+    font-size: 14px;
+    color: #3d3b37;
+    line-height: 1.65;
+}
+
+.fellow-back {
+    padding: 2.5rem 0;
+}
+
+.fellow-back a {
+    font-size: 13px;
+    color: #378ADD;
+    letter-spacing: 0.08em;
+    border-bottom: 0.5px solid #378ADD;
+    padding-bottom: 2px;
+    transition: opacity 0.2s ease;
+}
+
+.fellow-back a:hover { opacity: 0.7; }
 
 
 /* --- About --- */
@@ -539,6 +666,9 @@ em {
     .nav-links { gap: 1.25rem; }
     .hero { padding: 2.5rem 1.25rem; }
     .section { padding: 2rem 1.25rem; }
+    .fellow-page { padding: 0 1.25rem; }
+    .fellow-header { padding: 2.5rem 0 2rem; }
+    .fellow-bio-section p { font-size: 16px; }
     .section-header { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
     .hero-cta { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
     .stat-grid { grid-template-columns: 1fr; gap: 0.75rem; }
@@ -548,4 +678,5 @@ em {
     .chart-years span { font-size: 9px; }
     .full-report-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
     .full-report-right { align-items: flex-start; }
+    .fellow-focus-tags { gap: 0.4rem; }
 }
