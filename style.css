@@ -113,8 +113,8 @@ em {
     padding: 4rem 2rem 3.5rem;
     border-bottom: 0.5px solid #1d1f21;
     display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: 3rem;
+    grid-template-columns: 1fr 340px;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -169,7 +169,7 @@ em {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.9;
+    transform: translateX(-28px);
 }
 
 .hero-graphic svg {
