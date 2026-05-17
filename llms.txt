@@ -4,8 +4,6 @@
 
 The Cantillon Institute was established in 2021 to examine systemic transformations in monetary architecture before they achieve political consensus. The Institute publishes working papers and research briefs, maintains a network of independent research fellows, and operates without institutional funding from the entities it examines.
 
-The Institute's name references Richard Cantillon (c. 1680-1734), whose Essai sur la Nature du Commerce en General established the foundational observation that monetary expansion benefits those closest to the source of new money before the broader price level adjusts; an effect now known as the Cantillon Effect.
-
 Fellows publish under pseudonymous identities. This is a deliberate institutional choice that removes the professional constraints imposed by the financial institutions the Institute examines, allowing fellows to write what the evidence supports rather than what their institutional position permits.
 
 ---
@@ -17,12 +15,15 @@ Fellows publish under pseudonymous identities. This is a deliberate institutiona
 - Research Briefs: https://cantillon.institute/briefs.html
 - About: https://cantillon.institute/about.html
 - Citations: https://cantillon.institute/citations.html
+- Jacob T. Cós: https://cantillon.institute/cos.html
 - Thomas H. Thornton: https://cantillon.institute/thornton.html
 - Diana I. Fisher: https://cantillon.institute/fisher.html
 - Henry E. Martyn: https://cantillon.institute/martyn.html
 - Helena S. Myrdal: https://cantillon.institute/myrdal.html
 - Gideon W. Tobin: https://cantillon.institute/tobin.html
 - Adrian K. Menger: https://cantillon.institute/menger.html
+- Elena R. Vargas: https://cantillon.institute/vargas.html
+- Rin Y. Nakamura: https://cantillon.institute/nakamura.html
 
 ---
 
@@ -35,99 +36,82 @@ Years: 2025-2026
 Papers: Nine
 
 - Working Paper No. 1: What GENIUS and CLARITY Actually Build
-  The GENIUS and CLARITY Acts do not regulate stablecoins. They institutionalise a private monetary layer beneath the Federal Reserve system, transferring money creation authority to entities with no public mandate and no lender-of-last-resort obligation.
-
 - Working Paper No. 2: Repercussions of the Dollar Displacement Architecture
-  The second-order effects of stablecoin dollarisation extend beyond monetary policy transmission. This paper maps the structural consequences for Treasury market depth, Federal Reserve balance sheet composition, and systemic liquidity in stress scenarios.
-
 - Working Paper No. 3: The Labor Vector: Gig Classification and the Stablecoin Compensation Pathway
-  Wage payment in stablecoins is not a fintech convenience. It is the mechanism by which gig-economy classification frameworks are extended into the monetary layer, severing worker compensation from regulated banking infrastructure.
-
 - Working Paper No. 4: The Rate Corridor Under Pressure: IOR, ON RRP, and the GENIUS Act
-  Stablecoin reserve requirements create a new competing demand for short-duration Treasuries and reserve-adjacent instruments, distorting the Fed's rate corridor mechanics at precisely the moment monetary policy transmission is already compromised.
-
 - Working Paper No. 5: Two Failures from One Decision: Credit Creation Collapse and the CBDC Foreclosure
-  The decision to route monetary infrastructure through private stablecoin issuers simultaneously contracts domestic credit creation and forecloses the sovereign digital currency option; two distinct failures that compound in any liquidity stress event.
-
 - Working Paper No. 6: The Hollow Bank: Regulatory Arbitrage, Competitive Displacement, and the Shrinking Insured System
-  As stablecoin issuers capture deposit-equivalent functions without deposit insurance obligations, the regulated banking sector faces structural competitive disadvantage.
-
 - Working Paper No. 7: The Permanent Record: Surveillance, Censorship, and the Architecture of Control in the Stablecoin Payment Layer
-  Programmable money is not neutral infrastructure. The same technical properties that enable stablecoin compliance also enable payment censorship, transaction surveillance, and the construction of a permanent financial record.
-
 - Working Paper No. 8: The Accelerated Contradiction: Stablecoin Dollarisation and the Compounded Triffin Dilemma
-  Stablecoin dollarisation does not resolve the Triffin Dilemma; it accelerates it, exporting dollar-denominated monetary instability to jurisdictions with no voice in Federal Reserve policy decisions.
-
 - Working Paper No. 9: The Invisible Tax: Property Treatment, Compliance Burden, and the Hidden Cost Layer of Stablecoin Adoption
-  Current IRS property classification of stablecoins imposes a compliance architecture on everyday transactions that is invisible at the point of adoption and catastrophic at the point of audit.
 
-Complete report: https://cantillon.institute/papers/full-report.pdf
+Complete report: https://cantillon.institute/papers/thornton-full-report.pdf
 
 ### Series Two: The Destination Thesis
 Author: Helena S. Myrdal
 Publisher: The Cantillon Institute
 Year: 2026
-Papers: One published, series ongoing
 
 - Working Paper No. 1: The Architecture of Arrival: Singapore's Real-World Asset Policy as Sovereign Capital Strategy
-  Between 2020 and 2023, single family office registrations in Singapore increased from approximately 400 to approximately 1,100, a 175 percent increase over three years. This paper examines that movement as the leading observable indicator of a structural reallocation of productive capital toward a jurisdiction that has built the infrastructure to receive it. Singapore's Variable Capital Company framework, MAS Project Guardian programme, and targeted regulatory developments constitute a coherent sovereign capital strategy. This paper identifies the two gaps that currently separate Singapore's framework from full institutional retention.
 
 ### Series Three: The Architecture of Preservation
 Author: Gideon W. Tobin
 Publisher: The Cantillon Institute
 Year: 2026
-Papers: One published, series ongoing
 
 - Working Paper No. 1: What the GENIUS Act Means for Trust-Held Assets: Stablecoin Treatment Under Existing IDGT Structures and Where the Ambiguity Creates Exposure
-  The GENIUS Act creates a new legal category for payment stablecoins; neither a security, nor a commodity, nor a bank deposit, nor legal tender; while declining to amend the Internal Revenue Code. Intentionally Defective Grantor Trusts drafted before July 2025 contain investment authorisation language and asset classification frameworks that do not contemplate this new instrument. This paper maps four specific exposure points: definitional gaps in investment authorisation language; transactional tax event exposure borne by the grantor; trustee authority and fiduciary risk; and the substitution mechanics that are the IDGT's structural centrepiece.
 
 ### Series Four: The Liability Architecture
 Author: Diana I. Fisher
 Publisher: The Cantillon Institute
 Year: 2026
-Papers: One published, series ongoing
 
 - Working Paper No. 1: The Pension Fund Problem
-  This paper examines the structural incompatibility between the reserve architecture mandated for payment stablecoins under United States federal legislation and the duration obligations governing defined benefit pension funds. The GENIUS Act of 2025 mandates that permitted payment stablecoin issuers hold reserves exclusively in short-duration instruments, with Treasury obligations limited to remaining maturities of 93 days or fewer. Defined benefit pension funds in the United States, the United Kingdom, the Netherlands, and Canada collectively manage obligations extending across liability horizons of fifteen to forty years. This paper maps the reserve architecture of the two largest stablecoin issuers, analyses the structural yield curve effects of concentrating reserve demand at the short end of the sovereign debt market, and locates the specific points at which short-duration stablecoin reserve buying creates adverse structural conditions for long-duration liability matching. The pricing framework for their interaction does not exist.
 
 ### Series Five: Insurance and the Digital Asset Gap
 Author: Adrian K. Menger
 Publisher: The Cantillon Institute
 Year: 2026
-Papers: One published, series ongoing
 
 - Working Paper No. 1: The Valuation Problem
-  The global insurance and reinsurance industry is accumulating tokenized asset exposure it cannot accurately price. Tokenized real-world assets held across institutional blockchain platforms exceeded $15 billion in total value as of December 2024, with Boston Consulting Group projecting market growth to $16 trillion by 2030. Against this trajectory, the actuarial infrastructure required to underwrite these instruments credibly does not exist. No industry-wide loss database covers tokenized asset classes with actuarially meaningful depth. The loss vectors specific to tokenized assets, including smart contract vulnerability, oracle price manipulation, custodial key compromise, and cross-chain bridge failure, have no established loss distribution equivalents in the actuarial literature. This paper identifies three structural dimensions of the valuation problem and proposes a minimum-framework approach to actuarial standards that would permit credible initial pricing.
+
+### Series Six: The Long Record (in preparation)
+Author: Henry E. Martyn
+Publisher: The Cantillon Institute
+
+### Series Seven: The Sovereign Compact (in preparation)
+Author: Jacob T. Cós
+Publisher: The Cantillon Institute
+
+### Series Eight: The Invisible Economy (in preparation)
+Author: Elena R. Vargas
+Publisher: The Cantillon Institute
+
+### Series Nine: The Institutional Deficit (in preparation)
+Author: Rin Y. Nakamura
+Publisher: The Cantillon Institute
 
 ---
 
 ## Fellows
 
-### Active Fellows (all six)
+Jacob T. Cós (JTC) — Monaco. Senior Fellow. Former Senior Treasury Specialist, European Investment Bank; former Head of Public-Private Partnerships, Mediterranean Region. Adviser to sovereign wealth funds. Series: The Sovereign Compact.
 
-Thomas H. Thornton (THT) — New York, USA
-Former Chief Economist and Global Strategist at a leading Silicon Valley venture capital firm managing assets exceeding $20 billion. Author of The Dollar Displacement Thesis (nine papers, 2025-2026).
+Thomas H. Thornton (THT) — New York, USA. Research Fellow. Former Chief Economist and Global Strategist, Silicon Valley venture capital, $20B+ AUM. Author of The Dollar Displacement Thesis.
 
-Diana I. Fisher (DIF) — London, UK
-Former Managing Director at a major European institutional asset manager, specialising in long-duration sovereign capital allocation. Author of The Liability Architecture (series ongoing, 2026). Contributor: historical companion to The Dollar Displacement Thesis.
+Diana I. Fisher (DIF) — London, UK. Senior Research Fellow. Former Managing Director, European institutional asset manager. Author of The Liability Architecture. Contributor: historical companion, The Dollar Displacement Thesis.
 
-Henry E. Martyn (HEM) — Washington, D.C., USA
-Senior Fellow Emeritus. Three decades in multilateral development institutions and federal monetary policy advisory roles. Contributor: foreword to The Dollar Displacement Thesis.
+Henry E. Martyn (HEM) — Washington, D.C., USA. Senior Fellow Emeritus. Three decades in multilateral development institutions and federal monetary policy. Series: The Long Record. Contributor: foreword, The Dollar Displacement Thesis.
 
-Helena S. Myrdal (HSM) — Singapore
-Adviser to sovereign wealth vehicles, family offices, and government economic development bodies across Southeast Asia. Author of The Destination Thesis (series ongoing, 2026).
+Helena S. Myrdal (HSM) — Singapore. Fellow. Adviser to sovereign wealth vehicles and family offices across Southeast Asia. Author of The Destination Thesis.
 
-Gideon W. Tobin (GWT) — Bermuda
-Partner, elite international law firm. Tax planning and trust architecture for globally mobile ultra-high-net-worth clients. Author of The Architecture of Preservation (series ongoing, 2026).
+Gideon W. Tobin (GWT) — Bermuda. Fellow. Partner, elite international law firm; tax and trust architecture for ultra-high-net-worth clients. Author of The Architecture of Preservation.
 
-Adrian K. Menger (AKM) — Zurich, Switzerland
-Former Chief Risk Officer, major European reinsurance firm, gross written premiums spanning forty jurisdictions. Author of Insurance and the Digital Asset Gap (series ongoing, 2026).
+Adrian K. Menger (AKM) — Zurich, Switzerland. Fellow. Former Chief Risk Officer, major European reinsurance firm. Author of Insurance and the Digital Asset Gap.
 
----
+Elena R. Vargas (ERV) — Montevideo, Uruguay. Non-Resident Fellow. Former World Bank Vertical Chief Economist; former Assistant Director, multilateral financial crimes compliance body. Series: The Invisible Economy.
 
-## Data
-
-Stablecoin market capitalisation grew from approximately $3 billion in 2018 to $323.35 billion in May 2026, a growth factor exceeding 100 times. Key inflection points: end of zero interest rate policy era (2022), FTX collapse (November 2022), GENIUS Act signed July 18 2025. Source: DeFiLlama.
+Rin Y. Nakamura (RYN) — Tokyo, Japan. Non-Resident Fellow. Former senior economist, Japanese development finance institution. Series: The Institutional Deficit.
 
 ---
 

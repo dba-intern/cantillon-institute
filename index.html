@@ -23,11 +23,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"ResearchOrganization","name":"The Cantillon Institute","url":"https://cantillon.institute","foundingDate":"2021","description":"An independent research institute examining the structural transformation of monetary systems, capital formation, and the political economy of financial power.","location":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Washington","addressRegion":"D.C.","addressCountry":"US"}},"contactPoint":{"@type":"ContactPoint","email":"contact@cantillon.institute"},"member":[{"@type":"Person","name":"Thomas H. Thornton","jobTitle":"Research Fellow","workLocation":"New York, USA"},{"@type":"Person","name":"Diana I. Fisher","jobTitle":"Senior Research Fellow","workLocation":"London, UK"},{"@type":"Person","name":"Henry E. Martyn","jobTitle":"Senior Fellow Emeritus","workLocation":"Washington, D.C., USA"},{"@type":"Person","name":"Helena S. Myrdal","jobTitle":"Fellow","workLocation":"Singapore"},{"@type":"Person","name":"Gideon W. Tobin","jobTitle":"Fellow","workLocation":"Bermuda"},{"@type":"Person","name":"Adrian K. Menger","jobTitle":"Fellow","workLocation":"Zurich, Switzerland"}]}
+    {"@context":"https://schema.org","@type":"ResearchOrganization","name":"The Cantillon Institute","url":"https://cantillon.institute","foundingDate":"2021","description":"An independent research institute examining the structural transformation of monetary systems, capital formation, and the political economy of financial power.","contactPoint":{"@type":"ContactPoint","email":"contact@cantillon.institute"},"member":[{"@type":"Person","name":"Jacob T. Cós","jobTitle":"Senior Fellow","workLocation":"Monaco"},{"@type":"Person","name":"Thomas H. Thornton","jobTitle":"Research Fellow","workLocation":"New York, USA"},{"@type":"Person","name":"Diana I. Fisher","jobTitle":"Senior Research Fellow","workLocation":"London, UK"},{"@type":"Person","name":"Henry E. Martyn","jobTitle":"Senior Fellow Emeritus","workLocation":"Washington, D.C., USA"},{"@type":"Person","name":"Helena S. Myrdal","jobTitle":"Fellow","workLocation":"Singapore"},{"@type":"Person","name":"Gideon W. Tobin","jobTitle":"Fellow","workLocation":"Bermuda"},{"@type":"Person","name":"Adrian K. Menger","jobTitle":"Fellow","workLocation":"Zurich, Switzerland"},{"@type":"Person","name":"Elena R. Vargas","jobTitle":"Non-Resident Fellow","workLocation":"Montevideo, Uruguay"},{"@type":"Person","name":"Rin Y. Nakamura","jobTitle":"Non-Resident Fellow","workLocation":"Tokyo, Japan"}]}
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Email gate modal for full report -->
+    <div class="gate-overlay" id="gateOverlay" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+        <div class="gate-modal">
+            <h3 id="gateTitle">ACCESS THE FULL REPORT</h3>
+            <p>Enter your email address to download the complete Dollar Displacement Thesis, comprising nine working papers, foreword, historical companion, and investor analysis.</p>
+            <form class="gate-form" id="gateForm" name="full-report-gate" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="full-report-gate">
+                <p style="display:none;"><label>Do not fill: <input name="bot-field"></label></p>
+                <input type="email" name="email" placeholder="your@email.com" required class="gate-input" aria-label="Email address" id="gateEmail">
+                <button type="submit" class="gate-submit">Download Full Report</button>
+                <p class="gate-note">No marketing. New research notifications only.</p>
+                <p class="gate-close" id="gateClose">Cancel</p>
+            </form>
+        </div>
+    </div>
+
     <header>
         <nav class="nav" aria-label="Main navigation">
             <a href="/" class="nav-logo">The Cantillon Institute</a>
@@ -96,7 +113,8 @@
                 </div>
                 <a href="papers.html" style="font-size:12px;color:#378ADD;letter-spacing:0.08em;border-bottom:0.5px solid #378ADD;padding-bottom:2px;flex-shrink:0;">View all papers &#8594;</a>
             </div>
-            <a href="papers/full-report.pdf" class="full-report-card" aria-label="Download the complete Dollar Displacement Thesis report as PDF">
+            <!-- Email-gated full report card -->
+            <div class="full-report-card" id="fullReportTrigger" role="button" tabindex="0" aria-label="Access the complete Dollar Displacement Thesis report" style="cursor:pointer;">
                 <div class="full-report-left">
                     <span class="full-report-badge">Complete Report</span>
                     <p class="full-report-title">THE DOLLAR DISPLACEMENT THESIS:<br>COMPLETE WORKING PAPER SERIES</p>
@@ -104,16 +122,16 @@
                 </div>
                 <div class="full-report-right">
                     <span class="full-report-cta">PDF &#8595;</span>
-                    <span class="full-report-size">Full document</span>
+                    <span class="full-report-size">Enter email to access</span>
                 </div>
-            </a>
+            </div>
             <div class="papers-list" role="list">
                 <a href="papers/fisher-paper-01.pdf" class="paper-row" role="listitem">
                     <span class="paper-num">New</span>
                     <div class="paper-body">
                         <span class="paper-series-tag">The Liability Architecture &middot; D.I. Fisher</span>
                         <h3 class="paper-title">The Pension Fund Problem</h3>
-                        <p class="paper-abstract">The GENIUS Act mandates that permitted payment stablecoin issuers hold reserves exclusively in short-duration instruments. Defined benefit pension funds collectively manage obligations extending across liability horizons of fifteen to forty years. This paper maps the structural yield curve effects of concentrating reserve demand at the short end of the sovereign debt market and locates the specific points at which short-duration stablecoin reserve buying creates adverse structural conditions for long-duration liability matching. The pricing framework for their interaction does not exist.</p>
+                        <p class="paper-abstract">The GENIUS Act mandates that permitted payment stablecoin issuers hold reserves exclusively in short-duration instruments. Defined benefit pension funds collectively manage obligations extending across liability horizons of fifteen to forty years. This paper maps the structural yield curve effects of concentrating reserve demand at the short end of the sovereign debt market. The pricing framework for their interaction does not exist.</p>
                     </div>
                     <span class="paper-cta">PDF &#8595;</span>
                 </a>
@@ -190,35 +208,59 @@
             <p class="label">Fellows</p>
             <h2 id="fellows-heading" class="sr-only">Research Fellows</h2>
             <div class="fellows-grid">
+                <a href="cos.html" class="fellow-card-link"><article class="fellow-card">
+                    <p class="fellow-id">JTC &middot; Monaco</p>
+                    <span class="fellow-title-tag">Senior Fellow</span>
+                    <h3 class="fellow-name">Jacob T. C&oacute;s</h3>
+                    <p class="fellow-role">Former Senior Treasury Specialist, European Investment Bank; sovereign wealth fund adviser</p>
+                </article></a>
                 <a href="thornton.html" class="fellow-card-link"><article class="fellow-card">
                     <p class="fellow-id">THT &middot; New York</p>
+                    <span class="fellow-title-tag">Research Fellow</span>
                     <h3 class="fellow-name">Thomas H. Thornton</h3>
                     <p class="fellow-role">Former Chief Economist and Global Strategist; Silicon Valley venture capital, $20B+ AUM</p>
                 </article></a>
                 <a href="fisher.html" class="fellow-card-link"><article class="fellow-card">
                     <p class="fellow-id">DIF &middot; London</p>
+                    <span class="fellow-title-tag">Senior Research Fellow</span>
                     <h3 class="fellow-name">Diana I. Fisher</h3>
                     <p class="fellow-role">Former Managing Director; European institutional asset management, long-duration sovereign capital</p>
                 </article></a>
                 <a href="martyn.html" class="fellow-card-link"><article class="fellow-card">
                     <p class="fellow-id">HEM &middot; Washington D.C.</p>
+                    <span class="fellow-title-tag">Senior Fellow Emeritus</span>
                     <h3 class="fellow-name">Henry E. Martyn</h3>
-                    <p class="fellow-role">Senior Fellow Emeritus; three decades in multilateral development institutions and federal monetary policy</p>
+                    <p class="fellow-role">Three decades in multilateral development institutions and federal monetary policy</p>
                 </article></a>
                 <a href="myrdal.html" class="fellow-card-link"><article class="fellow-card">
                     <p class="fellow-id">HSM &middot; Singapore</p>
+                    <span class="fellow-title-tag">Fellow</span>
                     <h3 class="fellow-name">Helena S. Myrdal</h3>
-                    <p class="fellow-role">Adviser to sovereign wealth vehicles and family offices across Southeast Asia; real-world asset policy integration</p>
+                    <p class="fellow-role">Adviser to sovereign wealth vehicles and family offices across Southeast Asia</p>
                 </article></a>
                 <a href="tobin.html" class="fellow-card-link"><article class="fellow-card">
                     <p class="fellow-id">GWT &middot; Bermuda</p>
+                    <span class="fellow-title-tag">Fellow</span>
                     <h3 class="fellow-name">Gideon W. Tobin</h3>
                     <p class="fellow-role">Partner, elite international law firm; tax and trust architecture for ultra-high-net-worth clients</p>
                 </article></a>
                 <a href="menger.html" class="fellow-card-link"><article class="fellow-card">
                     <p class="fellow-id">AKM &middot; Zurich</p>
+                    <span class="fellow-title-tag">Fellow</span>
                     <h3 class="fellow-name">Adrian K. Menger</h3>
                     <p class="fellow-role">Former Chief Risk Officer; major European reinsurance firm, forty jurisdictions</p>
+                </article></a>
+                <a href="vargas.html" class="fellow-card-link"><article class="fellow-card">
+                    <p class="fellow-id">ERV &middot; Montevideo</p>
+                    <span class="fellow-title-tag">Non-Resident Fellow</span>
+                    <h3 class="fellow-name">Elena R. Vargas</h3>
+                    <p class="fellow-role">Former World Bank Chief Economist; illicit financial flows, capital resurfacing, cross-border capital movement</p>
+                </article></a>
+                <a href="nakamura.html" class="fellow-card-link"><article class="fellow-card">
+                    <p class="fellow-id">RYN &middot; Tokyo</p>
+                    <span class="fellow-title-tag">Non-Resident Fellow</span>
+                    <h3 class="fellow-name">Rin Y. Nakamura</h3>
+                    <p class="fellow-role">Former senior economist, Japanese development finance; institutional development in emerging economies</p>
                 </article></a>
             </div>
         </section>
@@ -237,5 +279,36 @@
         <span>The Cantillon Institute &middot; Est. 2021</span>
         <span>cantillon.institute</span>
     </footer>
+
+    <script>
+        const trigger = document.getElementById('fullReportTrigger');
+        const overlay = document.getElementById('gateOverlay');
+        const closeBtn = document.getElementById('gateClose');
+        const form = document.getElementById('gateForm');
+        const PDF_URL = 'papers/thornton-full-report.pdf';
+
+        trigger.addEventListener('click', () => overlay.classList.add('active'));
+        trigger.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' ') overlay.classList.add('active'); });
+        closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
+        overlay.addEventListener('click', e => { if(e.target === overlay) overlay.classList.remove('active'); });
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('gateEmail').value;
+            // Submit to Netlify
+            const data = new FormData(form);
+            try {
+                await fetch('/', { method: 'POST', body: data });
+            } catch(err) { /* silent fail; download still proceeds */ }
+            overlay.classList.remove('active');
+            // Trigger download
+            const a = document.createElement('a');
+            a.href = PDF_URL;
+            a.download = 'cantillon-institute-dollar-displacement-thesis.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
 </body>
 </html>
