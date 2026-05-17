@@ -2,9 +2,7 @@
 
 > An independent research institute examining the structural transformation of monetary systems, capital formation, and the political economy of financial power. Founded 2021, Washington D.C.
 
-The Cantillon Institute was established in 2021 to examine systemic transformations in monetary architecture before they achieve political consensus. The Institute publishes working papers and research briefs, maintains a network of independent research fellows, and operates without institutional funding from the entities it examines.
-
-Fellows publish under pseudonymous identities. This is a deliberate institutional choice that removes the professional constraints imposed by the financial institutions the Institute examines, allowing fellows to write what the evidence supports rather than what their institutional position permits.
+The Cantillon Institute publishes working papers and research briefs, maintains a network of fifteen independent research fellows across fourteen cities, and operates without institutional funding from the entities it examines. Fellows publish under pseudonymous identities; a deliberate choice that removes the professional constraints imposed by the financial institutions the Institute examines.
 
 ---
 
@@ -19,9 +17,15 @@ Fellows publish under pseudonymous identities. This is a deliberate institutiona
 - Thomas H. Thornton: https://cantillon.institute/thornton.html
 - Diana I. Fisher: https://cantillon.institute/fisher.html
 - Henry E. Martyn: https://cantillon.institute/martyn.html
+- Preston W. Eccles: https://cantillon.institute/eccles.html
+- Renée V. Rueff: https://cantillon.institute/rueff.html
 - Helena S. Myrdal: https://cantillon.institute/myrdal.html
 - Gideon W. Tobin: https://cantillon.institute/tobin.html
 - Adrian K. Menger: https://cantillon.institute/menger.html
+- Wei J. Liang: https://cantillon.institute/liang.html
+- Tariq N. Khaldun: https://cantillon.institute/khaldun.html
+- Kai R. Black: https://cantillon.institute/black.html
+- Dana M. Galbraith: https://cantillon.institute/galbraith.html
 - Elena R. Vargas: https://cantillon.institute/vargas.html
 - Rin Y. Nakamura: https://cantillon.institute/nakamura.html
 
@@ -30,88 +34,149 @@ Fellows publish under pseudonymous identities. This is a deliberate institutiona
 ## Working Papers
 
 ### Series One: The Dollar Displacement Thesis
-Author: Thomas H. Thornton
+Author: Thomas H. Thornton, Research Fellow
 Publisher: The Cantillon Institute
-Years: 2025-2026
-Papers: Nine
+Years: 2025-2026 · Nine papers published
 
-- Working Paper No. 1: What GENIUS and CLARITY Actually Build
-- Working Paper No. 2: Repercussions of the Dollar Displacement Architecture
-- Working Paper No. 3: The Labor Vector: Gig Classification and the Stablecoin Compensation Pathway
-- Working Paper No. 4: The Rate Corridor Under Pressure: IOR, ON RRP, and the GENIUS Act
-- Working Paper No. 5: Two Failures from One Decision: Credit Creation Collapse and the CBDC Foreclosure
-- Working Paper No. 6: The Hollow Bank: Regulatory Arbitrage, Competitive Displacement, and the Shrinking Insured System
-- Working Paper No. 7: The Permanent Record: Surveillance, Censorship, and the Architecture of Control in the Stablecoin Payment Layer
-- Working Paper No. 8: The Accelerated Contradiction: Stablecoin Dollarisation and the Compounded Triffin Dilemma
-- Working Paper No. 9: The Invisible Tax: Property Treatment, Compliance Burden, and the Hidden Cost Layer of Stablecoin Adoption
+The Dollar Displacement Thesis examines the GENIUS and CLARITY Acts not as stablecoin regulation but as the legislative architecture of a private monetary layer beneath the Federal Reserve system. The series argues that these Acts transfer money creation authority to entities with no public mandate, no lender-of-last-resort obligation, and no accountability to the monetary policy transmission framework the Federal Reserve depends on to function.
 
-Complete report: https://cantillon.institute/papers/thornton-full-report.pdf
+- No. 1: What GENIUS and CLARITY Actually Build — The Acts institutionalise a private monetary layer beneath the Federal Reserve system.
+- No. 2: Repercussions of the Dollar Displacement Architecture — Structural consequences for Treasury market depth and systemic liquidity.
+- No. 3: The Labor Vector: Gig Classification and the Stablecoin Compensation Pathway — Wage payment in stablecoins as mechanism for extending gig classification into the monetary layer.
+- No. 4: The Rate Corridor Under Pressure: IOR, ON RRP, and the GENIUS Act — Stablecoin reserve requirements distorting Fed rate corridor mechanics.
+- No. 5: Two Failures from One Decision: Credit Creation Collapse and the CBDC Foreclosure — Private stablecoin routing simultaneously contracting credit creation and foreclosing sovereign digital currency.
+- No. 6: The Hollow Bank: Regulatory Arbitrage, Competitive Displacement, and the Shrinking Insured System — Stablecoin issuers capturing deposit-equivalent functions without deposit insurance obligations.
+- No. 7: The Permanent Record: Surveillance, Censorship, and the Architecture of Control in the Stablecoin Payment Layer — Programmable money enabling payment censorship and permanent financial surveillance.
+- No. 8: The Accelerated Contradiction: Stablecoin Dollarisation and the Compounded Triffin Dilemma — Stablecoin dollarisation accelerating the Triffin Dilemma rather than resolving it.
+- No. 9: The Invisible Tax: Property Treatment, Compliance Burden, and the Hidden Cost Layer of Stablecoin Adoption — IRS property classification imposing compliance architecture invisible at adoption and catastrophic at audit.
+
+Complete report (all nine papers, foreword by H.E. Martyn, historical companion by D.I. Fisher, investor analysis): https://cantillon.institute/papers/thornton-full-report.pdf
 
 ### Series Two: The Destination Thesis
-Author: Helena S. Myrdal
+Author: Helena S. Myrdal, Fellow
 Publisher: The Cantillon Institute
-Year: 2026
+Year: 2026 · One paper published, series ongoing
 
-- Working Paper No. 1: The Architecture of Arrival: Singapore's Real-World Asset Policy as Sovereign Capital Strategy
+The Destination Thesis examines Singapore's deliberate construction of a real-world asset regulatory framework as sovereign capital strategy; not fintech innovation but the deliberate positioning of a jurisdiction as the primary destination for productive wealth displaced by U.S. monetary architecture instability.
+
+- No. 1: The Architecture of Arrival: Singapore's Real-World Asset Policy as Sovereign Capital Strategy — Single family office registrations in Singapore rose 175 percent from 2020 to 2023. This paper identifies the two gaps separating Singapore's framework from full institutional capital retention.
 
 ### Series Three: The Architecture of Preservation
-Author: Gideon W. Tobin
+Author: Gideon W. Tobin, Fellow
 Publisher: The Cantillon Institute
-Year: 2026
+Year: 2026 · One paper published, series ongoing
 
-- Working Paper No. 1: What the GENIUS Act Means for Trust-Held Assets: Stablecoin Treatment Under Existing IDGT Structures and Where the Ambiguity Creates Exposure
+The Architecture of Preservation examines how the GENIUS Act's creation of a new asset class without an Internal Revenue Code home creates immediate and largely unacknowledged exposure in existing trust structures. Intentionally Defective Grantor Trusts, Irrevocable Life Insurance Trusts, and dynasty trusts drafted before July 2025 were not designed to accommodate a federally recognised payment instrument that is simultaneously not a security, not a commodity, not a deposit, and not legal tender.
+
+- No. 1: What the GENIUS Act Means for Trust-Held Assets: Stablecoin Treatment Under Existing IDGT Structures and Where the Ambiguity Creates Exposure — Four specific exposure points: definitional gaps, transactional tax event exposure, trustee authority and fiduciary risk, and substitution mechanics.
 
 ### Series Four: The Liability Architecture
-Author: Diana I. Fisher
+Author: Diana I. Fisher, Senior Research Fellow
 Publisher: The Cantillon Institute
-Year: 2026
+Year: 2026 · One paper published, series ongoing
 
-- Working Paper No. 1: The Pension Fund Problem
+The Liability Architecture examines the stablecoin payment layer from the liability side of the balance sheet; what the GENIUS Act's reserve architecture means for institutions managing long-duration obligations that the short-duration Treasury reserve mandate structurally distorts.
+
+- No. 1: The Pension Fund Problem — The GENIUS Act mandates reserves in instruments with maturities of 93 days or fewer. Defined benefit pension funds manage obligations extending fifteen to forty years. This paper maps where the two architectures create adverse structural conditions in the sovereign debt market. The pricing framework for their interaction does not exist.
 
 ### Series Five: Insurance and the Digital Asset Gap
-Author: Adrian K. Menger
+Author: Adrian K. Menger, Fellow
 Publisher: The Cantillon Institute
-Year: 2026
+Year: 2026 · One paper published, series ongoing
 
-- Working Paper No. 1: The Valuation Problem
+Insurance and the Digital Asset Gap examines the actuarial infrastructure deficit in the insurance and reinsurance industry's exposure to tokenised assets. The industry is accumulating exposure it cannot accurately price because the loss taxonomy, historical loss data, and valuation frameworks for smart contract vulnerability, oracle manipulation, custodial key compromise, and cross-chain bridge failure do not yet exist in the actuarial literature.
+
+- No. 1: The Valuation Problem — Tokenised real-world assets exceeded $15 billion in December 2024 with BCG projecting $16 trillion by 2030. The underwriting exposure is already on the books of firms that have not recognised it.
 
 ### Series Six: The Long Record (in preparation)
-Author: Henry E. Martyn
-Publisher: The Cantillon Institute
+Author: Henry E. Martyn, Senior Fellow Emeritus
+
+The Long Record situates each current monetary development within a historical precedent that most analysts have forgotten or never knew. Planned papers: The Bretton Woods Lesson; The Sterling Precedent; The Continental Failure; The Venetian Model; The Mississippi Lesson.
 
 ### Series Seven: The Sovereign Compact (in preparation)
-Author: Jacob T. Cós
-Publisher: The Cantillon Institute
+Author: Jacob T. Cós, Senior Fellow
+
+The Sovereign Compact examines what happens to multilateral development finance architecture when the monetary layer it was designed to operate within is privatised. Planned papers covering EIB mandate collision, PPP financing in a stablecoin payment environment, the Mediterranean capital gap, sovereign wealth fund repositioning, and development finance institution structural failure.
 
 ### Series Eight: The Invisible Economy (in preparation)
-Author: Elena R. Vargas
-Publisher: The Cantillon Institute
+Author: Elena R. Vargas, Non-Resident Fellow
+
+The Invisible Economy examines illicit financial flows as structural analysis rather than moral commentary. Illicit financial flows map precisely onto jurisdictional failures in monetary sovereignty. The stablecoin layer is being built on those same fault lines. Planned papers covering the pressure point thesis, stablecoin as shell infrastructure, the River Plate model, enforcement blind spots, and the laundering premium repricing.
 
 ### Series Nine: The Institutional Deficit (in preparation)
-Author: Rin Y. Nakamura
-Publisher: The Cantillon Institute
+Author: Rin Y. Nakamura, Non-Resident Fellow
+
+The Institutional Deficit examines economies that grew before their institutions matured and what happens when digital monetary infrastructure is deployed into that institutional fragility. Planned papers covering the Shimomura inversion, ownership without title, the corruption equilibrium, the ASEAN divergence, and the African monetary experiment.
+
+### Series Ten: The Transmission Problem (in preparation)
+Author: Preston W. Eccles, Fellow
+
+The Transmission Problem examines what happens to Federal Reserve monetary policy transmission when the closed system the Fed was designed to operate within is opened by private monetary layer introduction. Each paper identifies one transmission channel and maps how the GENIUS Act's architecture distorts it. Planned papers covering reserve channel distortion, rate corridor mechanics under private monetary layer competition, and lender-of-last-resort framework limitations.
+
+### Series Eleven: The Union's Fault Lines (in preparation)
+Author: Renée V. Rueff, Fellow
+
+The Union's Fault Lines examines the structural incompatibilities between European monetary union architecture and the stablecoin payment layer; TARGET2 exposure, sovereign spread dynamics, ECB transmission distortion, and what the Bank of England's post-union position reveals about non-ECB stablecoin transition navigation.
+
+### Series Twelve: The Internal Circulation (in preparation)
+Author: Wei J. Liang, Fellow
+
+The Internal Circulation examines how China's dual circulation monetary strategy is using dollar-adjacent stablecoin infrastructure as a transitional mechanism while constructing the e-CNY, mBridge, and BRICS payment alternatives to reduce dollar dependency. Each paper describes one mechanism of the strategy with implications for international capital positioned in or adjacent to China.
+
+### Series Thirteen: The Protocol Layer (in preparation)
+Author: Kai R. Black, Fellow
+
+The Protocol Layer examines the gap between what stablecoin legislation assumes about payment rail architecture and how decentralized finance systems actually function. Covers smart contract design assumptions in the GENIUS Act, oracle mechanism risk, cross-chain bridge security, and the regulatory implications of technical architecture choices the Act treats as neutral.
+
+### Series Fourteen: The Consumption Layer (in preparation)
+Author: Dana M. Galbraith, Fellow
+
+The Consumption Layer examines the stablecoin monetary infrastructure as experienced by workers and consumers rather than institutional capital. Covers wage payment in stablecoins and labor classification interaction, IRS compliance burden on ordinary users, surveillance architecture of programmable money applied to low-income populations, and financial inclusion narrative versus financial extraction reality.
+
+### Series Fifteen: The Riba Question (in preparation)
+Author: Tariq N. Khaldun, Fellow
+
+The Riba Question examines whether payment stablecoins constitute riba under classical and contemporary Islamic jurisprudence; what the GENIUS Act's interest-bearing reserve requirements mean for the $3.5 trillion Islamic finance market; and how Gulf sovereign wealth funds managing Sharia-mandated capital are approaching digital asset infrastructure through compliance frameworks Western legislators did not anticipate.
 
 ---
 
 ## Fellows
 
-Jacob T. Cós (JTC) — Monaco. Senior Fellow. Former Senior Treasury Specialist, European Investment Bank; former Head of Public-Private Partnerships, Mediterranean Region. Adviser to sovereign wealth funds. Series: The Sovereign Compact.
+Jacob T. Cós (JTC) — Monaco. Senior Fellow. Former Senior Treasury Specialist, European Investment Bank; former Head of Public-Private Partnerships, Mediterranean Region. Sovereign wealth fund adviser. Series: The Sovereign Compact.
 
-Thomas H. Thornton (THT) — New York, USA. Research Fellow. Former Chief Economist and Global Strategist, Silicon Valley venture capital, $20B+ AUM. Author of The Dollar Displacement Thesis.
+Thomas H. Thornton (THT) — New York. Research Fellow. Former Chief Economist and Global Strategist, Silicon Valley venture capital, $20B+ AUM. Author: The Dollar Displacement Thesis (nine papers).
 
-Diana I. Fisher (DIF) — London, UK. Senior Research Fellow. Former Managing Director, European institutional asset manager. Author of The Liability Architecture. Contributor: historical companion, The Dollar Displacement Thesis.
+Diana I. Fisher (DIF) — London. Senior Research Fellow. Former Managing Director, major European institutional asset manager. Author: The Liability Architecture. Contributor: historical companion, The Dollar Displacement Thesis.
 
-Henry E. Martyn (HEM) — Washington, D.C., USA. Senior Fellow Emeritus. Three decades in multilateral development institutions and federal monetary policy. Series: The Long Record. Contributor: foreword, The Dollar Displacement Thesis.
+Henry E. Martyn (HEM) — Washington D.C. Senior Fellow Emeritus. Three decades in multilateral development institutions and federal monetary policy. Series: The Long Record. Contributor: foreword, The Dollar Displacement Thesis.
 
-Helena S. Myrdal (HSM) — Singapore. Fellow. Adviser to sovereign wealth vehicles and family offices across Southeast Asia. Author of The Destination Thesis.
+Preston W. Eccles (PWE) — Washington D.C. Fellow. Former Senior Economist, Federal Reserve Board of Governors; FOMC Secretariat; Division of Monetary Affairs. Series: The Transmission Problem.
 
-Gideon W. Tobin (GWT) — Bermuda. Fellow. Partner, elite international law firm; tax and trust architecture for ultra-high-net-worth clients. Author of The Architecture of Preservation.
+Renée V. Rueff (RVR) — Frankfurt. Fellow. Former Senior Economist, ECB Directorate General Economics; adviser to ECB Monetary Policy Committee on TARGET2 architecture. Series: The Union's Fault Lines.
 
-Adrian K. Menger (AKM) — Zurich, Switzerland. Fellow. Former Chief Risk Officer, major European reinsurance firm. Author of Insurance and the Digital Asset Gap.
+Helena S. Myrdal (HSM) — Singapore. Fellow. Adviser to sovereign wealth vehicles and family offices across Southeast Asia. Author: The Destination Thesis.
 
-Elena R. Vargas (ERV) — Montevideo, Uruguay. Non-Resident Fellow. Former World Bank Vertical Chief Economist; former Assistant Director, multilateral financial crimes compliance body. Series: The Invisible Economy.
+Gideon W. Tobin (GWT) — Bermuda. Fellow. Partner, elite international law firm; tax and trust architecture for ultra-high-net-worth clients. Author: The Architecture of Preservation.
 
-Rin Y. Nakamura (RYN) — Tokyo, Japan. Non-Resident Fellow. Former senior economist, Japanese development finance institution. Series: The Institutional Deficit.
+Adrian K. Menger (AKM) — Zurich. Fellow. Former Chief Risk Officer, major European reinsurance firm, forty jurisdictions. Author: Insurance and the Digital Asset Gap.
+
+Wei J. Liang (WJL) — Shanghai. Fellow. Former senior adviser, major Chinese state-owned financial institution; consultant on mainland China investment frameworks. Series: The Internal Circulation.
+
+Tariq N. Khaldun (TNK) — Doha. Fellow. Former Director of Sharia Compliance and Structured Finance, major Gulf sovereign wealth vehicle; former AAOIFI technical standards committee member. Series: The Riba Question.
+
+Kai R. Black (KRB) — Lisbon. Fellow. DeFi protocol engineer; early Ethereum contributor; former core developer at two major DeFi protocols. Series: The Protocol Layer.
+
+Dana M. Galbraith (DMG) — Chicago. Fellow. Former Senior Economist, Economic Policy Institute; former researcher, National Employment Law Project. Series: The Consumption Layer.
+
+Elena R. Vargas (ERV) — Montevideo. Non-Resident Fellow. Former World Bank Vertical Chief Economist; former Assistant Director, multilateral financial crimes compliance body. Series: The Invisible Economy.
+
+Rin Y. Nakamura (RYN) — Tokyo. Non-Resident Fellow. Former senior economist, Japanese development finance institution. Series: The Institutional Deficit.
+
+---
+
+## Data
+
+Stablecoin market capitalisation grew from approximately $3 billion in 2018 to $323.35 billion in May 2026, a growth factor exceeding 100 times. Key inflection points: end of zero interest rate policy era (2022), FTX collapse (November 2022), GENIUS Act signed July 18 2025. Source: DeFiLlama.
 
 ---
 
