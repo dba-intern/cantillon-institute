@@ -34,4 +34,22 @@
   <url><loc>https://cantillon.institute/thornton-paper-08.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://cantillon.institute/thornton-paper-09.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
+  <!-- The Destination Thesis: HTML paper pages -->
+  <url><loc>https://cantillon.institute/myrdal-paper-01.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Insurance and the Digital Asset Gap: HTML paper pages -->
+  <url><loc>https://cantillon.institute/menger-paper-01.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- The Institutional Deficit: HTML paper pages -->
+  <url><loc>https://cantillon.institute/nakamura-paper-01.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- The Sovereign Compact: HTML paper pages -->
+  <url><loc>https://cantillon.institute/cos-paper-01.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- The Liability Architecture: HTML paper pages -->
+  <url><loc>https://cantillon.institute/fisher-paper-01.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- The Long Record: HTML paper pages -->
+  <url><loc>https://cantillon.institute/martyn-paper-01.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
 </urlset>
