@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Invisible Tax &mdash; The Cantillon Institute</title>
+    <meta name="description" content="The GENIUS Act creates a payment architecture for stablecoins as dollar equivalents. The IRS classifies stablecoins as property. Every consumer transaction is a taxable event with no de minimis threshold. A consumer making 50 stablecoin transactions per day generates 18,250 potentially reportable events annually. Reward tokens are ordinary income at issuer-determined valuations with no IRS guidance. The legislative packages that constructed the payment architecture did not address the tax architecture, because the mismatch harms consumers but not issuers. Working Paper No. 9, T.H. Thornton.">
+    <link rel="canonical" href="https://cantillon.institute/thornton-paper-09.html">
+    <meta property="og:title" content="The Invisible Tax: Property Treatment, Compliance Burden, and the Hidden Cost Layer of Stablecoin Adoption &mdash; The Cantillon Institute">
+    <meta property="og:description" content="Every stablecoin transaction is a taxable event. No de minimis exemption. 18,250 reportable events per year for a typical user. Working Paper No. 9, T.H. Thornton.">
+    <meta property="og:url" content="https://cantillon.institute/thornton-paper-09.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cantillon.institute/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "The Invisible Tax: Property Treatment, Compliance Burden, and the Hidden Cost Layer of Stablecoin Adoption",
+        "alternativeHeadline": "Working Paper No. 9, The Dollar Displacement Thesis",
+        "author": {"@type": "Person", "name": "Thomas H. Thornton", "affiliation": {"@type": "Organization", "name": "The Cantillon Institute"}},
+        "publisher": {"@type": "Organization", "name": "The Cantillon Institute", "url": "https://cantillon.institute"},
+        "datePublished": "2026",
+        "url": "https://cantillon.institute/thornton-paper-09.html",
+        "sameAs": "https://cantillon.institute/papers/thornton-paper-09.pdf",
+        "about": ["stablecoin IRS property classification", "stablecoin taxable event per transaction", "de minimis exemption stablecoin", "1099-DA stablecoin reporting", "reward token ordinary income tax", "stablecoin wage double taxation", "crypto tax compliance burden", "Notice 2014-21 stablecoin", "Revenue Procedure 2024-28 cost basis"],
+        "description": "The GENIUS Act creates a payment architecture for stablecoins while the IRS classifies them as property. Every consumer transaction is a taxable event with no de minimis threshold, generating up to 18,250 reportable events annually. The compliance burden falls entirely on consumers while issuers capture the float.",
+        "isPartOf": {"@type": "PublicationVolume", "name": "The Dollar Displacement Thesis", "publisher": {"@type": "Organization", "name": "The Cantillon Institute"}}
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-page { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+        .paper-header { padding: 4rem 0 3rem; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .paper-series-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; font-weight: 700; text-transform: uppercase; }
+        .paper-number { font-size: 11px; letter-spacing: 0.1em; color: #4a4845; text-transform: uppercase; }
+        .paper-header h1 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; color: #e8e4da; margin-bottom: 1.5rem; }
+        .paper-byline { font-size: 14px; color: #5a5855; margin-bottom: 2rem; letter-spacing: 0.04em; }
+        .paper-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .paper-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 13px; font-weight: 700; color: #0b0c0d; background: #378ADD; border-radius: 4px; padding: 0.55rem 1rem; letter-spacing: 0.04em; transition: opacity 0.2s ease; }
+        .paper-download:hover { opacity: 0.85; }
+        .paper-back-link { font-size: 13px; color: #378ADD; letter-spacing: 0.06em; border-bottom: 0.5px solid #378ADD; padding-bottom: 1px; transition: opacity 0.2s ease; }
+        .paper-back-link:hover { opacity: 0.7; }
+        .paper-nav { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-nav p { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; }
+        .paper-nav ol { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+        .paper-nav a { font-size: 14px; color: #6a6860; transition: color 0.2s ease; line-height: 1.5; }
+        .paper-nav a:hover { color: #e8e4da; }
+        .paper-body { padding: 3.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-body h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; color: #e8e4da; margin-top: 3rem; margin-bottom: 1.25rem; scroll-margin-top: 5rem; }
+        .paper-body h2:first-child { margin-top: 0; }
+        .paper-body p { font-size: 17px; color: #a8a49a; line-height: 1.9; margin-bottom: 1.5rem; max-width: 660px; }
+        .paper-body p:last-child { margin-bottom: 0; }
+        .paper-body em { font-style: italic; color: #c0bdb5; }
+        .paper-body strong { font-weight: 700; color: #c8c4bc; }
+        .paper-footnote { padding-top: 2rem; border-top: 0.5px solid #1d1f21; margin-top: 2rem; }
+        .paper-footnote p { font-size: 14px; color: #5a5855; line-height: 1.75; font-style: italic; }
+        .series-complete { background: #0d1117; border: 0.5px solid #378ADD; border-radius: 6px; padding: 1.5rem 1.75rem; margin-top: 2rem; }
+        .series-complete p { font-size: 14px; color: #6a6860; line-height: 1.7; margin-bottom: 0; }
+        .series-complete strong { color: #378ADD; }
+        .paper-series-nav { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-nav h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.04em; color: #e8e4da; margin-bottom: 1.25rem; }
+        .paper-series-links { display: flex; flex-direction: column; gap: 0.5rem; }
+        .paper-series-link { display: flex; align-items: baseline; gap: 1rem; font-size: 14px; color: #5a5855; transition: color 0.2s ease; text-decoration: none; }
+        .paper-series-link:hover { color: #e8e4da; }
+        .paper-series-link .num { font-size: 11px; color: #378ADD; font-weight: 700; letter-spacing: 0.1em; flex-shrink: 0; min-width: 32px; }
+        .paper-series-link.current { color: #e8e4da; }
+        .paper-series-full { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 0.5px solid #1d1f21; }
+        .paper-series-full a { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 13px; font-weight: 700; color: #0b0c0d; background: #378ADD; border-radius: 4px; padding: 0.55rem 1rem; transition: opacity 0.2s ease; }
+        .paper-series-full a:hover { opacity: 0.85; }
+        .paper-foot { padding: 2.5rem 0; }
+        .paper-foot a { font-size: 13px; color: #378ADD; letter-spacing: 0.08em; border-bottom: 0.5px solid #378ADD; padding-bottom: 2px; transition: opacity 0.2s ease; }
+        .paper-foot a:hover { opacity: 0.7; }
+        @media (max-width: 640px) {
+            .paper-page { padding: 0 1.25rem; }
+            .paper-header { padding: 2.5rem 0 2rem; }
+            .paper-body p { font-size: 16px; }
+            .paper-body h2 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="/" class="nav-logo">The Cantillon Institute</a>
+            <div class="nav-links">
+                <a href="papers.html">Papers</a>
+                <a href="briefs.html">Briefs</a>
+                <a href="/#fellows">Fellows</a>
+                <a href="about.html">About</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="paper-page">
+
+            <div class="paper-header">
+                <div class="paper-series-meta">
+                    <span class="paper-series-label">The Dollar Displacement Thesis</span>
+                    <span class="paper-number">Working Paper No. 9 &middot; T.H. Thornton &middot; 2026</span>
+                </div>
+                <h1>The Invisible Tax: Property Treatment, Compliance Burden, and the Hidden Cost Layer of Stablecoin Adoption</h1>
+                <p class="paper-byline">Thomas H. Thornton &middot; Research Fellow, The Cantillon Institute &middot; New York</p>
+                <div class="paper-actions">
+                    <a href="papers/thornton-paper-09.pdf" class="paper-download" download>PDF &#8595; Download</a>
+                    <a href="papers/thornton-full-report.pdf" class="paper-download" style="background:#1d3a52;color:#378ADD;" download>Complete Series &#8595;</a>
+                    <a href="thornton.html" class="paper-back-link">Full series by T.H. Thornton &#8594;</a>
+                </div>
+            </div>
+
+            <nav class="paper-nav" aria-label="Paper sections">
+                <p>Contents</p>
+                <ol>
+                    <li><a href="#foundational-mismatch">The Foundational Mismatch</a></li>
+                    <li><a href="#per-transaction">The Per-Transaction Taxable Event Problem</a></li>
+                    <li><a href="#reward-tokens">The Reward Token Layer: An Unresolved Valuation Problem</a></li>
+                    <li><a href="#double-taxation">The Double Taxation Structure of Stablecoin Wages</a></li>
+                    <li><a href="#1099-da">The 1099-DA Framework and the Illusion of Enforcement</a></li>
+                    <li><a href="#intermediary">The Intermediary Ecosystem: A Hidden Tax on Adoption</a></li>
+                    <li><a href="#legislative-gap">The Legislative Gap and Partial Proposals</a></li>
+                    <li><a href="#summary">Summary: The Architecture of Hidden Cost</a></li>
+                </ol>
+            </nav>
+
+            <div class="paper-body">
+
+                <h2 id="foundational-mismatch">The Foundational Mismatch</h2>
+                <p>The GENIUS Act constructs a legal and regulatory framework for stablecoins as payment instruments; instruments designed to function like dollars in consumer transactions. The Internal Revenue Service, operating under authority established by Notice 2014-21 and extended by the 2024 digital asset regulations, classifies stablecoins as property. These two frameworks are in direct and unresolved conflict.</p>
+                <p>A payment instrument that functions like a dollar but is taxed like a share of stock creates a compliance obligation for every transaction that no participant in the traditional dollar payment system faces. When a consumer pays for groceries with a debit card, there is no taxable event. When the same consumer pays for groceries with USDC, the IRS requires them to calculate the gain or loss on the disposal of that USDC; the difference between the cost basis at acquisition and the fair market value at the moment of payment. The gain may be $0.002. It is still legally required to be reported. There is no de minimis exemption for stablecoin transactions under current law.</p>
+                <p>GENIUS creates the payment architecture. The IRS creates the compliance burden. Neither framework addresses the other. The consumer is caught between them.</p>
+
+                <h2 id="per-transaction">The Per-Transaction Taxable Event Problem</h2>
+                <p>The property classification means that every stablecoin disposal is a taxable event. The IRS definition of disposal is broad: selling stablecoins for fiat currency, exchanging one stablecoin for another, swapping stablecoins for any other cryptocurrency, and using stablecoins to pay for goods or services. Each of these events requires the taxpayer to determine the cost basis of the disposed stablecoins, calculate the gain or loss, classify it as short-term or long-term depending on holding period, and report it on Form 8949.</p>
+                <p>For a consumer whose primary transaction medium is a stablecoin, this means that every daily transaction; coffee, transportation, rent, utilities, groceries, is a taxable event requiring individual cost-basis tracking and gain/loss calculation. The gains on individual transactions are typically de minimis in dollar terms because stablecoins are pegged to one dollar. A $4.50 coffee paid with 4.50 USDC acquired at $1.0000 and disposed at $1.0001 produces a $0.00045 capital gain. Under current law, this must be reported.</p>
+                <p>There is no de minimis exemption for stablecoin transactions in U.S. tax law as of 2025. This is not an oversight that will be corrected by regulatory guidance; it is a statutory gap requiring legislative action. For comparison, Internal Revenue Code Section 988 provides a $200 de minimis exemption for personal foreign currency transactions, recognising that requiring taxpayers to track gains on small currency conversions is administratively unworkable. No equivalent provision applies to stablecoins. The IRS treats a USDT-to-USDC swap; two dollar-pegged instruments exchanging at effectively identical values, as a fully taxable disposal event, requiring cost-basis tracking and gain/loss reporting for both legs.</p>
+                <p>The compliance obligation does not scale proportionally with the transaction value. It scales with transaction frequency. A consumer making 10 stablecoin transactions per day generates 3,650 potentially reportable events per year, each requiring cost-basis identification under the per-wallet tracking rules that became mandatory on 1 January 2025 (Revenue Procedure 2024-28). A consumer making 50 transactions per day; well within the range of normal payment card usage, generates 18,250 reportable events annually. The administrative burden of accurate per-transaction cost-basis tracking at this frequency is not manageable by individuals without automated software tools, ongoing subscription costs, and some baseline level of tax literacy that cannot be assumed across the population the architecture claims to serve.</p>
+
+                <h2 id="reward-tokens">The Reward Token Layer: An Unresolved Valuation Problem</h2>
+                <p>Working Paper 1 established that the reward token layer is where purchasing power erosion actually enters the stablecoin architecture; issuers over-incentivise adoption by distributing reward tokens whose value they control unilaterally. This paper adds the tax dimension: reward tokens received by consumers are taxable as ordinary income at fair market value at the time of receipt.</p>
+                <p>The valuation problem is immediate. Reward tokens issued by stablecoin platforms are not publicly traded instruments with observable market prices. They are issuer-defined credits redeemable for platform-specific benefits, bill discounts, merchant rewards, access privileges. The IRS requires that ordinary income be recognised at fair market value. For a liquid, publicly traded asset, fair market value is observable. For an illiquid, non-traded reward token whose redemption value is set by the issuer and whose secondary market does not exist, fair market value is a legal fiction requiring individual taxpayer determination with no authoritative guidance.</p>
+                <p>There is no IRS ruling, revenue procedure, or notice that addresses the tax treatment of non-traded issuer-controlled reward tokens specifically. The general principles applying to property received as compensation; fair market value at receipt, ordinary income treatment, apply facially. But if the issuer sets the reward token's notional value at, say, 10 cents per unit and distributes 1,000 units as adoption incentive, the IRS has no established methodology for verifying, challenging, or standardising that valuation. The taxpayer is required to report ordinary income on an asset whose value is determined by the party with the greatest interest in minimising that value for competitive purposes and maximising it for the purposes of appearing generous.</p>
+                <p>The dual-nature problem compounds this. A consumer who receives 1,000 reward tokens as ordinary income at $0.10 per token reports $100 of ordinary income and establishes a $100 cost basis. When those tokens are redeemed for $80 in bill discounts, the consumer has realised a $20 capital loss on top of the $100 ordinary income already recognised. Two separate tax events arise from a single adoption incentive. Neither is practically trackable by the consumer who received the tokens without professional assistance.</p>
+                <p>This architecture systematically generates tax obligations at the point of maximum consumer vulnerability; the adoption phase when consumers have been over-incentivised to convert dollars to stablecoins and reward tokens, before the network effects that would justify the switch have materialised, and before the compliance infrastructure exists to manage the resulting obligations.</p>
+
+                <h2 id="double-taxation">The Double Taxation Structure of Stablecoin Wages</h2>
+                <p>Working Paper 3 identified the labour vector through which stablecoin compensation reaches employees: first through gig and contractor classification, then potentially through lobbying-enabled extension to W-2 employees. The tax dimension of this pathway adds a layer the labour analysis did not fully develop.</p>
+                <p>An employee receiving wages in USDC is taxed twice on the same value. The employer reports the fair market value of the USDC at the time of payment on the W-2 as ordinary wage income; subject to income tax, FICA, and self-employment tax where applicable. The employee recognises ordinary income at that value. That value becomes the cost basis of the USDC received. When the employee spends that USDC; on groceries, rent, transportation, they recognise a second event: the capital gain or loss between the cost basis established at receipt and the fair market value at disposal.</p>
+                <p>In ordinary stablecoin conditions, the gain or loss on disposal is near-zero; the peg holds at approximately $1.00. But the compliance event is real regardless of the magnitude of the gain. The employee who receives wages in USDC must report the W-2 income, track the cost basis of every USDC unit received, and report a capital gain or loss on every subsequent disposal. For a worker paid weekly in stablecoins who uses them for daily purchases, this creates 52 ordinary income events at payroll and potentially thousands of capital events during the year. The compliance complexity of stablecoin wage payment is not materially less than if the employee had been paid in a volatile cryptocurrency; the peg reduces the magnitude of gains and losses but not the number of reportable events.</p>
+
+                <h2 id="1099-da">The 1099-DA Framework and the Illusion of Enforcement</h2>
+                <p>Beginning 1 January 2025, brokers; including custodial stablecoin platforms, digital asset exchanges, and hosted wallet providers, are required to report gross proceeds from stablecoin transactions on Form 1099-DA. Cost basis reporting was added for transactions beginning 1 January 2026. The IRS has framed this as a compliance improvement, providing taxpayers with the information they need to file accurately.</p>
+                <p>The 1099-DA framework addresses the institutional transaction layer; custodial platforms where brokers can be defined and identified. It does not address direct peer-to-peer stablecoin transactions, DeFi protocol interactions, or smart contract-mediated payments. As the architecture scales and consumers use stablecoins for daily purchases at merchants accepting on-chain payments directly, a growing share of transactions occurs outside the custodial framework where 1099-DA reporting applies.</p>
+                <p>The IRS estimated that 75 percent of cryptocurrency holders on centralised exchanges were non-compliant with reporting requirements in 2023; before the 1099-DA framework existed, before GENIUS formalised stablecoin adoption, and at adoption levels a fraction of those projected for 2030. Mass non-compliance at current adoption scales will not be resolved by 1099-DA reporting for custodial transactions alone. It will escalate proportionally with adoption, producing a growing population of technically non-compliant stablecoin users who are unaware of their obligations, unable to meet them practically, or unable to afford the compliance infrastructure required to do so.</p>
+                <p>The enforcement asymmetry mirrors the broader power asymmetry of the architecture. Stablecoin issuers, with compliance officers, legal teams, and direct regulatory relationships, face manageable BSA and AML reporting obligations. Individual consumers transacting daily in stablecoins face theoretically unlimited per-transaction reportable events with no institutional support, no employer withholding, and no de minimis protection. The compliance cost falls entirely on the consumer. The issuer captures the float.</p>
+
+                <h2 id="intermediary">The Intermediary Ecosystem: A Hidden Tax on Adoption</h2>
+                <p>The compliance burden described above is not absorbed by consumers silently. It is partially transferred to a new layer of intermediaries; crypto tax software providers, digital asset accountants, and compliance platforms, whose existence represents a structural cost of the stablecoin payment architecture that does not exist in the traditional dollar payment system.</p>
+                <p>A consumer using a bank account for all transactions faces no per-transaction tax compliance obligation beyond the annual reporting of interest earned. A consumer using stablecoins as a primary payment medium faces per-transaction capital gain/loss tracking, ordinary income recognition on reward tokens, cost-basis identification under the per-wallet methodology, potential quarterly estimated tax payments on accumulated micro-gains, and annual filing complexity that requires either significant personal time or paid professional assistance.</p>
+                <p>The market for crypto tax compliance software is growing at rates consistent with the adoption trajectory described in Working Paper 8. Subscriptions to platforms like Koinly, CoinTracker, TurboTax Crypto, and comparable tools represent a direct tax on stablecoin adoption paid not to the government but to the intermediary layer that exists solely because the tax framework and the payment framework are not aligned.</p>
+                <p>This cost is invisible in standard analyses of stablecoin adoption economics. The reward token benefits offered during the adoption phase are visible. The compliance costs they generate are not. A consumer who receives $100 in reward token value over the course of a year and pays $120 for the crypto tax software required to report the associated ordinary income events has experienced a net negative outcome from the adoption incentive that cannot be recovered.</p>
+                <p>The intermediary ecosystem is not neutral. It is a rent on the gap between what the payment architecture requires and what the tax architecture permits, paid by consumers and captured by compliance intermediaries; a third category of private beneficiary of the stablecoin legislative framework, alongside issuers and large institutional banks.</p>
+
+                <h2 id="legislative-gap">The Legislative Gap and Partial Proposals</h2>
+                <p>The tax treatment mismatch is not unrecognised. Senator Cynthia Lummis has introduced legislation proposing to leave staking and reward income untaxed until the underlying asset is sold, deferring recognition until the taxpayer has realised a liquid gain. House proposals have sought a five-year deferral window. Industry advocates have called for a de minimis exemption modelled on the IRC Section 988 foreign currency rule.</p>
+                <p>None of these proposals has been enacted as of May 2026. The GENIUS Act addressed reserve requirements, issuer licensing, BSA compliance, and consumer protection; it did not address tax treatment. CLARITY addressed market structure and SEC/CFTC jurisdiction; it did not address tax treatment. The legislative packages that constructed the entire stablecoin regulatory framework were passed without resolving the foundational tax architecture question that determines whether the framework is practically functional for the consumers it claims to protect.</p>
+                <p>The political economy of this gap is informative. Resolving the tax treatment in favour of consumers; de minimis exemption, currency treatment for dollar-pegged stablecoins, deferred recognition of reward tokens, reduces IRS revenue and requires Treasury cooperation. The same political spending infrastructure that produced GENIUS and CLARITY has not mobilised with equivalent intensity around tax reform, because the current tax treatment does not harm issuers. It harms consumers. Issuers face no per-transaction reportable events. They have every incentive to advocate for the payment architecture and no commensurate incentive to advocate for the tax reform that would make the payment architecture practically usable by the consumers they are acquiring.</p>
+
+                <h2 id="summary">Summary: The Architecture of Hidden Cost</h2>
+                <p>The stablecoin tax framework as it currently operates produces the following structure:</p>
+                <p>Every consumer stablecoin transaction is a taxable event with no de minimis threshold. Reward tokens are ordinary income at an issuer-determined value with no IRS valuation guidance. Stablecoin wages are taxed twice; as ordinary income at receipt and as capital gain/loss on every subsequent disposal. Compliance obligations scale with transaction frequency, not transaction value. Mass non-compliance is structurally embedded at current adoption levels and will worsen proportionally with adoption growth. An intermediary compliance ecosystem captures rent on the gap between payment and tax frameworks, payable by consumers. The legislative packages that constructed the payment architecture did not address the tax architecture, because the mismatch harms consumers but not issuers.</p>
+                <p>The GENIUS Act creates a payment system designed to replace dollars in everyday consumer transactions. The IRS tax framework makes every transaction in that payment system more administratively burdensome than the dollar transactions it replaces. The combined effect is a hidden tax on adoption; borne by consumers, invisible in the legislative record, unaddressed by the framework that created it, and growing in proportion to the success of the architecture the framework was designed to enable.</p>
+
+                <div class="paper-footnote">
+                    <p>This is the ninth and final working paper in the series. The complete Dollar Displacement Thesis, comprising Working Papers 1 through 9, foreword by H.E. Martyn, and historical companion by D.I. Fisher, is available as a single document.</p>
+                </div>
+
+                <div class="series-complete">
+                    <p><strong>Series complete.</strong> The Dollar Displacement Thesis spans nine working papers examining the GENIUS and CLARITY Acts as the legislative architecture of a private monetary layer beneath the Federal Reserve system. Download the complete series including foreword and historical companion.</p>
+                </div>
+
+            </div>
+
+            <nav class="paper-series-nav" aria-label="Series navigation">
+                <h3>THE DOLLAR DISPLACEMENT THESIS</h3>
+                <div class="paper-series-links">
+                    <a href="thornton-paper-01.html" class="paper-series-link"><span class="num">No.&nbsp;1</span>What GENIUS and CLARITY Actually Build</a>
+                    <a href="thornton-paper-02.html" class="paper-series-link"><span class="num">No.&nbsp;2</span>Repercussions of the Dollar Displacement Architecture</a>
+                    <a href="thornton-paper-03.html" class="paper-series-link"><span class="num">No.&nbsp;3</span>The Labor Vector: Gig Classification, Wage Law, and the Corporate Pathway to Stablecoin Compensation</a>
+                    <a href="thornton-paper-04.html" class="paper-series-link"><span class="num">No.&nbsp;4</span>The Rate Corridor Under Pressure: IOR, ON RRP, and the GENIUS Act</a>
+                    <a href="thornton-paper-05.html" class="paper-series-link"><span class="num">No.&nbsp;5</span>Two Failures from One Decision: Credit Creation Collapse and the CBDC Foreclosure</a>
+                    <a href="thornton-paper-06.html" class="paper-series-link"><span class="num">No.&nbsp;6</span>The Hollow Bank: Regulatory Arbitrage, Competitive Displacement, and the Shrinking Insured System</a>
+                    <a href="thornton-paper-07.html" class="paper-series-link"><span class="num">No.&nbsp;7</span>The Permanent Record: Surveillance, Censorship, and the Architecture of Control in the Stablecoin Payment Layer</a>
+                    <a href="thornton-paper-08.html" class="paper-series-link"><span class="num">No.&nbsp;8</span>The Accelerated Contradiction: Stablecoin Dollarisation and the Compounded Triffin Dilemma</a>
+                    <span class="paper-series-link current"><span class="num">No.&nbsp;9</span>The Invisible Tax: Property Treatment, Compliance Burden, and the Hidden Cost Layer of Stablecoin Adoption</span>
+                </div>
+                <div class="paper-series-full">
+                    <a href="papers/thornton-full-report.pdf" download>Complete Series PDF &#8595;</a>
+                </div>
+            </nav>
+
+            <div class="paper-foot">
+                <a href="thornton.html">&#8592; Return to Thomas H. Thornton</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span>The Cantillon Institute &middot; Est. 2021</span>
+        <span>cantillon.institute</span>
+    </footer>
+</body>
+</html>
