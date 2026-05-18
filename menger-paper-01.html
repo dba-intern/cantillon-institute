@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Valuation Problem &mdash; The Cantillon Institute</title>
+    <meta name="description" content="Tokenized real-world assets exceeded $15 billion in December 2024 with BCG projecting $16 trillion by 2030. No industry-wide loss database covers tokenized asset classes. Smart contract vulnerability, oracle manipulation, custodial key compromise, and cross-chain bridge failure have no established loss distribution equivalents in the actuarial literature. The aggregate underwriting exposure is already present in policy books of firms that have not recognised it. Working Paper No. 1, A.K. Menger, Insurance and the Digital Asset Gap.">
+    <link rel="canonical" href="https://cantillon.institute/menger-paper-01.html">
+    <meta property="og:title" content="The Valuation Problem &mdash; The Cantillon Institute">
+    <meta property="og:description" content="The insurance industry is accumulating tokenized asset exposure it cannot price. Working Paper No. 1, A.K. Menger, Insurance and the Digital Asset Gap.">
+    <meta property="og:url" content="https://cantillon.institute/menger-paper-01.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cantillon.institute/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "The Valuation Problem: Insurance Pricing and the Tokenized Asset Gap",
+        "alternativeHeadline": "Working Paper No. 1, Insurance and the Digital Asset Gap",
+        "author": {"@type": "Person", "name": "Adrian K. Menger", "affiliation": {"@type": "Organization", "name": "The Cantillon Institute"}},
+        "publisher": {"@type": "Organization", "name": "The Cantillon Institute", "url": "https://cantillon.institute"},
+        "datePublished": "2026",
+        "url": "https://cantillon.institute/menger-paper-01.html",
+        "sameAs": "https://cantillon.institute/papers/menger-paper-01.pdf",
+        "about": ["tokenized real-world asset insurance", "smart contract risk actuarial", "oracle manipulation insurance", "crypto bridge exploit reinsurance", "RWA underwriting gap", "digital asset loss taxonomy", "BCG tokenized asset projection"],
+        "description": "The global insurance and reinsurance industry is accumulating tokenized asset exposure it cannot accurately price. This paper identifies three structural dimensions of the valuation problem and proposes a minimum-framework approach to actuarial standards.",
+        "isPartOf": {"@type": "PublicationVolume", "name": "Insurance and the Digital Asset Gap", "publisher": {"@type": "Organization", "name": "The Cantillon Institute"}}
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-page { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+        .paper-header { padding: 4rem 0 3rem; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .paper-series-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; font-weight: 700; text-transform: uppercase; }
+        .paper-number { font-size: 11px; letter-spacing: 0.1em; color: #4a4845; text-transform: uppercase; }
+        .paper-header h1 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; color: #e8e4da; margin-bottom: 0.5rem; }
+        .paper-header p.subtitle { font-size: 16px; color: #6a6860; font-style: italic; margin-bottom: 1.5rem; }
+        .paper-byline { font-size: 14px; color: #5a5855; margin-bottom: 2rem; letter-spacing: 0.04em; }
+        .paper-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .paper-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 13px; font-weight: 700; color: #0b0c0d; background: #378ADD; border-radius: 4px; padding: 0.55rem 1rem; letter-spacing: 0.04em; transition: opacity 0.2s ease; }
+        .paper-download:hover { opacity: 0.85; }
+        .paper-back-link { font-size: 13px; color: #378ADD; letter-spacing: 0.06em; border-bottom: 0.5px solid #378ADD; padding-bottom: 1px; }
+        .paper-abstract-block { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-abstract-block p.label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; }
+        .paper-abstract-block blockquote { font-size: 16px; color: #7a7870; line-height: 1.85; font-style: italic; border-left: 2px solid #1d3a52; padding-left: 1.25rem; margin: 0 0 0.75rem 0; }
+        .paper-abstract-block p.keywords { font-size: 13px; color: #4a4845; margin: 0; }
+        .paper-nav { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-nav p { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; }
+        .paper-nav ol { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+        .paper-nav a { font-size: 14px; color: #6a6860; transition: color 0.2s ease; line-height: 1.5; }
+        .paper-nav a:hover { color: #e8e4da; }
+        .paper-body { padding: 3.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-body h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; color: #e8e4da; margin-top: 3rem; margin-bottom: 1.25rem; scroll-margin-top: 5rem; }
+        .paper-body h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; color: #c8c4bc; margin-top: 2.25rem; margin-bottom: 0.9rem; scroll-margin-top: 5rem; }
+        .paper-body h2:first-child { margin-top: 0; }
+        .paper-body p { font-size: 17px; color: #a8a49a; line-height: 1.9; margin-bottom: 1.5rem; max-width: 660px; }
+        .paper-body p:last-child { margin-bottom: 0; }
+        .paper-body em { font-style: italic; color: #c0bdb5; }
+        .paper-data-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 14px; }
+        .paper-data-table th { text-align: left; padding: 0.6rem 1rem; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #378ADD; border-bottom: 0.5px solid #1d3a52; font-weight: 700; }
+        .paper-data-table td { padding: 0.6rem 1rem; color: #7a7870; border-bottom: 0.5px solid #1a1c1e; line-height: 1.5; }
+        .paper-data-table tr:last-child td { border-bottom: none; }
+        .table-note { font-size: 13px; color: #4a4845; font-style: italic; margin-top: 0.5rem; line-height: 1.6; max-width: 660px; }
+        .paper-references { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-references h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.06em; color: #e8e4da; margin-bottom: 1.5rem; text-transform: uppercase; }
+        .paper-references ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .paper-references li { font-size: 14px; color: #6a6860; line-height: 1.75; padding-left: 1.5rem; text-indent: -1.5rem; }
+        .paper-series-nav { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-nav h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.04em; color: #e8e4da; margin-bottom: 1.25rem; }
+        .paper-series-links { display: flex; flex-direction: column; gap: 0.5rem; }
+        .paper-series-link { display: flex; align-items: baseline; gap: 1rem; font-size: 14px; color: #5a5855; text-decoration: none; }
+        .paper-series-link .num { font-size: 11px; color: #378ADD; font-weight: 700; letter-spacing: 0.1em; flex-shrink: 0; min-width: 32px; }
+        .paper-series-link.current { color: #e8e4da; }
+        .paper-foot { padding: 2.5rem 0; }
+        .paper-foot a { font-size: 13px; color: #378ADD; letter-spacing: 0.08em; border-bottom: 0.5px solid #378ADD; padding-bottom: 2px; }
+        @media (max-width: 640px) { .paper-page { padding: 0 1.25rem; } .paper-header { padding: 2.5rem 0 2rem; } .paper-body p { font-size: 16px; } .paper-body h2 { font-size: 20px; } .paper-body h3 { font-size: 16px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="/" class="nav-logo">The Cantillon Institute</a>
+            <div class="nav-links">
+                <a href="papers.html">Papers</a>
+                <a href="briefs.html">Briefs</a>
+                <a href="/#fellows">Fellows</a>
+                <a href="about.html">About</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="paper-page">
+            <div class="paper-header">
+                <div class="paper-series-meta">
+                    <span class="paper-series-label">Insurance and the Digital Asset Gap</span>
+                    <span class="paper-number">Working Paper No. 1 &middot; A.K. Menger &middot; 2026</span>
+                </div>
+                <h1>The Valuation Problem</h1>
+                <p class="subtitle">Insurance pricing has not caught up to tokenized asset classes. This paper identifies the liability exposure and maps the framework required to close it.</p>
+                <p class="paper-byline">Adrian K. Menger &middot; Fellow, The Cantillon Institute &middot; Zurich</p>
+                <div class="paper-actions">
+                    <a href="papers/menger-paper-01.pdf" class="paper-download" download>PDF &#8595; Download</a>
+                    <a href="menger.html" class="paper-back-link">A.K. Menger at The Cantillon Institute &#8594;</a>
+                </div>
+            </div>
+
+            <div class="paper-abstract-block">
+                <p class="label">Abstract</p>
+                <blockquote>The global insurance and reinsurance industry is accumulating tokenized asset exposure it cannot accurately price. Tokenized real-world assets held across institutional blockchain platforms exceeded $15 billion in total value as of December 2024, with Boston Consulting Group projecting market growth to $16 trillion by 2030. Against this trajectory, the actuarial infrastructure required to underwrite these instruments credibly does not exist. No industry-wide loss database covers tokenized asset classes with actuarially meaningful depth. Policy language drafted for traditional property, financial institution, and cargo coverage is being applied without material amendment to instruments with fundamentally different risk architectures. The loss vectors specific to tokenized assets, including smart contract vulnerability, oracle price manipulation, custodial key compromise, and cross-chain bridge failure, have no established loss distribution equivalents in the actuarial literature. This paper identifies three structural dimensions of the valuation problem: the temporal mismatch between the value of an asset at underwriting and its value at time of loss; the legal ambiguity separating a tokenized instrument from its underlying asset; and the absence of a standardised loss taxonomy for digital asset risk events. The aggregate underwriting exposure arising from this gap is not prospective. It is already present in the policy books of firms that have not recognised it.</blockquote>
+                <p class="keywords"><strong>Keywords:</strong> tokenized assets, insurance pricing, actuarial modelling, real-world asset tokenization, smart contract risk, liability exposure, reinsurance</p>
+            </div>
+
+            <nav class="paper-nav" aria-label="Paper sections">
+                <p>Contents</p>
+                <ol>
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#what-actuarial">2. What Actuarial Pricing Actually Requires</a></li>
+                    <li><a href="#layered-valuation">3. The Layered Valuation Problem</a></li>
+                    <li><a href="#current-coverage">4. What Current Policies Actually Cover</a></li>
+                    <li><a href="#liability-exposure">5. The Liability Exposure Already on the Books</a></li>
+                    <li><a href="#framework">6. A Framework for Closure</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <div class="paper-body">
+
+                <h2 id="introduction">1. Introduction</h2>
+                <p>The gap between what the insurance industry is covering and what it is capable of pricing is not new. It widened materially when cyber risk emerged as an insurable class in the late 1990s; the industry spent a decade writing cyber coverage on terms designed for property and casualty, absorbing losses it had no framework to anticipate, before a credible pricing infrastructure began to develop. The tokenized asset problem follows the same structural pattern, at a larger scale and with faster underlying growth.</p>
+                <p>Tokenized real-world assets, meaning blockchain-registered representations of physical or financial assets including real estate, private credit instruments, infrastructure equity, commodities, and Treasury securities, are not a speculative category. As of December 2024, on-chain tokenized real-world assets excluding stablecoins exceeded $15 billion in total value, a figure that represents organic institutional adoption rather than retail speculation (RWA.xyz, 2025). The growth rate from January 2023 to December 2024 was approximately 640 percent. Boston Consulting Group's projection of $16 trillion in tokenized asset value by 2030 implies a compound annual growth rate of approximately 66 percent from 2024 levels (Amendola &amp; Schneider, 2022).</p>
+                <p>Against this, the insurance industry's preparation is close to absent. There is no standardised insurance product for tokenized asset risk. There is no industry-agreed taxonomy of digital asset loss events. There is no actuarial loss database with the historical depth required to construct credible loss distributions. What exists is a patchwork of cyber coverage, crime coverage, and professional liability products, each written for different risk architectures, being applied at discretion by underwriters who do not share a common framework for what they are actually covering.</p>
+                <p>This paper does not characterise that situation as a scandal. It characterises it as a pricing problem with a calculable cost; and the cost is already accumulating.</p>
+
+                <h2 id="what-actuarial">2. What Actuarial Pricing Actually Requires</h2>
+                <p>Sound actuarial pricing requires three foundational inputs: a defined loss taxonomy, a credible historical loss database with sufficient depth to estimate loss distributions, and a stable relationship between the insured value at underwriting and the recoverable value at loss. Tokenized assets fail, with varying degrees of severity, on all three.</p>
+
+                <h3>Loss Taxonomy</h3>
+                <p>Traditional property insurance pricing is built on a loss taxonomy developed over centuries. Fire, flood, windstorm, earthquake, theft; each peril has a defined trigger, a measurable frequency, and a severity distribution calibrated from loss experience spanning multiple market cycles. The correlation structure between perils is understood. Reinsurance treaties can be priced accordingly.</p>
+                <p>The loss events specific to tokenized assets do not map onto this taxonomy. Smart contract vulnerabilities are not analogous to any recognised property or casualty peril. A vulnerability in a smart contract governing a tokenized real estate position can result in total loss of the digital position without any change to the underlying physical asset; the legal relationship between those two loss outcomes is untested in most jurisdictions. Oracle manipulation, where an external data feed supplying price information to a smart contract is compromised or falsified, can trigger automated settlement at values that bear no relationship to the underlying asset. Cross-chain bridge failure, the loss vector responsible for the largest single theft events in the digital asset space, constitutes a systemic exposure with no traditional equivalent: a single protocol failure can produce correlated losses across thousands of unrelated positions simultaneously.</p>
+                <p>None of these loss types appear in standard insurance loss taxonomies. Without taxonomy, there is no pricing. Without pricing, the policy is a contingent liability without an adequate reserve.</p>
+
+                <h3>Loss History</h3>
+                <p>The Chartered Insurance Institute's guidance on minimum data requirements for credible loss distribution modelling specifies at least ten years of loss history at adequate exposure volume to permit stable frequency and severity estimates (CII, 2019). The broader reinsurance convention, reflected in Swiss Re's catastrophe modelling standards, requires minimum return-period validation against at least two major loss events within the model's calibration period (Swiss Re Institute, 2023).</p>
+                <p>Tokenized real-world assets as an asset class have less than five years of meaningful market history at institutional scale. The digital asset space more broadly has produced significant loss events; Chainalysis documented $3.8 billion in cryptocurrency hack losses in 2022 alone (Chainalysis, 2023). These events occurred in a speculative, largely unregulated market with custody and governance standards materially below what institutional tokenized asset platforms are beginning to implement.</p>
+
+                <table class="paper-data-table">
+                    <thead>
+                        <tr>
+                            <th>Loss Event</th>
+                            <th>Date</th>
+                            <th>Documented Loss</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Ronin Network bridge compromise</td><td>March 2022</td><td>$625 million</td></tr>
+                        <tr><td>Wormhole bridge exploit</td><td>February 2022</td><td>$320 million</td></tr>
+                        <tr><td>Nomad bridge exploit</td><td>August 2022</td><td>$190 million</td></tr>
+                        <tr><td>Total documented 2022 hack losses</td><td>Full year</td><td>$3.8 billion</td></tr>
+                    </tbody>
+                </table>
+                <p class="table-note">Source: Chainalysis, 2023. Note: these events occurred in markets with governance and custody standards below current institutional-grade tokenisation platforms. Direct actuarial application to institutional RWA books requires material adjustment; the proxy data is directionally informative, not calibration-ready.</p>
+
+                <p>The loss history is insufficient for actuarial calibration on two counts: it is too short, and the proxy data does not match the institutional risk environment of the market now being insured. Using 2022 DeFi hack data to price a 2026 tokenized Treasury fund is an error of category, not merely of calibration.</p>
+
+                <h3>Valuation Stability</h3>
+                <p>Tokenized assets can reprice continuously, in real time, based on factors that include but are not limited to the value of the underlying asset. A tokenized position in a real estate fund may carry an insured value at underwriting that diverges from both the underlying property value and the secondary market price of the token at time of loss. In volatile market conditions, those three values can diverge by 40 percent or more within a single trading session. No standard policy language addresses this three-way divergence.</p>
+
+                <h2 id="layered-valuation">3. The Layered Valuation Problem</h2>
+                <p>The valuation problem has three distinct layers, each creating a separate failure mode in the insurance relationship.</p>
+
+                <h3>Layer One: Temporal Valuation Mismatch</h3>
+                <p>Tokenized real estate positions can be priced at a discount or premium to net asset value based on liquidity conditions in the secondary token market. A fund with $100 million in underlying real estate exposure may have a token market capitalisation of $73 million in a period of digital asset market stress; the same fund may trade at $118 million under conditions of high demand. If a loss event occurs during the discount period, the insured's economic loss is the token value, not the NAV. If the policy was written on NAV and the settlement is on NAV, the insurer has overpaid by a material amount. The temporal mismatch is not a technical detail; it is a gap that will produce contested settlements at scale.</p>
+
+                <h3>Layer Two: Legal Identity of the Token</h3>
+                <p>The relationship between a tokenized instrument and its underlying asset is not legally settled in any major jurisdiction. In the event of a loss affecting the digital layer, does the holder of the tokenized instrument retain full legal claim to the underlying asset? In the event of a loss affecting the underlying asset, does the tokenized instrument holder hold a claim equivalent to that of a traditional instrument holder? The answer in both cases is: it depends. The dependence is on jurisdiction, on the structure of the tokenization platform, on the terms of the custodial arrangement, and on the specific nature of the loss event. The Lloyd's Market Association published guidance in 2022 acknowledging the unresolved legal status of tokenized assets as a material underwriting consideration (LMA, 2022). The guidance documented the problem. It did not resolve it.</p>
+
+                <h3>Layer Three: Smart Contract Risk as a Distinct Peril</h3>
+                <p>In a tokenized asset structure, the smart contract is not merely a record-keeping mechanism; it is the instrument of ownership, transfer, and settlement. A flaw in the contract can create total loss of the digital position irrespective of what occurs at the underlying asset level. Certik documented over 1,700 significant on-chain security incidents in 2023, with total identified losses across all categories exceeding $1.8 billion for the calendar year (Certik, 2024). Standard cyber insurance does not cover smart contract failure as a defined peril. Firms that have attempted to extend coverage have done so through manuscript endorsements carrying sub-limits that do not reflect the actual size of tokenized positions being covered.</p>
+
+                <h2 id="current-coverage">4. What Current Policies Actually Cover</h2>
+                <p>The coverage available for tokenized asset risk today falls into four categories: cyber insurance, crime insurance, directors and officers liability, and professional indemnity. Each covers a different subset of the risk. None covers the full exposure.</p>
+                <p>Cyber insurance, a market generating approximately $15 billion in gross written premium globally as of 2024, was designed to cover losses arising from the compromise of information systems (Munich Re, 2025). It was not designed to cover the loss of a tokenized asset position following a smart contract exploit. The practical effect is that cyber underwriters are applying policy language drafted for traditional IT environments to tokenized asset loss events through claims-time interpretation. There is no industry consensus on whether a smart contract exploit constitutes a "computer system compromise" under standard cyber policy language.</p>
+                <p>Financial institution crime coverage, including the Bankers Blanket Bond and its successors, does not cover loss arising from protocol-level failures in external blockchain infrastructure. Several London Market underwriters have extended crime coverage to include "virtual asset theft" through specific endorsements; these carry sub-limits that do not reflect actual exposure size and contain carve-outs for losses arising from "coding errors" or "protocol vulnerabilities" that would exclude the majority of documented smart contract loss events.</p>
+                <p>Directors and officers liability and professional indemnity coverage address liability arising from decisions made in the governance of the tokenized asset platform, not losses to the underlying asset position itself. The aggregate effect is coverage fragmentation: multiple policy types apply partial coverage to different aspects of the same loss event, with contested overlaps and definitive gaps at the boundaries.</p>
+
+                <h2 id="liability-exposure">5. The Liability Exposure Already on the Books</h2>
+                <p>As of December 2024, an estimated $15 billion in tokenized real-world assets sat on major institutional blockchain platforms, with coverage arrangements that range from partial to essentially absent (RWA.xyz, 2025).</p>
+
+                <table class="paper-data-table">
+                    <thead>
+                        <tr>
+                            <th>Platform / Instrument</th>
+                            <th>Approximate AUM, December 2024</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tokenized U.S. Treasury instruments (all platforms)</td><td>$3.5 billion</td></tr>
+                        <tr><td>BlackRock BUIDL Fund</td><td>$530 million</td></tr>
+                        <tr><td>Franklin Templeton BENJI</td><td>$360 million</td></tr>
+                        <tr><td>Ondo Finance USDY/OUSG (combined)</td><td>$590 million</td></tr>
+                        <tr><td>Private credit tokenization (Securitize, Hamilton Lane, KKR combined)</td><td>$1.1 billion</td></tr>
+                    </tbody>
+                </table>
+                <p class="table-note">Source: RWA.xyz, December 2024. Platform concentrations represent single-event loss accumulation risk that has not been modelled as a catastrophe exposure class.</p>
+
+                <p>The question of whether that coverage will respond on the terms the insured intends has not been tested in litigation at scale. At $15 billion in current exposure growing at rates that imply $100 billion within three to four years, the probability of such an event occurring before the industry has established coherent coverage frameworks is not small.</p>
+                <p>The reinsurance dimension compounds the problem. Primary insurers carrying tokenized asset exposure have ceded portions of that exposure to reinsurers who, in the majority of cases, are pricing the reinsurance based on the same inadequate actuarial foundations as the primary insurer. The cedant's uncertainty is propagated through the treaty structure.</p>
+
+                <h2 id="framework">6. A Framework for Closure</h2>
+                <p>Establishing a credible pricing framework for tokenized asset risk requires action at four levels: taxonomy, data infrastructure, policy language, and regulatory classification.</p>
+                <p>The first requirement is an industry-agreed taxonomy of tokenized asset loss events distinguishing at minimum between: custody layer failure; smart contract layer failure covering exploit, logic error, and protocol upgrade failure; oracle layer failure covering price manipulation and feed disruption; bridge and interoperability failure; and governance layer failure covering unauthorised smart contract modification through governance mechanism exploitation. Each is a distinct peril with a distinct trigger structure and a distinct probable severity distribution.</p>
+                <p>The second requirement is a shared loss database at the industry level. Cyber insurance developed CyberAcuView as a mechanism for sharing anonymised loss data. A functionally equivalent mechanism for tokenized asset losses is absent. The data required exists; on-chain transactions are public by design, and loss events are documented in near real time by blockchain analytics firms including Chainalysis, Elliptic, and TRM Labs. Swiss Re and Munich Re, the two largest reinsurers globally, have the analytical infrastructure to lead this effort. Neither has moved beyond preliminary research publication.</p>
+                <p>Standard-form policy language for tokenized asset coverage should be treated as an immediate project. The minimum required elements are: a defined insured event trigger distinguishing between the digital layer and the underlying asset layer; a defined valuation mechanism specifying which of the three value references applies at settlement; and a defined exclusion structure explicit about what remains uninsured rather than leaving exclusions to claims-time interpretation.</p>
+                <p>The Prudential Regulation Authority, the European Insurance and Occupational Pensions Authority, and the Federal Insurance Office have not yet classified tokenized asset exposure as a distinct risk category requiring specific capital treatment. Under Solvency II, tokenized asset exposures are currently aggregated with the broader asset classes they represent without adjustment for the additional risk layers described in this paper. That classification produces capital charges that understate the actual risk. Regulators who receive the loss event before they receive the taxonomy will set the taxonomy on enforcement terms; that is a structurally worse outcome for the industry than establishing it on analytical terms in advance.</p>
+
+                <h2 id="conclusion">Conclusion</h2>
+                <p>The insurance industry has a documented history of under-preparing for emerging asset class risk. Asbestos liability cost the global industry an estimated $70 billion or more in total incurred losses and required fifteen years of adverse development (Swiss Re, 2002). Cyber insurance losses in the 2017 to 2020 period produced combined ratios above 100 in multiple consecutive underwriting years. The pattern is consistent: the industry systematically under-prices novel risk until the novel risk produces a loss large enough to reset the market.</p>
+                <p>The tokenized asset market is at an early stage of that cycle. The exposure is growing at 640 percent over two years. The actuarial infrastructure is absent. The policy language has not been tested. The regulatory classification has not been established. The window in which the industry can establish a credible pricing framework on its own terms, before a loss event forces the lesson at greater cost, is measurable in years rather than decades.</p>
+                <p>The cost of closing that gap on the industry's own initiative is the cost of taxonomy development, data infrastructure investment, and policy language drafting. That cost is not comparable to the cost of absorbing a systematic loss event across an inadequately priced book at the scale this market will reach. The subsequent papers in this series address each of the four closure requirements in turn.</p>
+
+            </div>
+
+            <div class="paper-references">
+                <h2>References</h2>
+                <ul>
+                    <li>Amendola, S., &amp; Schneider, M. (2022). <em>Relevance of on-chain asset tokenisation in 'crypto winter': Building the foundation of an asset management value chain</em>. Boston Consulting Group and ADDX.</li>
+                    <li>Certik. (2024). <em>Web3 security report 2023</em>. Certik Security.</li>
+                    <li>Chainalysis. (2023). <em>The Chainalysis 2023 crypto crime report</em>. Chainalysis Inc.</li>
+                    <li>Chartered Insurance Institute. (2019). <em>Actuarial data requirements and standards for general insurance</em>. CII Technical Publication.</li>
+                    <li>International Association of Insurance Supervisors. (2024). <em>Application paper on the supervision of insurer activities related to crypto-assets</em>. IAIS.</li>
+                    <li>Lloyd's Market Association. (2022). <em>Digital assets: Considerations for the Lloyd's market</em>. LMA Guidance Note.</li>
+                    <li>Munich Re. (2025). <em>Cyber insurance: Risks and trends 2024/2025</em>. Munich Re.</li>
+                    <li>RWA.xyz. (2025). <em>Real world asset tokenisation market data, December 2024</em>. RWA.xyz Analytics.</li>
+                    <li>Swiss Re. (2002). <em>Asbestos: The long and expensive tail of liability</em>. Swiss Re Sigma No. 6/2002.</li>
+                    <li>Swiss Re Institute. (2023). <em>Natural catastrophe modelling: Standards and calibration methodology</em>. Swiss Re Institute Technical Paper.</li>
+                </ul>
+            </div>
+
+            <nav class="paper-series-nav" aria-label="Series navigation">
+                <h3>INSURANCE AND THE DIGITAL ASSET GAP</h3>
+                <div class="paper-series-links">
+                    <span class="paper-series-link current"><span class="num">No.&nbsp;1</span>The Valuation Problem</span>
+                    <span class="paper-series-link" style="color:#2e2c2a;"><span class="num" style="color:#2a3a4a;">No.&nbsp;2</span>Forthcoming &middot; The Taxonomy Problem: Establishing Loss Categories for Smart Contract Risk</span>
+                </div>
+            </nav>
+            <div class="paper-foot"><a href="menger.html">&#8592; Return to Adrian K. Menger</a></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <span>The Cantillon Institute &middot; Est. 2021</span>
+        <span>cantillon.institute</span>
+    </footer>
+</body>
+</html>
