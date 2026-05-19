@@ -372,3 +372,27 @@ em { font-style: italic; }
     .briefs-format-grid { grid-template-columns: 1fr; }
     .gate-modal { padding: 1.75rem; }
 }
+
+/* ============================================
+   BRIEFS ARCHIVE & BRIEF ROW
+   ============================================ */
+.briefs-archive { padding: 3rem 0; border-top: 0.5px solid #1d1f21; }
+.briefs-list { display: flex; flex-direction: column; gap: 0; }
+.brief-row { display: grid; grid-template-columns: 140px 1fr 60px; gap: 1.5rem; align-items: start; padding: 1.75rem 0; border-bottom: 0.5px solid #1d1f21; text-decoration: none; transition: background 0.15s ease; }
+.brief-row:first-child { border-top: 0.5px solid #1d1f21; }
+.brief-row:hover .brief-title { color: #e8e4da; }
+.brief-row:hover .brief-cta { color: #5aabff; }
+.brief-row-meta { display: flex; flex-direction: column; gap: 0.4rem; padding-top: 2px; }
+.brief-date { font-size: 12px; color: #4a4845; letter-spacing: 0.04em; }
+.brief-author-tag { font-size: 11px; color: #378ADD; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.brief-row-body { display: flex; flex-direction: column; gap: 0.5rem; }
+.brief-title { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 20px; font-weight: 700; color: #c8c4bc; line-height: 1.1; letter-spacing: 0.01em; transition: color 0.15s ease; }
+.brief-summary { font-size: 14px; color: #6a6860; line-height: 1.7; }
+.brief-cta { font-size: 13px; color: #378ADD; padding-top: 4px; white-space: nowrap; transition: color 0.15s ease; }
+
+@media (max-width: 640px) {
+    .brief-row { grid-template-columns: 1fr; gap: 0.75rem; }
+    .brief-row-meta { flex-direction: row; gap: 1rem; align-items: center; }
+    .brief-cta { display: none; }
+    .brief-title { font-size: 18px; }
+}

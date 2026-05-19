@@ -180,6 +180,45 @@ Stablecoin market capitalisation grew from approximately $3 billion in 2018 to $
 
 ---
 
+## Research Briefs
+
+Research briefs are researcher-flagged digests. Each one surfaces a piece of content that a member of the Institute's research staff encountered and judged worth flagging. Written by Research Associates, Research Analysts, and Research Assistants.
+
+## The GENIUS Act's 21 Rulemakings and the Race to Define the Stablecoin Market
+URL: https://cantillon.institute/brief-2026-05-19-genius-rulemaking-tracker.html
+Date: 2026-05-19
+Author: Research Assistant
+Source: An Interactive Guide to GENIUS Implementation (https://www.paradigm.xyz/2026/04/an-interactive-guide-to-genius-implementation)
+Summary: The GENIUS Act's stablecoin framework will not be determined by what Congress wrote. It will be determined by 21 separate rulemakings from four federal agencies with different interpretive instincts and no shared enforcement mechanism for their deadline. Paradigm has built and published the first public tracker of this rulemaking landscape, revealing how fragmented the implementation process is. Agencies that move fastest and write the broadest rules will set the competitive terms for the US stablecoin market, regardless of what slower-moving counterparts decide. The risk is not inaction. The risk is incoherence across a multi-regulator system with no central arbiter.
+Topics: GENIUS Act, stablecoin regulation, rulemaking, regulatory arbitrage, OCC, NCUA, FDIC, Federal Reserve, APA
+
+## The NCUA's First GENIUS Rulemaking Creates a One-Way Investment Gate
+URL: https://cantillon.institute/brief-2026-05-19-ncua-genius-credit-union-split.html
+Date: 2026-05-19
+Author: Research Analyst
+Source: Paradigm Files Comment Letter on NCUA's GENIUS Rulemaking (https://www.paradigm.xyz/2026/04/paradigm-files-comment-letter-on-ncua-s-genius-rulemaking)
+Summary: The NCUA's first GENIUS Act rulemaking contains an asymmetry that is easy to describe and hard to justify. Federally insured credit unions may receive unlimited outside investment under the proposed framework, but may not invest in payment stablecoin issuers supervised by a different regulator. The one-way gate does not protect credit union members. It concentrates the ability to build stablecoin infrastructure in issuers operating under a single supervisory regime, and it does so without any clear statutory basis in the GENIUS Act.
+Topics: GENIUS Act, NCUA, credit unions, FICU, PPSI, stablecoin regulation, regulatory asymmetry, investment rules, change-of-control
+
+## The OCC Proposes a Yield Prohibition That Reaches Beyond the Statute
+URL: https://cantillon.institute/brief-2026-05-19-occ-genius-yield-overreach.html
+Date: 2026-05-19
+Author: Research Associate
+Source: Paradigm Files Comment Letter on the OCC's GENIUS Rulemaking (https://www.paradigm.xyz/2026/05/paradigm-files-comment-letter-on-the-occ-s-genius-rulemaking)
+Summary: The Office of the Comptroller of the Currency has proposed a GENIUS Act rule that extends the statute's yield prohibition beyond the parties Congress chose to restrict. US-chartered issuers operating under that expanded prohibition will face constraints that foreign issuers, state-chartered alternatives, and unlicensed platforms will not. This is not a minor legal technicality. It is the mechanism by which overly aggressive rulemaking disadvantages licensed institutions relative to those that chose not to seek federal supervision, or that operate beyond US jurisdiction entirely.
+Topics: GENIUS Act, OCC, yield prohibition, stablecoin regulation, regulatory overreach, charter arbitrage, third-party restriction, rebuttable presumption
+
+## American Dynamism and the Distributional Question the Frame Cannot Answer
+URL: https://cantillon.institute/brief-2026-05-19-dynamism-frame-capital-mobilization.html
+Date: 2026-05-19
+Author: Research Analyst
+Source: American credulity, American dynamism (https://a16z.com/american-credulity-american-dynamism/)
+Summary: The policy debates surrounding GENIUS Act implementation are being conducted inside an ideological frame that this essay articulates with unusual clarity. That frame holds that American economic leadership is a function of capital mobilization velocity: whoever deploys capital fastest into emerging technologies wins. The historical argument has merit. But the distributional question that monetary and regulatory analysis cannot avoid is absent from the frame, and it is the question that determines whether the next mobilization produces broad growth or concentrated rents.
+Topics: American dynamism, GENIUS Act, capital allocation, distributional economics, stablecoin yield, a16z, venture capital, AI, monetary policy
+
+
+---
+
 ## Contact
 
 contact@cantillon.institute
