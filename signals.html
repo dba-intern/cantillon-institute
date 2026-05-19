@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signals &mdash; The Cantillon Institute</title>
+    <meta name="description" content="Live and current market data across stablecoin architecture, Federal Reserve mechanics, European monetary flows, and the emerging alternative monetary stack. Updated from public sources.">
+    <link rel="canonical" href="https://cantillon.institute/signals.html">
+    <meta property="og:title" content="Signals &mdash; The Cantillon Institute">
+    <meta property="og:description" content="Market data and indicators tracking the structural transformation of monetary systems.">
+    <meta property="og:url" content="https://cantillon.institute/signals.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cantillon.institute/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ---- SIGNALS PAGE ---- */
+        .signals-page { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        .signals-header { padding: 4rem 0 2.5rem; border-bottom: 0.5px solid #1d1f21; }
+        .signals-header h1 { font-family: "Barlow Condensed", system-ui, sans-serif; font-size: clamp(36px, 6vw, 64px); font-weight: 700; color: #e8e4da; letter-spacing: -0.01em; line-height: 1; margin-bottom: 1rem; }
+        .signals-header-meta { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+        .signals-live-dot { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 12px; color: #4a8a4a; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
+        .signals-live-dot::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #4a8a4a; display: block; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .signals-updated { font-size: 12px; color: #4a4845; }
+        .signals-note { font-size: 13px; color: #4a4845; margin-top: 0.75rem; max-width: 640px; }
+        /* FRED config notice */
+        .fred-notice { background: #0f1215; border: 0.5px solid #1d3a52; border-radius: 4px; padding: 0.75rem 1rem; margin-bottom: 0.5rem; font-size: 13px; color: #5a9fd4; line-height: 1.6; display: none; }
+        .fred-notice a { color: #378ADD; }
+        /* Stats bar */
+        .signals-stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-bottom: 0.5px solid #1d1f21; margin: 2rem 0; }
+        .signals-stat { padding: 1.25rem 0 1.25rem; border-right: 0.5px solid #1d1f21; }
+        .signals-stat:last-child { border-right: none; }
+        .signals-stat-label { font-size: 11px; letter-spacing: 0.12em; color: #4a4845; text-transform: uppercase; margin-bottom: 0.4rem; }
+        .signals-stat-value { font-family: "Barlow Condensed", system-ui, sans-serif; font-size: 28px; font-weight: 700; color: #e8e4da; line-height: 1; }
+        .signals-stat-sub { font-size: 12px; color: #6a6860; margin-top: 0.25rem; }
+        /* Grid */
+        .signals-grid { padding: 2.5rem 0; display: flex; flex-direction: column; gap: 2rem; }
+        .signals-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .signals-row.full { grid-template-columns: 1fr; }
+        /* Cards */
+        .signal-card { background: #0d0f10; border: 0.5px solid #1d1f21; border-radius: 4px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+        .signal-card-header { display: flex; flex-direction: column; gap: 0.3rem; }
+        .signal-section-tag { font-size: 10px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; }
+        .signal-title { font-family: "Barlow Condensed", system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e8e4da; line-height: 1.1; }
+        .signal-desc { font-size: 13px; color: #6a6860; line-height: 1.5; }
+        .signal-chart-wrap { position: relative; width: 100%; }
+        .signal-chart-wrap canvas { width: 100% !important; }
+        .signal-loading { display: flex; align-items: center; justify-content: center; height: 200px; font-size: 13px; color: #4a4845; }
+        .signal-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; border-top: 0.5px solid #1a1c1e; }
+        .signal-source { font-size: 12px; color: #4a4845; }
+        .signal-source span { color: #378ADD; }
+        .signal-download { font-size: 12px; color: #378ADD; background: none; border: 0.5px solid #1d3a52; border-radius: 3px; padding: 0.35rem 0.7rem; cursor: pointer; transition: border-color 0.2s ease, color 0.2s ease; font-family: "DM Sans", sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+        .signal-download:hover { border-color: #378ADD; }
+        @media (max-width: 800px) { .signals-stats-bar { grid-template-columns: repeat(2, 1fr); } .signals-row { grid-template-columns: 1fr; } .signals-page { padding: 0 1.25rem; } }
+        @media (max-width: 480px) { .signals-stats-bar { grid-template-columns: 1fr 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="/" class="nav-logo">The Cantillon Institute</a>
+            <div class="nav-links">
+                <a href="papers.html">Papers</a>
+                <a href="briefs.html">Briefs</a>
+                <a href="signals.html">Signals</a>
+                <a href="/#fellows">Fellows</a>
+                <a href="about.html">About</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="signals-page">
+
+            <div class="signals-header">
+                <p class="label">Market Data</p>
+                <h1>SIGNALS</h1>
+                <div class="signals-header-meta">
+                    <span class="signals-live-dot" id="liveIndicator">Loading</span>
+                    <span class="signals-updated" id="updatedTime"></span>
+                </div>
+                <p class="signals-note">Data sourced from DefiLlama, FRED, ECB, and curated Institute datasets. Charts marked Live update on page load. All others reflect the most recent published figures.</p>
+                <div class="fred-notice" id="fredNotice">
+                    Federal Reserve charts require a free FRED API key. <a href="https://fred.stlouisfed.org/docs/api/api_key.html" target="_blank" rel="noopener">Get your key here</a>, then add it to the FRED_API_KEY constant in this page. Reserve and ON RRP charts are shown with paper-cited data until configured.
+                </div>
+            </div>
+
+            <!-- STATS BAR -->
+            <div class="signals-stats-bar">
+                <div class="signals-stat">
+                    <p class="signals-stat-label">Stablecoin Market Cap</p>
+                    <p class="signals-stat-value" id="statStablecoin">--</p>
+                    <p class="signals-stat-sub" id="statStablecoinSub">Loading live data</p>
+                </div>
+                <div class="signals-stat">
+                    <p class="signals-stat-label">Fed Reserve Balances</p>
+                    <p class="signals-stat-value">$3.26T</p>
+                    <p class="signals-stat-sub">H.4.1, Dec 2024</p>
+                </div>
+                <div class="signals-stat">
+                    <p class="signals-stat-label">TARGET2 DE Claim</p>
+                    <p class="signals-stat-value">&euro;1.10T</p>
+                    <p class="signals-stat-sub">Bundesbank, Dec 2024</p>
+                </div>
+                <div class="signals-stat">
+                    <p class="signals-stat-label">mBridge Settled</p>
+                    <p class="signals-stat-value">$55.5B</p>
+                    <p class="signals-stat-sub">Reuters, Jan 2026</p>
+                </div>
+            </div>
+
+            <div class="signals-grid">
+
+                <!-- ROW 1: FULL WIDTH - Stablecoin market cap -->
+                <div class="signals-row full">
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Dollar Architecture &middot; Live</span>
+                            <h3 class="signal-title">Total Stablecoin Market Capitalization</h3>
+                            <p class="signal-desc">Combined circulating value of all fiat-pegged stablecoins across all chains. The GENIUS Act was signed July 18, 2025.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <div class="signal-loading" id="loading-c1">Loading live data from DefiLlama...</div>
+                            <canvas id="chart-c1" style="display:none;"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>DefiLlama</span> &middot; Live</span>
+                            <button class="signal-download" onclick="dlChart('chart-c1','cantillon-stablecoin-market-cap.png')">Download PNG</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 2: Fed reserves | ON RRP -->
+                <div class="signals-row">
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Dollar Architecture &middot; FRED</span>
+                            <h3 class="signal-title">Federal Reserve: Total Reserve Balances</h3>
+                            <p class="signal-desc">Reserve balances held by depository institutions at Federal Reserve Banks. Floor system reference rate.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c2" height="220"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>FRED H.4.1 (WRESBAL)</span></span>
+                            <button class="signal-download" onclick="dlChart('chart-c2','cantillon-fed-reserve-balances.png')">Download PNG</button>
+                        </div>
+                    </div>
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Dollar Architecture &middot; FRED</span>
+                            <h3 class="signal-title">Federal Reserve: ON RRP Outstanding</h3>
+                            <p class="signal-desc">Overnight reverse repurchase agreements. Peaked at $2.554T in December 2022. Declined to $239B by December 2024.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c3" height="220"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>FRED (RRPONTSYD)</span></span>
+                            <button class="signal-download" onclick="dlChart('chart-c3','cantillon-on-rrp-outstanding.png')">Download PNG</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 3: Stablecoin composition | SWIFT share -->
+                <div class="signals-row">
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Dollar Architecture &middot; Live</span>
+                            <h3 class="signal-title">Stablecoin Market: Top 5 Issuers</h3>
+                            <p class="signal-desc">Current circulating supply by issuer. Tether USDT and Circle USDC together account for over 90 percent of total supply.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <div class="signal-loading" id="loading-c4">Loading live data...</div>
+                            <canvas id="chart-c4" height="220" style="display:none;"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>DefiLlama</span> &middot; Live</span>
+                            <button class="signal-download" onclick="dlChart('chart-c4','cantillon-stablecoin-issuers.png')">Download PNG</button>
+                        </div>
+                    </div>
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Dollar Architecture</span>
+                            <h3 class="signal-title">SWIFT Payment Currency Share</h3>
+                            <p class="signal-desc">Share of total SWIFT payment value by currency. Dollar at 51.14 percent is a historic high. RMB at 3.10 percent as of March 2026.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c5" height="220"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>SWIFT Global Currency Tracker</span> &middot; March 2026</span>
+                            <button class="signal-download" onclick="dlChart('chart-c5','cantillon-swift-currency-share.png')">Download PNG</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 4: TARGET2 | RWA tokenization -->
+                <div class="signals-row">
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">European Fractures</span>
+                            <h3 class="signal-title">TARGET2 Balances by Country</h3>
+                            <p class="signal-desc">Claims (positive) and liabilities (negative) within the Eurosystem real-time gross settlement infrastructure. December 2024.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c6" height="220"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>ECB / National Central Banks</span> &middot; Dec 2024</span>
+                            <button class="signal-download" onclick="dlChart('chart-c6','cantillon-target2-balances.png')">Download PNG</button>
+                        </div>
+                    </div>
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Tokenization</span>
+                            <h3 class="signal-title">Tokenized Real-World Assets by Class</h3>
+                            <p class="signal-desc">On-chain tokenized asset value by underlying asset class, excluding stablecoins. Total exceeded $15 billion in December 2024.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c7" height="220"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>RWA.xyz</span> &middot; Dec 2024</span>
+                            <button class="signal-download" onclick="dlChart('chart-c7','cantillon-rwa-tokenization.png')">Download PNG</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 5: mBridge | e-CNY -->
+                <div class="signals-row">
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Alternative Stack</span>
+                            <h3 class="signal-title">mBridge: Cumulative Settlement Value</h3>
+                            <p class="signal-desc">Total cross-border settlement processed on the mBridge multi-CBDC platform. BIS withdrew October 31, 2024. e-CNY accounts for 95.3 percent of volume.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c8" height="220"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>Reuters / PYMNTS</span> &middot; Jan 2026</span>
+                            <button class="signal-download" onclick="dlChart('chart-c8','cantillon-mbridge-settlement.png')">Download PNG</button>
+                        </div>
+                    </div>
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Alternative Stack</span>
+                            <h3 class="signal-title">e-CNY: Cumulative Transaction Value</h3>
+                            <p class="signal-desc">Total value of transactions processed through the digital renminbi system. Reclassified from M0 to M1/M2 in January 2026.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c9" height="220"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>PBoC / China Daily</span> &middot; Dec 2025</span>
+                            <button class="signal-download" onclick="dlChart('chart-c9','cantillon-ecny-adoption.png')">Download PNG</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 6: Singapore FOs | Islamic finance -->
+                <div class="signals-row">
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Capital Movement</span>
+                            <h3 class="signal-title">Singapore Single Family Office Registrations</h3>
+                            <p class="signal-desc">Registered single family offices in Singapore. Increased 175 percent between 2020 and 2023 following capital flight triggers including HK NSL and Fed tightening cycle.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c10" height="220"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>Monetary Authority of Singapore</span> &middot; 2024</span>
+                            <button class="signal-download" onclick="dlChart('chart-c10','cantillon-singapore-family-offices.png')">Download PNG</button>
+                        </div>
+                    </div>
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Capital Movement</span>
+                            <h3 class="signal-title">Global Islamic Finance: Total Assets</h3>
+                            <p class="signal-desc">Total assets under the global Islamic finance system. Reached $3.88 trillion in 2024 at 14.9 percent year-over-year growth. Standard Chartered projects $7.5T by 2028.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c11" height="220"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>IFSB Stability Report</span> &middot; May 2025</span>
+                            <button class="signal-download" onclick="dlChart('chart-c11','cantillon-islamic-finance-assets.png')">Download PNG</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 7: FULL WIDTH - Illicit stablecoin volume -->
+                <div class="signals-row full">
+                    <div class="signal-card">
+                        <div class="signal-card-header">
+                            <span class="signal-section-tag">Illicit Flows</span>
+                            <h3 class="signal-title">Illicit Virtual Asset Transaction Volume: Stablecoins vs. Other</h3>
+                            <p class="signal-desc">Annual illicit transaction volume in the virtual asset market. Stablecoins accounted for 84 percent of $154 billion in total illicit virtual asset volume in 2025. Source: Chainalysis, cited in FATF March 2026 Targeted Report on Stablecoins and Unhosted Wallets.</p>
+                        </div>
+                        <div class="signal-chart-wrap">
+                            <canvas id="chart-c12" height="280"></canvas>
+                        </div>
+                        <div class="signal-card-footer">
+                            <span class="signal-source">Source: <span>Chainalysis / FATF</span> &middot; 2026</span>
+                            <button class="signal-download" onclick="dlChart('chart-c12','cantillon-illicit-stablecoin-volume.png')">Download PNG</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- .signals-grid -->
+
+        </div><!-- .signals-page -->
+    </main>
+
+    <footer class="footer">
+        <span>The Cantillon Institute &middot; Est. 2021</span>
+        <span>cantillon.institute</span>
+    </footer>
+
+    <script>
+    // ============================================================
+    // CONFIGURATION
+    // To enable live Federal Reserve data, add your free FRED API key below.
+    // Get a free key at: https://fred.stlouisfed.org/docs/api/api_key.html
+    // ============================================================
+    const FRED_API_KEY = '5aa04953f7bc7db13521fc5389f7bcfd';
+
+    // ============================================================
+    // CHART.JS GLOBAL DEFAULTS
+    // ============================================================
+    Chart.defaults.color = '#6a6860';
+    Chart.defaults.font.family = "'DM Sans', sans-serif";
+    Chart.defaults.font.size = 12;
+    Chart.defaults.plugins.legend.display = false;
+    Chart.defaults.plugins.tooltip.backgroundColor = '#1a1c1e';
+    Chart.defaults.plugins.tooltip.borderColor = '#1d1f21';
+    Chart.defaults.plugins.tooltip.borderWidth = 1;
+    Chart.defaults.plugins.tooltip.titleColor = '#e8e4da';
+    Chart.defaults.plugins.tooltip.bodyColor = '#a8a49a';
+    Chart.defaults.plugins.tooltip.padding = 10;
+    Chart.defaults.plugins.tooltip.cornerRadius = 3;
+
+    const BLUE = '#378ADD';
+    const BLUE2 = '#5a9fd4';
+    const BLUE3 = '#2a6aaa';
+    const RED = '#c0392b';
+    const GRID = '#1d1f21';
+    const AXIS = '#2a2c2e';
+
+    function gridConfig() {
+        return { color: GRID, drawBorder: false };
+    }
+    function axisConfig(label) {
+        return { grid: gridConfig(), ticks: { color: '#6a6860' }, title: { display: !!label, text: label || '', color: '#4a4845', font: { size: 11 } } };
+    }
+
+    // ============================================================
+    // DOWNLOAD HELPER
+    // ============================================================
+    function dlChart(canvasId, filename) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+        const link = document.createElement('a');
+        link.download = filename;
+        link.href = canvas.toDataURL('image/png', 1.0);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // ============================================================
+    // CHART 1: STABLECOIN MARKET CAP (DefiLlama live)
+    // ============================================================
+    async function buildChart1() {
+        try {
+            const res = await fetch('https://stablecoins.llama.fi/stablecoincharts/all');
+            const raw = await res.json();
+            // Sample to roughly monthly data points
+            const cutoff = Date.now()/1000 - 4*365*24*3600;
+            const filtered = raw.filter(d => d.date > cutoff);
+            const sampled = filtered.filter((_, i) => i % 4 === 0);
+            const labels = sampled.map(d => {
+                const dt = new Date(d.date * 1000);
+                return dt.toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
+            });
+            const values = sampled.map(d => {
+                const t = d.totalCirculating;
+                return Object.values(t).reduce((a,b) => a + (Number(b) || 0), 0) / 1e9;
+            });
+            // Update stat bar with latest
+            const latest = values[values.length - 1];
+            document.getElementById('statStablecoin').textContent = '$' + latest.toFixed(0) + 'B';
+            document.getElementById('statStablecoinSub').textContent = 'Live, DefiLlama';
+            document.getElementById('loading-c1').style.display = 'none';
+            const canvas = document.getElementById('chart-c1');
+            canvas.style.display = 'block';
+            new Chart(canvas, {
+                type: 'line',
+                data: {
+                    labels,
+                    datasets: [{
+                        data: values,
+                        borderColor: BLUE,
+                        backgroundColor: 'rgba(55,138,221,0.08)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 0,
+                        pointHoverRadius: 4,
+                        pointHoverBackgroundColor: BLUE
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    animation: { duration: 600 },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: ctx => ' $' + ctx.parsed.y.toFixed(1) + 'B'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: axisConfig(),
+                        y: { ...axisConfig('USD Billions'), ticks: { color: '#6a6860', callback: v => '$' + v + 'B' } }
+                    }
+                }
+            });
+            // Mark GENIUS Act
+            document.getElementById('liveIndicator').textContent = 'Live Data Active';
+            document.getElementById('updatedTime').textContent = 'Updated: ' + new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+        } catch(e) {
+            document.getElementById('loading-c1').textContent = 'Live data unavailable. Reload to retry.';
+        }
+    }
+
+    // ============================================================
+    // CHART 2: FED RESERVE BALANCES
+    // Uses FRED if key configured, else paper-cited data
+    // ============================================================
+    const RESERVE_FALLBACK = {
+        labels: ['Jan 20','Jan 21','Jan 22','Apr 22','Jan 23','Jan 24','Jun 24','Dec 24'],
+        values: [3.33, 3.85, 4.10, 3.26, 3.05, 3.55, 3.30, 3.26]
+    };
+    async function buildChart2() {
+        let labels = RESERVE_FALLBACK.labels;
+        let values = RESERVE_FALLBACK.values;
+        if (FRED_API_KEY) {
+            try {
+                const url = 'https://api.stlouisfed.org/fred/series/observations?series_id=WRESBAL&api_key=' + FRED_API_KEY + '&file_type=json&observation_start=2020-01-01&frequency=m&aggregation_method=avg';
+                const res = await fetch(url);
+                const data = await res.json();
+                const obs = data.observations.filter(o => o.value !== '.');
+                labels = obs.map(o => { const d = new Date(o.date); return d.toLocaleDateString('en-US',{month:'short',year:'2-digit'}); });
+                values = obs.map(o => parseFloat(o.value) / 1e6);
+            } catch(e) {
+                if (!FRED_API_KEY) document.getElementById('fredNotice').style.display = 'block';
+            }
+        } else {
+            // Key configured, notice stays hidden
+        }
+        new Chart(document.getElementById('chart-c2'), {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    borderColor: BLUE,
+                    backgroundColor: 'rgba(55,138,221,0.06)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.3,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    pointHoverBackgroundColor: BLUE
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { tooltip: { callbacks: { label: ctx => ' $' + ctx.parsed.y.toFixed(2) + 'T' } } },
+                scales: {
+                    x: axisConfig(),
+                    y: { ...axisConfig('USD Trillions'), ticks: { color: '#6a6860', callback: v => '$' + v.toFixed(1) + 'T' } }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // CHART 3: ON RRP
+    // ============================================================
+    const RRP_FALLBACK = {
+        labels: ['Jan 21','Jun 21','Dec 21','Jun 22','Dec 22','Jun 23','Dec 23','Jun 24','Dec 24'],
+        values: [0.01, 0.50, 1.60, 2.20, 2.55, 2.10, 1.00, 0.45, 0.24]
+    };
+    async function buildChart3() {
+        let labels = RRP_FALLBACK.labels;
+        let values = RRP_FALLBACK.values;
+        if (FRED_API_KEY) {
+            try {
+                const url = 'https://api.stlouisfed.org/fred/series/observations?series_id=RRPONTSYD&api_key=' + FRED_API_KEY + '&file_type=json&observation_start=2021-01-01&frequency=m&aggregation_method=avg';
+                const res = await fetch(url);
+                const data = await res.json();
+                const obs = data.observations.filter(o => o.value !== '.');
+                labels = obs.map(o => { const d = new Date(o.date); return d.toLocaleDateString('en-US',{month:'short',year:'2-digit'}); });
+                values = obs.map(o => parseFloat(o.value) / 1e6);
+            } catch(e) {}
+        }
+        new Chart(document.getElementById('chart-c3'), {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    borderColor: BLUE2,
+                    backgroundColor: 'rgba(90,159,212,0.06)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.3,
+                    pointRadius: 0,
+                    pointHoverRadius: 4,
+                    pointHoverBackgroundColor: BLUE2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { tooltip: { callbacks: { label: ctx => ' $' + ctx.parsed.y.toFixed(2) + 'T' } } },
+                scales: {
+                    x: axisConfig(),
+                    y: { ...axisConfig('USD Trillions'), ticks: { color: '#6a6860', callback: v => '$' + v.toFixed(2) + 'T' } }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // CHART 4: STABLECOIN TOP 5 (DefiLlama live)
+    // ============================================================
+    async function buildChart4() {
+        try {
+            const res = await fetch('https://stablecoins.llama.fi/stablecoins');
+            const data = await res.json();
+            const sorted = (data.peggedAssets || [])
+                .filter(s => s.circulating && s.circulating.peggedUSD)
+                .sort((a,b) => (b.circulating.peggedUSD || 0) - (a.circulating.peggedUSD || 0))
+                .slice(0, 5);
+            const labels = sorted.map(s => s.symbol || s.name);
+            const values = sorted.map(s => (s.circulating.peggedUSD || 0) / 1e9);
+            const colors = [BLUE, BLUE2, '#4a8db8', '#3a7da8', BLUE3];
+            document.getElementById('loading-c4').style.display = 'none';
+            const canvas = document.getElementById('chart-c4');
+            canvas.style.display = 'block';
+            new Chart(canvas, {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [{
+                        data: values,
+                        backgroundColor: colors,
+                        borderRadius: 0,
+                        barThickness: 36
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    plugins: { tooltip: { callbacks: { label: ctx => ' $' + ctx.parsed.x.toFixed(1) + 'B' } } },
+                    scales: {
+                        x: { ...axisConfig('USD Billions'), grid: gridConfig(), ticks: { color: '#6a6860', callback: v => '$' + v + 'B' } },
+                        y: { grid: { display: false }, ticks: { color: '#a8a49a', font: { weight: '600' } } }
+                    }
+                }
+            });
+        } catch(e) {
+            document.getElementById('loading-c4').textContent = 'Live data unavailable.';
+        }
+    }
+
+    // ============================================================
+    // CHART 5: SWIFT CURRENCY SHARE
+    // ============================================================
+    function buildChart5() {
+        const labels = ['USD', 'EUR', 'GBP', 'JPY', 'CNY'];
+        const values = [51.14, 21.89, 6.23, 4.55, 3.10];
+        const colors = [BLUE, BLUE2, '#4a8db8', '#3a7da8', BLUE3];
+        new Chart(document.getElementById('chart-c5'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: colors,
+                    borderRadius: 0,
+                    barThickness: 36
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: { tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.x.toFixed(2) + '%' } } },
+                scales: {
+                    x: { ...axisConfig('Share of SWIFT payment value'), grid: gridConfig(), ticks: { color: '#6a6860', callback: v => v + '%' } },
+                    y: { grid: { display: false }, ticks: { color: '#a8a49a', font: { weight: '600' } } }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // CHART 6: TARGET2 BALANCES
+    // ============================================================
+    function buildChart6() {
+        const labels = ['Germany (DE)', 'Netherlands (NL)', 'Luxembourg (LU)', 'Finland (FI)', 'Spain (ES)', 'Italy (IT)'];
+        const values = [1100, 280, 240, 90, -478, -597];
+        const colors = values.map(v => v >= 0 ? BLUE : RED);
+        new Chart(document.getElementById('chart-c6'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: colors,
+                    borderRadius: 0,
+                    barThickness: 28
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: {
+                    tooltip: { callbacks: { label: ctx => ' €' + ctx.parsed.x.toFixed(0) + 'B' } }
+                },
+                scales: {
+                    x: {
+                        ...axisConfig('EUR Billions'),
+                        grid: gridConfig(),
+                        ticks: { color: '#6a6860', callback: v => '€' + v + 'B' }
+                    },
+                    y: { grid: { display: false }, ticks: { color: '#a8a49a' } }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // CHART 7: RWA TOKENIZATION BY ASSET CLASS
+    // ============================================================
+    function buildChart7() {
+        const labels = ['US Treasuries', 'Private Credit', 'Real Estate', 'Equity Funds', 'Commodities', 'Other'];
+        const values = [3500, 1100, 500, 320, 200, 380];
+        const colors = [BLUE, BLUE2, '#4a8db8', '#3a7da8', BLUE3, '#2a5a8a'];
+        new Chart(document.getElementById('chart-c7'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: colors,
+                    borderRadius: 0,
+                    barThickness: 28
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: { tooltip: { callbacks: { label: ctx => ' $' + ctx.parsed.x.toFixed(0) + 'M' } } },
+                scales: {
+                    x: { ...axisConfig('USD Millions'), grid: gridConfig(), ticks: { color: '#6a6860', callback: v => '$' + (v/1000).toFixed(1) + 'B' } },
+                    y: { grid: { display: false }, ticks: { color: '#a8a49a' } }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // CHART 8: MBRIDGE CUMULATIVE SETTLEMENT
+    // ============================================================
+    function buildChart8() {
+        const labels = ['2022 Pilot', 'End 2023', 'End 2024', 'Jan 2026'];
+        const values = [0.022, 1.2, 18.5, 55.49];
+        new Chart(document.getElementById('chart-c8'), {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    borderColor: BLUE,
+                    backgroundColor: 'rgba(55,138,221,0.08)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.2,
+                    pointRadius: 5,
+                    pointBackgroundColor: BLUE,
+                    pointBorderColor: '#0d0f10',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { tooltip: { callbacks: { label: ctx => ' $' + ctx.parsed.y.toFixed(2) + 'B cumulative' } } },
+                scales: {
+                    x: axisConfig(),
+                    y: { ...axisConfig('USD Billions'), ticks: { color: '#6a6860', callback: v => '$' + v + 'B' } }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // CHART 9: e-CNY CUMULATIVE TRANSACTION VALUE
+    // ============================================================
+    function buildChart9() {
+        const labels = ['Dec 2021', 'Dec 2022', 'Dec 2023', 'Dec 2024', 'Dec 2025'];
+        const values = [0.88, 13.8, 1800, 7000, 19500];
+        new Chart(document.getElementById('chart-c9'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: [BLUE3, BLUE3, BLUE2, BLUE2, BLUE],
+                    borderRadius: 0,
+                    barThickness: 36
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { tooltip: { callbacks: { label: ctx => ' ¥' + ctx.parsed.y.toFixed(0) + 'B' } } },
+                scales: {
+                    x: axisConfig(),
+                    y: { ...axisConfig('CNY Billions'), grid: gridConfig(), ticks: { color: '#6a6860', callback: v => '¥' + (v >= 1000 ? (v/1000).toFixed(1)+'T' : v+'B') } }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // CHART 10: SINGAPORE FAMILY OFFICES
+    // ============================================================
+    function buildChart10() {
+        const labels = ['2020', '2021', '2022', '2023'];
+        const values = [400, 700, 900, 1100];
+        new Chart(document.getElementById('chart-c10'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: [BLUE3, BLUE2, BLUE2, BLUE],
+                    borderRadius: 0,
+                    barThickness: 52
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.y + ' registered SFOs' } } },
+                scales: {
+                    x: axisConfig(),
+                    y: { ...axisConfig('Registered SFOs'), grid: gridConfig(), ticks: { color: '#6a6860' }, min: 0 }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // CHART 11: GLOBAL ISLAMIC FINANCE ASSETS
+    // ============================================================
+    function buildChart11() {
+        const labels = ['2020', '2021', '2022', '2023', '2024'];
+        const values = [2.20, 2.80, 3.00, 3.37, 3.88];
+        new Chart(document.getElementById('chart-c11'), {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [{
+                    data: values,
+                    borderColor: BLUE,
+                    backgroundColor: 'rgba(55,138,221,0.07)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.3,
+                    pointRadius: 5,
+                    pointBackgroundColor: BLUE,
+                    pointBorderColor: '#0d0f10',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { tooltip: { callbacks: { label: ctx => ' $' + ctx.parsed.y.toFixed(2) + 'T' } } },
+                scales: {
+                    x: axisConfig(),
+                    y: { ...axisConfig('USD Trillions'), ticks: { color: '#6a6860', callback: v => '$' + v.toFixed(1) + 'T' }, min: 1.5 }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // CHART 12: ILLICIT STABLECOIN VOLUME (full width)
+    // ============================================================
+    function buildChart12() {
+        const labels = ['2021', '2022', '2023', '2024', '2025'];
+        const stablecoin = [7.9, 18.4, 40.6, 62.0, 129.4];
+        const other     = [8.1, 11.6, 9.4,  14.0, 24.6];
+        new Chart(document.getElementById('chart-c12'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: 'Stablecoin',
+                        data: stablecoin,
+                        backgroundColor: RED,
+                        borderRadius: 0,
+                        barPercentage: 0.6
+                    },
+                    {
+                        label: 'Other VA',
+                        data: other,
+                        backgroundColor: '#2a3a4a',
+                        borderRadius: 0,
+                        barPercentage: 0.6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        align: 'end',
+                        labels: { color: '#6a6860', boxWidth: 12, boxHeight: 12, padding: 16, font: { size: 12 } }
+                    },
+                    tooltip: { callbacks: { label: ctx => ' ' + ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(1) + 'B' } }
+                },
+                scales: {
+                    x: axisConfig(),
+                    y: { ...axisConfig('USD Billions'), grid: gridConfig(), ticks: { color: '#6a6860', callback: v => '$' + v + 'B' }, stacked: false }
+                }
+            }
+        });
+    }
+
+    // ============================================================
+    // INIT
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', () => {
+        buildChart1();
+        buildChart2();
+        buildChart3();
+        buildChart4();
+        buildChart5();
+        buildChart6();
+        buildChart7();
+        buildChart8();
+        buildChart9();
+        buildChart10();
+        buildChart11();
+        buildChart12();
+    });
+    </script>
+
+</body>
+</html>
