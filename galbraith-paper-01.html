@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Other Side of the Ledger: Payment Stablecoin Infrastructure and the Distributional Architecture of the GENIUS Act &mdash; The Cantillon Institute</title>
+    <meta name="description" content="The GENIUS Act creates regulatory infrastructure for a private payment layer that will be deployed first and most aggressively into the segment of the American workforce least equipped to bear its costs: gig economy workers, low-wage consumers, and households already operating outside banking protections. The financial inclusion narrative is incomplete. The mechanism by which stablecoin infrastructure reaches underbanked populations is simultaneously the mechanism by which it extracts value from them. GENIUS Act passed 308-122 in the House, 68-30 in the Senate. Working Paper No. 1, D.M. Galbraith, The Consumption Layer.">
+    <link rel="canonical" href="https://cantillon.institute/galbraith-paper-01.html">
+    <meta property="og:title" content="The Other Side of the Ledger: Payment Stablecoin Infrastructure and the Distributional Architecture of the GENIUS Act &mdash; The Cantillon Institute">
+    <meta property="og:url" content="https://cantillon.institute/galbraith-paper-01.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cantillon.institute/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-page { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+        .paper-header { padding: 4rem 0 3rem; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .paper-series-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; font-weight: 700; text-transform: uppercase; }
+        .paper-number { font-size: 11px; letter-spacing: 0.1em; color: #4a4845; text-transform: uppercase; }
+        .paper-header h1 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; color: #e8e4da; margin-bottom: 1.5rem; }
+        .paper-byline { font-size: 14px; color: #5a5855; margin-bottom: 2rem; }
+        .paper-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .paper-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 13px; font-weight: 700; color: #0b0c0d; background: #378ADD; border-radius: 4px; padding: 0.55rem 1rem; transition: opacity 0.2s ease; }
+        .paper-download:hover { opacity: 0.85; }
+        .paper-back-link { font-size: 13px; color: #378ADD; border-bottom: 0.5px solid #378ADD; padding-bottom: 1px; }
+        .paper-abstract-block { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-abstract-block .label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-abstract-block blockquote { font-size: 16px; color: #7a7870; line-height: 1.85; font-style: italic; border-left: 2px solid #1d3a52; padding-left: 1.25rem; margin: 0; }
+        .paper-nav { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-nav .nav-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-nav ol { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+        .paper-nav a { font-size: 14px; color: #6a6860; transition: color 0.2s ease; line-height: 1.5; text-decoration:none; }
+        .paper-nav a:hover { color: #e8e4da; }
+        .paper-body { padding: 3.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-body h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; color: #e8e4da; margin-top: 3rem; margin-bottom: 1.25rem; scroll-margin-top: 5rem; }
+        .paper-body h2:first-child { margin-top: 0; }
+        .paper-body p { font-size: 17px; color: #a8a49a; line-height: 1.9; margin-bottom: 1.5rem; max-width: 660px; }
+        .paper-body em { font-style: italic; color: #c0bdb5; }
+        .paper-body strong { font-weight: 700; color: #c8c4bc; }
+        .paper-references { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-references h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e8e4da; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .paper-references ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .paper-references li { font-size: 14px; color: #6a6860; line-height: 1.75; padding-left: 1.5rem; text-indent: -1.5rem; }
+        .paper-footnote { padding: 1.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-footnote p { font-size: 14px; color: #4a4845; font-style: italic; }
+        .paper-series-nav { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-nav h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e8e4da; margin-bottom: 1.25rem; letter-spacing: 0.04em; }
+        .paper-series-links { display: flex; flex-direction: column; gap: 0.5rem; }
+        .paper-series-link { display: flex; align-items: baseline; gap: 1rem; font-size: 14px; color: #5a5855; text-decoration: none; }
+        .paper-series-link .num { font-size: 11px; color: #378ADD; font-weight: 700; letter-spacing: 0.1em; flex-shrink: 0; min-width: 32px; }
+        .paper-series-link.current { color: #e8e4da; }
+        .paper-foot { padding: 2.5rem 0; }
+        .paper-foot a { font-size: 13px; color: #378ADD; border-bottom: 0.5px solid #378ADD; padding-bottom: 2px; }
+        @media (max-width: 640px) { .paper-page { padding: 0 1.25rem; } .paper-body p { font-size: 16px; } .paper-body h2 { font-size: 20px; } }
+</style>
+</head>
+<body>
+    <header><nav class="nav"><a href="/" class="nav-logo">The Cantillon Institute</a><div class="nav-links"><a href="papers.html">Papers</a><a href="briefs.html">Briefs</a><a href="/#fellows">Fellows</a><a href="about.html">About</a><a href="glossary.html">Glossary</a></div></nav></header>
+    <main><div class="paper-page">
+        <div class="paper-header">
+            <div class="paper-series-meta"><span class="paper-series-label">The Consumption Layer</span><span class="paper-number">Working Paper No. 1 &middot; D.M. Galbraith &middot; 2026</span></div>
+            <h1>The Other Side of the Ledger: Payment Stablecoin Infrastructure and the Distributional Architecture of the GENIUS Act</h1>
+            <p class="paper-byline">Dana M. Galbraith &middot; Fellow, The Cantillon Institute &middot; Chicago</p>
+            <div class="paper-actions">
+                <a href="papers/galbraith-paper-01.pdf" class="paper-download" download>PDF &#8595; Download</a>
+                <a href="galbraith.html" class="paper-back-link">Full profile &#8594;</a>
+            </div>
+        </div>
+        <div class="paper-abstract-block"><span class="label">Abstract</span><blockquote>The Guiding and Establishing National Innovation for U.S. Stablecoins Act, signed into law on July 18, 2025, is analysed in this Institute's parallel series primarily from the perspective of institutional capital: reserve mechanics, monetary policy transmission, seigniorage capture, and sovereign currency displacement. This paper initiates a complementary analysis from the opposite position. The GENIUS Act creates the regulatory infrastructure for a private payment layer that will be deployed first and most aggressively into the segment of the American workforce least equipped to bear its costs: gig economy workers, low-wage consumers, and households already operating outside the perimeter of traditional banking protections. The financial inclusion narrative that accompanied the Act's passage is not false. It is incomplete. The mechanism by which stablecoin infrastructure reaches underbanked populations is simultaneously the mechanism by which it extracts value from them: through seigniorage income captured by issuers rather than holders; through tax compliance architecture that places disproportionate burden on low-frequency, small-denomination earners; and through the interaction of stablecoin payment rails with independent contractor classification that allows labor costs to be moved outside the regulatory framework built to govern employment.</blockquote></div>
+        <nav class="paper-nav"><span class="nav-label">Contents</span><ol><li><a href="#intro">Introduction</a></li>
+      <li><a href="#seigniorage">I. The Seigniorage Structure and Who Captures It</a></li>
+      <li><a href="#gig">II. The Gig Architecture as the Deployment Vector</a></li>
+      <li><a href="#tax">III. The Tax Compliance Architecture and Its Burden Distribution</a></li>
+      <li><a href="#inclusion">IV. The Financial Inclusion Argument and What It Cannot Sustain</a></li>
+      <li><a href="#frame">V. The Analytical Frame for This Series</a></li>
+      <li><a href="#conclusion">Conclusion</a></li></ol></nav>
+        <div class="paper-body">
+   <h2 id="intro">Introduction</h2>
+   <p>Every other working paper published by this Institute analyses the stablecoin payment layer from the perspective of the institutions that will issue it, invest in it, or have their monetary policy transmission distorted by it. This paper occupies a different vantage point.</p>
+   <p>The worker receiving wages in USD Coin through a gig platform's payment API does not have a position in the seigniorage debate. She is not a creditor of Circle Internet Financial. She does not receive the interest income generated by the Treasury bills backing her employer's payment instrument. She receives a dollar-denominated token that functions as money in every practical sense except the ones that would require her employer to treat the payment as a wage subject to withholding, minimum wage protections, and employer-side payroll tax obligations.</p>
+   <p>The Guiding and Establishing National Innovation for U.S. Stablecoins Act, which passed the Senate 68 to 30 on June 17, 2025, passed the House 308 to 122 on July 17, 2025, and was signed into law on July 18, 2025 (Pub.L. 119-27), creates the regulatory framework for payment stablecoins: instruments redeemable one-for-one with the US dollar, backed by reserves in cash, short-duration Treasury securities, or repurchase agreements, and issued by entities subject to federal or state regulatory oversight (S. 1582, 119th Congress, 2025). Approximately 4.2 percent of American households were unbanked as of 2023, representing 5.6 million households; a further 14.2 percent were underbanked (Federal Deposit Insurance Corporation, 2023).</p>
+
+   <h2 id="seigniorage">I. The Seigniorage Structure and Who Captures It</h2>
+   <p>A payment stablecoin under the GENIUS Act is a dollar-denominated liability of its issuer. The holder receives a claim redeemable at par. The issuer holds reserves generating interest income. The holder receives none of that income. The GENIUS Act explicitly prohibits payment stablecoin issuers from paying yield to holders; a provision inserted to distinguish payment stablecoins from securities and money market instruments (S. 1582, 119th Congress, 2025, Section 4).</p>
+   <p>Tether Operations Limited reported net operating profit of approximately $4.52 billion for the first half of 2023, derived primarily from interest income on its reserve holdings (Tether, 2023). Circle Internet Financial disclosed in its IPO filing materials that interest income from USDC reserves constituted the substantial majority of its revenue (Circle Internet Financial, 2024). The consumer who uses USDC for payment transactions is, in functional economic terms, providing an interest-free loan to Circle for the duration of the holding. For a worker holding two weeks of wages in USDC because she has no bank account, the opportunity cost is measured against nothing. The population the inclusion argument most benefits is the population for which the seigniorage transfer is most persistent.</p>
+
+   <h2 id="gig">II. The Gig Architecture as the Deployment Vector</h2>
+   <p>The stablecoin payment layer does not reach workers through banks. It reaches them through platforms. The Federal Reserve's 2023 Survey of Household Economics and Decisionmaking found that 13 percent of adults reported earning income from gig platforms in the prior 12 months (Board of Governors of the Federal Reserve System, 2024). Independent contractors classified under Section 1099 of the Internal Revenue Code are not employees. They do not receive minimum wage protections under the Fair Labor Standards Act. They bear the full self-employment tax burden: 15.3 percent on net self-employment income up to the Social Security wage base.</p>
+   <p>Several major platforms had already moved in this direction before the GENIUS Act passed. Stripe announced expanded USDC payout functionality in 2023, enabling platforms built on Stripe to pay contractors in USDC to compatible wallets (Stripe, 2023). Coinbase's Commerce and Coinbase Prime products offer equivalent functionality for US-domestic payroll flows. The infrastructure existed before the regulatory framework did. The GENIUS Act's passage removed the primary institutional barrier to its expansion at scale.</p>
+   <p>Uber Technologies, which reported 1.9 million active drivers in the United States and Canada in its 2023 annual report, has consistently classified its driver-partners as independent contractors. Gig platforms spent over $200 million to pass Proposition 22 in 2020, which was at the time the most expensive ballot initiative in California history. Moving from ACH bank transfer to stablecoin payment within that existing classification structure changes the payment medium without changing the classification outcome.</p>
+
+   <h2 id="tax">III. The Tax Compliance Architecture and Its Burden Distribution</h2>
+   <p>The GENIUS Act created a targeted improvement: payment stablecoins meeting the Act's definition are treated as currency rather than property for transactions in which the payment stablecoin functions as a medium of exchange, eliminating the capital gains reporting obligation for routine payment transactions (S. 1582, 119th Congress, 2025, Section 9). The improvement is incomplete in ways that fall disproportionately on low-income users.</p>
+   <p>The GENIUS Act's currency treatment applies to payment stablecoins used as mediums of exchange. It does not eliminate income recognition at receipt. A worker receiving compensation in USDC must recognise that compensation as ordinary income at the time of receipt. The self-employment tax obligations for independent contractors remain unchanged: 15.3 percent on net self-employment income up to $168,600 for the 2024 tax year. The obligation to make quarterly estimated tax payments, under penalty of underpayment interest and potential penalties under Section 6654 of the Internal Revenue Code, remains in full.</p>
+   <p>For a worker earning $45,000 annually as an independent contractor paid in USDC through a gig platform, the self-employment tax obligation alone is approximately $6,357, before income tax. Her employer-classified counterpart has income tax withheld throughout the year, has the employer side of Social Security and Medicare paid by the employer at 7.65 percent, and receives a W-2 summarising the year's withholding.</p>
+
+   <h2 id="inclusion">IV. The Financial Inclusion Argument and What It Cannot Sustain</h2>
+   <p>The financial inclusion argument rests on three claims. First, that mobile-first payment infrastructure reaches unbanked and underbanked households. Second, that lower transaction costs reduce friction. Third, that stablecoin payment rails enable faster settlement, including near-instant access to earned wages. Each of these claims has empirical support. The FDIC's 2023 survey found that 4.2 percent of US households were unbanked; the Fed's 2023 SHED found that 70 percent of unbanked adults owned smartphones (Board of Governors of the Federal Reserve System, 2024).</p>
+   <p>The worker with instant access to USDC wages holds an instrument generating no yield, in a payment system operated by an issuer capturing yield on her balance, classified as an independent contractor outside the minimum wage and employment protection framework, bearing the full employer and employee side of self-employment tax. The financial inclusion literature has a term for the condition in which a population gains access to financial infrastructure while simultaneously bearing costs that wealthier participants do not bear: differential incorporation. The design does not require malicious intent. The distributional logic is in the architecture. The architecture is in the statute.</p>
+
+   <h2 id="frame">V. The Analytical Frame for This Series</h2>
+   <p>Working Paper No. 2 examines the interaction between stablecoin wage payment and independent contractor classification. Working Paper No. 3 examines the tax compliance architecture. Working Paper No. 4 examines the surveillance architecture of programmable money as applied to low-income populations. Working Paper No. 5 examines the financial inclusion evidence from mobile money adoption in Sub-Saharan Africa, Latin America, and Southeast Asia.</p>
+
+   <h2 id="conclusion">Conclusion</h2>
+   <p>The GENIUS Act was debated and passed primarily as a monetary architecture document. The debate it generated inside this Institute concerns reserve mechanics, monetary policy transmission, and sovereign currency displacement. These are real and significant questions. They are not the only questions.</p>
+   <p>The stablecoin payment layer, as designed by the GENIUS Act and as it is being deployed by the platforms already operating in the American gig economy, extracts value from the workers and consumers it ostensibly serves. The mechanisms of extraction are specific and architectural: seigniorage capture by issuers, compliance cost shifting to workers, classification arbitrage by platforms, and the potential use of payment programmability against the interests of holders. These mechanisms are not hypothetical. They are operational. The evidence for them is in the legislative text, the platform announcements, the issuer financial disclosures, and the distributional data already collected by federal statistical agencies.</p></div>
+        <div class="paper-references"><h2>References</h2><ul>
+      <li>Board of Governors of the Federal Reserve System. (2024). <em>Report on the Economic Well-Being of US Households in 2023</em>.</li>
+      <li>Bureau of Labor Statistics. (2022). <em>Contingent and Alternative Employment Arrangements, May 2021</em> (USDL-22-0284).</li>
+      <li>Cal. Bus. &amp; Prof. Code &sect; 7451 (2020). <em>Proposition 22, Protect App-Based Drivers and Services Act</em>.</li>
+      <li>Circle Internet Financial. (2024). <em>Form S-1 Registration Statement</em>. Securities and Exchange Commission.</li>
+      <li>29 C.F.R. &sect; 795 (2024). <em>Employee or Independent Contractor Classification Under the FLSA</em>. Department of Labor.</li>
+      <li>Federal Deposit Insurance Corporation. (2023). <em>2023 FDIC National Survey of Unbanked and Underbanked Households</em>.</li>
+      <li>Internal Revenue Service. (2014). <em>Notice 2014-21: IRS Virtual Currency Guidance</em>.</li>
+      <li>S. 1582, 119th Congress. (2025). <em>Guiding and Establishing National Innovation for U.S. Stablecoins Act (GENIUS Act)</em>. Pub.L. 119-27. Signed July 18, 2025.</li>
+      <li>Stripe. (2023). <em>Stripe enables USDC payouts for platforms and marketplaces</em> [Press release].</li>
+      <li>Tether. (2023). <em>Consolidated Reserves Report, H1 2023</em>. Tether Operations Limited.</li>
+      <li>Uber Technologies. (2023). <em>Annual Report on Form 10-K for the Fiscal Year Ended December 31, 2023</em>.</li>
+   </ul></div>
+        
+        <nav class="paper-series-nav"><h3>THE CONSUMPTION LAYER</h3><div class="paper-series-links">
+      <span class="paper-series-link current"><span class="num">No.&nbsp;1</span>The Other Side of the Ledger: Payment Stablecoin Infrastructure and the Distributional Architecture of the GENIUS Act</span>
+      <span class="paper-series-link" style="color:#2e2c2a;"><span class="num" style="color:#2a3a4a;">No.&nbsp;2</span>Forthcoming &middot; The Gig Architecture: Independent Contractor Classification and Stablecoin Wage Payment</span>
+   </div></nav>
+        <div class="paper-foot"><a href="galbraith.html">&#8592; Return to profile</a></div>
+    </div></main>
+    <footer class="footer"><span>The Cantillon Institute &middot; Est. 2021</span><span>cantillon.institute</span></footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complete Stack: e-CNY, mBridge, and the Architecture of Monetary Optionality &mdash; The Cantillon Institute</title>
+    <meta name="description" content="China's dual circulation strategy constitutes a monetary architecture project. The e-CNY and mBridge are not independent modernisation initiatives. They are the domestic and international components of a single coherent architecture designed to make China's dependency on dollar-denominated settlement infrastructure optional. The e-CNY carries 230 million personal wallets with cumulative transaction value of 19.5 trillion yuan. mBridge has processed $55.49 billion in total settlement value with the e-CNY accounting for 95.3 percent of volume. As of March 2026 CIPS operates with 194 direct participants across 126 countries. Working Paper No. 1, W.J. Liang, The Internal Circulation.">
+    <link rel="canonical" href="https://cantillon.institute/liang-paper-01.html">
+    <meta property="og:title" content="The Complete Stack: e-CNY, mBridge, and the Architecture of Monetary Optionality &mdash; The Cantillon Institute">
+    <meta property="og:url" content="https://cantillon.institute/liang-paper-01.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cantillon.institute/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-page { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+        .paper-header { padding: 4rem 0 3rem; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .paper-series-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; font-weight: 700; text-transform: uppercase; }
+        .paper-number { font-size: 11px; letter-spacing: 0.1em; color: #4a4845; text-transform: uppercase; }
+        .paper-header h1 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; color: #e8e4da; margin-bottom: 1.5rem; }
+        .paper-byline { font-size: 14px; color: #5a5855; margin-bottom: 2rem; }
+        .paper-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .paper-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 13px; font-weight: 700; color: #0b0c0d; background: #378ADD; border-radius: 4px; padding: 0.55rem 1rem; transition: opacity 0.2s ease; }
+        .paper-download:hover { opacity: 0.85; }
+        .paper-back-link { font-size: 13px; color: #378ADD; border-bottom: 0.5px solid #378ADD; padding-bottom: 1px; }
+        .paper-abstract-block { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-abstract-block .label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-abstract-block blockquote { font-size: 16px; color: #7a7870; line-height: 1.85; font-style: italic; border-left: 2px solid #1d3a52; padding-left: 1.25rem; margin: 0; }
+        .paper-nav { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-nav .nav-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-nav ol { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+        .paper-nav a { font-size: 14px; color: #6a6860; transition: color 0.2s ease; line-height: 1.5; text-decoration:none; }
+        .paper-nav a:hover { color: #e8e4da; }
+        .paper-body { padding: 3.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-body h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; color: #e8e4da; margin-top: 3rem; margin-bottom: 1.25rem; scroll-margin-top: 5rem; }
+        .paper-body h2:first-child { margin-top: 0; }
+        .paper-body p { font-size: 17px; color: #a8a49a; line-height: 1.9; margin-bottom: 1.5rem; max-width: 660px; }
+        .paper-body em { font-style: italic; color: #c0bdb5; }
+        .paper-body strong { font-weight: 700; color: #c8c4bc; }
+        .paper-references { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-references h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e8e4da; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .paper-references ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .paper-references li { font-size: 14px; color: #6a6860; line-height: 1.75; padding-left: 1.5rem; text-indent: -1.5rem; }
+        .paper-footnote { padding: 1.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-footnote p { font-size: 14px; color: #4a4845; font-style: italic; }
+        .paper-series-nav { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-nav h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e8e4da; margin-bottom: 1.25rem; letter-spacing: 0.04em; }
+        .paper-series-links { display: flex; flex-direction: column; gap: 0.5rem; }
+        .paper-series-link { display: flex; align-items: baseline; gap: 1rem; font-size: 14px; color: #5a5855; text-decoration: none; }
+        .paper-series-link .num { font-size: 11px; color: #378ADD; font-weight: 700; letter-spacing: 0.1em; flex-shrink: 0; min-width: 32px; }
+        .paper-series-link.current { color: #e8e4da; }
+        .paper-foot { padding: 2.5rem 0; }
+        .paper-foot a { font-size: 13px; color: #378ADD; border-bottom: 0.5px solid #378ADD; padding-bottom: 2px; }
+        @media (max-width: 640px) { .paper-page { padding: 0 1.25rem; } .paper-body p { font-size: 16px; } .paper-body h2 { font-size: 20px; } }
+</style>
+</head>
+<body>
+    <header><nav class="nav"><a href="/" class="nav-logo">The Cantillon Institute</a><div class="nav-links"><a href="papers.html">Papers</a><a href="briefs.html">Briefs</a><a href="/#fellows">Fellows</a><a href="about.html">About</a><a href="glossary.html">Glossary</a></div></nav></header>
+    <main><div class="paper-page">
+        <div class="paper-header">
+            <div class="paper-series-meta"><span class="paper-series-label">The Internal Circulation</span><span class="paper-number">Working Paper No. 1 &middot; W.J. Liang &middot; 2026</span></div>
+            <h1>The Complete Stack: e-CNY, mBridge, and the Architecture of Monetary Optionality</h1>
+            <p class="paper-byline">Wei J. Liang &middot; Fellow, The Cantillon Institute &middot; Shanghai</p>
+            <div class="paper-actions">
+                <a href="papers/liang-paper-01.pdf" class="paper-download" download>PDF &#8595; Download</a>
+                <a href="liang.html" class="paper-back-link">Full profile &#8594;</a>
+            </div>
+        </div>
+        <div class="paper-abstract-block"><span class="label">Abstract</span><blockquote>This paper argues that China's dual circulation strategy constitutes a monetary architecture project rather than the trade rebalancing or industrial policy framework most Western analysts have treated it as. Its two operational legs, the digital renminbi (e-CNY) and the mBridge multi-CBDC cross-border settlement platform, are not independent modernisation initiatives with compatible policy aims. They are the domestic and international components of a single coherent architecture, designed to make China's dependency on dollar-denominated settlement infrastructure optional at a moment of China's choosing rather than at a moment of external imposition. The e-CNY establishes granular visibility into and programmable control over domestic capital flows through a two-tier issuance model that routes all transactions through central bank infrastructure. mBridge establishes a settlement mechanism for cross-border transactions between participating central banks that operates entirely outside the SWIFT correspondent banking network. Read together, these systems constitute the first complete alternative monetary stack deployed at national scale by any economy operating at significant weight in global trade and finance.</blockquote></div>
+        <nav class="paper-nav"><span class="nav-label">Contents</span><ol><li><a href="#intro">I. Introduction</a></li>
+      <li><a href="#dual-circulation">II. What Dual Circulation Actually Describes</a></li>
+      <li><a href="#ecny">III. The Domestic Leg: e-CNY and the Mechanics of Visibility</a></li>
+      <li><a href="#mbridge">IV. The International Leg: mBridge and the Architecture of Settlement Optionality</a></li>
+      <li><a href="#stack">V. The Stack Read Together: Architectural Intent and Strategic Logic</a></li>
+      <li><a href="#implications">VI. Implications for International Capital</a></li>
+      <li><a href="#conclusion">Conclusion</a></li></ol></nav>
+        <div class="paper-body">
+   <h2 id="intro">I. Introduction</h2>
+   <p>The standard Western reading of China's dual circulation strategy locates it inside trade economics: domestic demand replaces export dependency; self-sufficiency reduces vulnerability to supply chain disruption. This reading is not wrong. It is incomplete in a way that makes it systematically misleading for capital analysis.</p>
+   <p>The dual circulation framework, as articulated at the Fifth Plenary Session of the 19th Central Committee of the Chinese Communist Party in October 2020, contains a monetary architecture dimension that most Western analysis has not mapped with precision. The two systems developed in parallel with that strategy, the e-CNY and mBridge, are not payment modernisation projects. They are the operational infrastructure through which the dual circulation's monetary logic is implemented. Payment modernisation projects optimise for efficiency within existing monetary frameworks. The e-CNY and mBridge construct an alternative to it.</p>
+
+   <h2 id="dual-circulation">II. What Dual Circulation Actually Describes</h2>
+   <p>The dual circulation strategy describes two circulation loops: the domestic principal loop and the international supplementary loop. The monetary dimension is operationally prior to the trade dimension. A domestic circulation loop that remains settled in dollar-denominated infrastructure is not, in any meaningful strategic sense, independent. China had already taken a partial step with the launch of the Cross-Border Interbank Payment System (CIPS) in 2015 and its Phase 2 expansion in 2018. As of March 2026, CIPS carries 194 direct participants and 1,597 indirect participants across 126 countries and regions, with a broader network footprint covering more than 5,100 banking institutions in 191 countries (CIPS, 2026). CIPS is a renminbi settlement system built to operate alongside the existing dollar-centric infrastructure. The e-CNY and mBridge are built to replace it.</p>
+
+   <h2 id="ecny">III. The Domestic Leg: e-CNY and the Mechanics of Visibility</h2>
+   <p>The e-CNY programme covers 26 specific demonstration zones across 17 provinces as of the current pilot configuration, encompassing every major Chinese economic centre including Beijing, Shanghai, Shenzhen, and Chengdu, the entirety of Hainan province as a whole-province trial, and cross-border retail pilots in Hong Kong, Macau, and merchant corridors across Laos, Thailand, Cambodia, and Singapore (Atlantic Council, 2025).</p>
+   <p>The architecture has four defining features. The two-tier issuance model issues e-CNY to 22 authorised Tier 1 institutions including, most significantly, MYbank (backed by Ant Group) and WeBank (backed by Tencent); the institutional backends of Alipay and WeChat Pay respectively, which together command over 90 percent of China's non-cash payment market (ResearchGate, 2025). The inclusion of both as Tier 1 operators means the PBoC has not positioned the e-CNY to compete with the dominant private payment infrastructure from outside. It has absorbed that infrastructure as a distribution layer for central bank money.</p>
+   <p>The tiered anonymity framework operates through four wallet tiers, from Tier 4 (mobile number only, single transactions up to RMB 2,000) through Tier 1 (full in-person identity verification, no upper limits). The PBoC operates under the stated principle of "small amounts are anonymous, large amounts are traceable." All mainland Chinese mobile numbers are, however, legally bound to a verified real-name national identity card. Privacy from commercial counterparties exists at small transaction sizes. Privacy from the state does not exist at any transaction size or wallet tier (Stanford DigiChina, 2025).</p>
+   <p>On January 1, 2026, the PBoC formally reclassified the e-CNY as deposit liabilities within the M1 and M2 monetary aggregates, removing it from the M0 cash-equivalent category and authorising it to bear interest on verified wallet balances (State Council of the People's Republic of China, 2025; China Daily, 2026). An interest-bearing e-CNY competes directly with commercial bank deposits, issued through central bank infrastructure with full PBoC ledger visibility at every tier. The reclassification dissolves the protection the two-tier architecture was explicitly designed to contain.</p>
+   <p>The adoption figures as of December 2025: 230 million personal wallets and 19.08 million corporate wallets, with cumulative transaction value reaching 19.5 trillion yuan ($2.8 trillion) across 3.57 billion total transactions (China Daily, 2026). In a single year during 2024 to 2025, the e-CNY processed approximately 4.2 trillion yuan against the 1.3 quadrillion yuan processed by commercial bank cards and private apps. The e-CNY's cumulative value represents approximately 0.2 percent of total retail payment flow (Peterson Institute for International Economics, 2026).</p>
+
+   <h2 id="mbridge">IV. The International Leg: mBridge and the Architecture of Settlement Optionality</h2>
+   <p>Project mBridge originated as a collaborative initiative between the BIS Innovation Hub, the Hong Kong Monetary Authority, the Bank of Thailand, the Central Bank of the United Arab Emirates, and the Digital Currency Institute of the People's Bank of China. On June 5, 2024, the platform reached minimum viable product stage. On the same date, the Saudi Central Bank (SAMA) formally joined mBridge as the fifth founding participant (Saudi Central Bank, 2024). Five months later, on October 31, 2024, BIS General Manager Agustín Carstens announced the BIS's formal withdrawal at the Santander International Banking Conference in Madrid.</p>
+   <p>The geopolitical context renders the "graduation" characterisation incomplete. The BIS withdrawal occurred one week after the BRICS summit in Kazan, Russia, at which President Putin publicly cited the mBridge multi-CBDC ledger architecture as a template for a "BRICS Bridge" payment network designed to bypass US dollar dominance. Carstens addressed the association directly: "mBridge is not the BRICS bridge" (Forbes, 2024). The BIS simultaneously advanced Project Agorá, a tokenised deposit settlement initiative structured around G7 central banks and SWIFT-compatible infrastructure.</p>
+   <p>The mBridge Ledger achieves atomic settlement for wholesale cross-border transactions in approximately 7 seconds. SWIFT's ISO 20022 modernisation programme has improved delivery times with approximately 75 percent of SWIFT payments now reaching destination banks within 10 minutes (SWIFT, 2025). The US dollar accounts for 51.14 percent of total SWIFT payment value, a historic high; the Chinese renminbi accounts for 3.10 percent (SWIFT Global Currency Tracker, 2026). The BIS confirms that the dollar appears on at least one side of 89 percent of all global foreign exchange transactions (BIS, 2024). mBridge does not require dollar correspondent banking relationships at all.</p>
+   <p>By late 2025 to early 2026, mBridge had processed $55.49 billion in total cross-border settlement value across 4,047 transactions (Reuters, 2026; PYMNTS, 2026). The growth multiple from the 2022 pilot's $22 million to current scale is approximately 2,500 times by transaction value. The e-CNY accounts for 95.3 percent of total settlement volume processed on the mBridge network (Atlantic Council, 2025; Peterson Institute for International Economics, 2025).</p>
+
+   <h2 id="stack">V. The Stack Read Together: Architectural Intent and Strategic Logic</h2>
+   <p>The domestic leg establishes complete visibility and programmable control over capital flows within China's monetary system. The January 2026 M1/M2 reclassification extends that control to the liability side of the commercial banking system. The international leg establishes a settlement mechanism for cross-border transactions that does not require dollar intermediation; and the 95.3 percent e-CNY share of mBridge settlement volume confirms that the international leg functions operationally as a projection of the domestic instrument.</p>
+   <p>The combined capability is domestic monetary visibility plus international settlement independence. The staging logic is architecturally legible. Each stage creates the conditions for the next. CIPS demonstrated that Chinese institutions could manage cross-border renminbi settlement at scale. mBridge demonstrated that multi-currency cross-border settlement could operate without SWIFT at wholesale speeds. The e-CNY is demonstrating that domestic monetary flows can be observed and programmed at the instrument level.</p>
+   <p>The complete stack thesis carries its own analytical limits. The e-CNY has not achieved meaningful retail adoption relative to China's existing payment infrastructure: 0.2 percent of total retail payment flow. mBridge at $55.49 billion in processed settlement value is not yet a systemic alternative to SWIFT. Neither observation weakens the architectural thesis. The question for analysis is whether the architecture being assembled is capable of scaling to systemic relevance. The growth trajectory, the participant accession pattern, the 95.3 percent e-CNY concentration in international settlement volume, and the BIS's departure at the moment of operational maturity all indicate that the question of scalability has been answered in the affirmative by the parties with the most direct information about the platform's capabilities.</p>
+
+   <h2 id="implications">VI. Implications for International Capital</h2>
+   <p>International capital positioned in or adjacent to China faces three direct implications that do not require projection. First, settlement pathway exposure: entities conducting significant business with Chinese counterparties need to model scenarios in which mBridge is the settlement infrastructure. The conditions under which a Chinese counterparty or a Gulf energy exporter might prefer mBridge settlement over dollar correspondent banking already exist. Saudi Arabia's participation provides the hydrocarbon corridor that constitutes China's single largest import payment category.</p>
+   <p>Second, domestic capital flow visibility: capital operating within China's domestic economy operates in a system where the PBoC is building granular ledger-level visibility into capital flows at the individual transaction scale. The January 2026 M1/M2 reclassification extends this visibility into the deposit liability space.</p>
+   <p>Third, the participant set as strategic signal: the mBridge participant roster of China, Hong Kong, Thailand, the UAE, and Saudi Arabia covers China's primary energy supply corridor, two of the three largest sovereign wealth fund ecosystems by assets under management, and the regional financial hub through which Chinese cross-border capital flows are structured. SAMA's accession as a full participant on the day of the platform's operational launch, after sustained engagement as an observing member throughout the development phase, represents a calculated commitment to the platform's architecture.</p>
+
+   <h2 id="conclusion">Conclusion</h2>
+   <p>The dual circulation strategy is a monetary architecture project. China holds $3.4105 trillion in foreign exchange reserves, the world's largest national stockpile (State Administration of Foreign Exchange, 2026). Dollar system participation remains substantial. The complete stack does not require China to exit the dollar system to have strategic value. Its value lies precisely in making exit optional: available when rational, unnecessary when it is not.</p>
+   <p>A monetary authority that can observe every domestic transaction at ledger level, programme the conditions under which distributed money may be spent, settle cross-border trade in central bank money entirely outside SWIFT, and do so through a system in which its own digital currency accounts for 95.3 percent of international settlement volume, occupies a structurally different strategic position than one that has not built any of those capabilities, regardless of whether it exercises the exit option in any given period.</p></div>
+        <div class="paper-references"><h2>References</h2><ul>
+      <li>Atlantic Council. (2025). <em>Central bank digital currency tracker: China</em>. GeoEconomics Center.</li>
+      <li>Bank for International Settlements. (2022). <em>Project mBridge: Connecting economies through CBDC</em>. BIS Innovation Hub.</li>
+      <li>Bank for International Settlements. (2024). <em>Triennial central bank survey: OTC foreign exchange turnover</em>.</li>
+      <li>China Daily. (2026). <em>e-CNY programme data: December 2025 figures</em>.</li>
+      <li>CIPS. (2026, April 9). <em>CIPS worldwide participants</em>. Cross-Border Interbank Payment System.</li>
+      <li>Forbes. (2024). <em>mBridge, BRICS, and the BIS withdrawal</em>.</li>
+      <li>Hong Kong Monetary Authority. (2022, October 26). <em>Project mBridge 2022 pilot results</em> [Press release].</li>
+      <li>Hong Kong Monetary Authority. (2024, June 5). <em>Project mBridge reaches minimum viable product stage</em> [Press release].</li>
+      <li>People's Bank of China. (2021). <em>Progress of research &amp; development of e-CNY in China</em>.</li>
+      <li>Peterson Institute for International Economics. (2026). <em>China gives state-backed digital cash</em>.</li>
+      <li>PYMNTS. (2026, January). <em>Cross-border payments platform Project mBridge processed $55.49B in transaction volume</em>.</li>
+      <li>ResearchGate. (2025). <em>Alipay and WeChat Pay market dynamics in Chinese digital payments</em>.</li>
+      <li>Reuters. (2026, January 16). <em>China-led cross-border digital currency platform sees surge</em>.</li>
+      <li>Saudi Central Bank. (2024, June 5). <em>SAMA joins Project mBridge as full participant</em> [Press release].</li>
+      <li>Stanford DigiChina. (2025). <em>Lexicon: Controllable anonymity and China's digital yuan</em>.</li>
+      <li>State Administration of Foreign Exchange. (2026, April 7). <em>China foreign exchange reserves data</em>.</li>
+      <li>State Council of the People's Republic of China. (2025). <em>e-CNY M1/M2 reclassification</em>.</li>
+      <li>SWIFT. (2025). <em>Year of shared progress: 5 highlights of 2025</em>.</li>
+      <li>SWIFT Global Currency Tracker. (2026). <em>Global payment currency market share</em>.</li>
+   </ul></div>
+        
+        <nav class="paper-series-nav"><h3>THE INTERNAL CIRCULATION</h3><div class="paper-series-links">
+      <span class="paper-series-link current"><span class="num">No.&nbsp;1</span>The Complete Stack: e-CNY, mBridge, and the Architecture of Monetary Optionality</span>
+      <span class="paper-series-link" style="color:#2e2c2a;"><span class="num" style="color:#2a3a4a;">No.&nbsp;2</span>Forthcoming &middot; The M1/M2 Reclassification: What the January 2026 Decision Changes</span>
+   </div></nav>
+        <div class="paper-foot"><a href="liang.html">&#8592; Return to profile</a></div>
+    </div></main>
+    <footer class="footer"><span>The Cantillon Institute &middot; Est. 2021</span><span>cantillon.institute</span></footer>
+</body>
+</html>

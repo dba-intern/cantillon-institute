@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Settlement Gap: TARGET2, MiCA, and the Hidden Fiscal Architecture of European Monetary Union &mdash; The Cantillon Institute</title>
+    <meta name="description" content="European monetary union operates a fiscal function it does not officially possess: TARGET2 absorbs intra-union capital movement and makes imbalances manageable. Germany's Bundesbank held a TARGET2 claim of approximately €1.1 trillion as of December 2024. MiCA authorises euro stablecoin infrastructure that settles outside TARGET2. The primary fault line is the progressive erosion of the ECB's capacity to see and absorb intra-union capital dynamics. Working Paper No. 1, R.V. Rueff.">
+    <link rel="canonical" href="https://cantillon.institute/rueff-paper-01.html">
+    <meta property="og:title" content="The Settlement Gap: TARGET2, MiCA, and the Hidden Fiscal Architecture of European Monetary Union &mdash; The Cantillon Institute">
+    <meta property="og:url" content="https://cantillon.institute/rueff-paper-01.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cantillon.institute/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-page { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+        .paper-header { padding: 4rem 0 3rem; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .paper-series-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; font-weight: 700; text-transform: uppercase; }
+        .paper-number { font-size: 11px; letter-spacing: 0.1em; color: #4a4845; text-transform: uppercase; }
+        .paper-header h1 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; color: #e8e4da; margin-bottom: 1.5rem; }
+        .paper-byline { font-size: 14px; color: #5a5855; margin-bottom: 2rem; }
+        .paper-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .paper-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 13px; font-weight: 700; color: #0b0c0d; background: #378ADD; border-radius: 4px; padding: 0.55rem 1rem; transition: opacity 0.2s ease; }
+        .paper-download:hover { opacity: 0.85; }
+        .paper-back-link { font-size: 13px; color: #378ADD; border-bottom: 0.5px solid #378ADD; padding-bottom: 1px; }
+        .paper-abstract-block { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-abstract-block .label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-abstract-block blockquote { font-size: 16px; color: #7a7870; line-height: 1.85; font-style: italic; border-left: 2px solid #1d3a52; padding-left: 1.25rem; margin: 0; }
+        .paper-nav { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-nav .nav-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-nav ol { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+        .paper-nav a { font-size: 14px; color: #6a6860; transition: color 0.2s ease; line-height: 1.5; text-decoration:none; }
+        .paper-nav a:hover { color: #e8e4da; }
+        .paper-body { padding: 3.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-body h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; color: #e8e4da; margin-top: 3rem; margin-bottom: 1.25rem; scroll-margin-top: 5rem; }
+        .paper-body h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 17px; font-weight: 700; color: #c8c4bc; margin-top: 2.25rem; margin-bottom: 0.9rem; }
+        .paper-body h2:first-child { margin-top: 0; }
+        .paper-body p { font-size: 17px; color: #a8a49a; line-height: 1.9; margin-bottom: 1.5rem; max-width: 660px; }
+        .paper-body em { font-style: italic; color: #c0bdb5; }
+        .paper-body strong { font-weight: 700; color: #c8c4bc; }
+        .paper-references { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-references h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e8e4da; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .paper-references ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .paper-references li { font-size: 14px; color: #6a6860; line-height: 1.75; padding-left: 1.5rem; text-indent: -1.5rem; }
+        .paper-footnote { padding: 1.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-footnote p { font-size: 14px; color: #4a4845; font-style: italic; }
+        .paper-series-nav { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-nav h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e8e4da; margin-bottom: 1.25rem; letter-spacing: 0.04em; }
+        .paper-series-links { display: flex; flex-direction: column; gap: 0.5rem; }
+        .paper-series-link { display: flex; align-items: baseline; gap: 1rem; font-size: 14px; color: #5a5855; text-decoration: none; }
+        .paper-series-link .num { font-size: 11px; color: #378ADD; font-weight: 700; letter-spacing: 0.1em; flex-shrink: 0; min-width: 32px; }
+        .paper-series-link.current { color: #e8e4da; }
+        .paper-foot { padding: 2.5rem 0; }
+        .paper-foot a { font-size: 13px; color: #378ADD; border-bottom: 0.5px solid #378ADD; padding-bottom: 2px; }
+        @media (max-width: 640px) { .paper-page { padding: 0 1.25rem; } .paper-body p { font-size: 16px; } .paper-body h2 { font-size: 20px; } }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="/" class="nav-logo">The Cantillon Institute</a>
+            <div class="nav-links">
+                <a href="papers.html">Papers</a>
+                <a href="briefs.html">Briefs</a>
+                <a href="/#fellows">Fellows</a>
+                <a href="about.html">About</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+        </nav>
+    </header>
+    <main><div class="paper-page">
+        <div class="paper-header">
+            <div class="paper-series-meta">
+                <span class="paper-series-label">The Union's Fault Lines</span>
+                <span class="paper-number">Working Paper No. 1 &middot; R.V. Rueff &middot; 2026</span>
+            </div>
+            <h1>The Settlement Gap: TARGET2, MiCA, and the Hidden Fiscal Architecture of European Monetary Union</h1>
+            <p class="paper-byline">Ren&eacute;e V. Rueff &middot; Fellow, The Cantillon Institute &middot; Frankfurt</p>
+            <div class="paper-actions">
+                <a href="papers/rueff-paper-01.pdf" class="paper-download" download>PDF &#8595; Download</a>
+                <a href="rueff.html" class="paper-back-link">Full profile &#8594;</a>
+            </div>
+        </div>
+        <div class="paper-abstract-block">
+            <span class="label">Abstract</span>
+            <blockquote>European monetary union operates a fiscal function it does not officially possess. TARGET2, the Eurosystem's real-time gross settlement infrastructure, performs that function: it absorbs intra-union capital movement, records the imbalances that capital flight produces, and provides the accounting mechanism through which the European Central Bank manages sovereign stress without recourse to the explicit fiscal transfers the union's political architecture prohibits. As of December 2024, Germany's Bundesbank held a TARGET2 claim of approximately &euro;1.1 trillion against the Eurosystem; Italy's Banca d'Italia carried a TARGET2 liability of approximately &euro;597 billion; Spain's Banco de Espa&ntilde;a a liability of approximately &euro;478 billion. The Markets in Crypto-Assets Regulation, in full application since December 2024, creates the regulatory conditions for euro-denominated stablecoin infrastructure at institutional scale. That infrastructure settles outside TARGET2. This paper argues that the primary fault line the stablecoin payment layer opens in European monetary architecture is the progressive erosion of the ECB's capacity to see, manage, and absorb the intra-union capital dynamics that TARGET2's settlement function currently intermediates. The union was designed to survive without a fiscal union. It was not designed to survive without a visible settlement layer.</blockquote>
+        </div>
+        <nav class="paper-nav"><span class="nav-label">Contents</span><ol>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#target2-fiscal">I. The Fiscal Function TARGET2 Is Not Called</a></li>
+                    <li><a href="#mica">II. The Architecture MiCA Authorises</a></li>
+                    <li><a href="#bypass">III. The Bypass and Its Mechanism</a></li>
+                    <li><a href="#tpi">IV. Sovereign Stress, the TPI, and the Loss of the Absorption Mechanism</a></li>
+                    <li><a href="#boe">V. The Bank of England as Adjacent Case</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li></ol></nav>
+        <div class="paper-body">
+                <h2 id="intro">Introduction</h2>
+                <p>The debate over stablecoin infrastructure in Europe has organised itself around a set of questions that are real but secondary: whether euro-denominated stablecoins compete with the euro at the margin, whether they complicate ECB monetary policy transmission in familiar ways, whether MiCA's reserve requirements are sufficient to ensure solvency at scale. These questions have received substantive attention. They are not the primary question.</p>
+                <p>The primary question is structural. European monetary union was constructed on the proposition that a single currency, a single monetary authority, and a unified settlement infrastructure could substitute for the fiscal union that the union's political architecture was unable to produce. That proposition has been tested twice in conditions of acute sovereign stress, in 2010 to 2012 and in 2018 to 2019, and it has held; not because the fiscal deficit was resolved but because the settlement infrastructure performed the fiscal function under pressure.</p>
+                <p>The stablecoin payment layer authorised by MiCA creates, for the first time, a private settlement infrastructure capable of operating at institutional scale alongside TARGET2 in a manner that routes cross-border capital movement outside TARGET2's visibility. The fault line this opens is the settlement gap: the progressive displacement of institutional cross-border capital movement from the system that makes those movements visible and manageable into a system that does not.</p>
+
+                <h2 id="target2-fiscal">I. The Fiscal Function TARGET2 Is Not Called</h2>
+                <p>TARGET2 is described in ECB operational documentation as the Eurosystem's real-time gross settlement system for large-value euro transactions. This description is accurate. It is not complete.</p>
+                <p>TARGET2 is also the mechanism by which capital flight within the eurozone is absorbed without triggering the sovereign debt dynamics that explicit cross-border capital movement would otherwise produce. When a depositor in a peripheral member state moves funds to a bank in a core member state, the transaction settles through TARGET2. The originating bank loses reserves. The receiving bank gains them. The national central bank in the peripheral jurisdiction records an increased liability to the Eurosystem. The national central bank in the core jurisdiction records an increased claim. No cross-border transfer of physical assets occurs. No sovereign currency exchange is required. No explicit fiscal mechanism is engaged.</p>
+                <p>Sinn and Wollmershäuser (2012) established this mechanism precisely in their analysis of TARGET2 imbalances during the eurozone sovereign crisis. By August 2012, Germany's Bundesbank held a TARGET2 claim of approximately &euro;750 billion (Deutsche Bundesbank, 2012). As of December 2024, Germany's Bundesbank held a TARGET2 claim of approximately &euro;1.1 trillion (Deutsche Bundesbank, 2025). Italy's Banca d'Italia carried a TARGET2 liability of approximately &euro;597 billion (Banca d'Italia, 2025). Spain's Banco de Espa&ntilde;a carried a liability of approximately &euro;478 billion (Banco de Espa&ntilde;a, 2025). These balances are the quantified record of a fiscal function that operates continuously; not only under stress, but as the background condition of how the union holds together.</p>
+
+                <h2 id="mica">II. The Architecture MiCA Authorises</h2>
+                <p>The Markets in Crypto-Assets Regulation, Regulation (EU) 2023/1114, entered full application on 30 December 2024. A euro-denominated stablecoin, issued and redeemable in euros at par, is classified as an e-money token under MiCA's definitional framework. MiCA establishes a category of significant e-money tokens; an issuer meeting at least three of the criteria at Article 43(1), including a customer base exceeding ten million holders within the EU, a market capitalisation or reserve value exceeding &euro;5 billion, and daily average transaction volumes exceeding 2.5 million transactions or &euro;500 million in value, falls under enhanced EBA supervision.</p>
+                <p>This tiered supervisory architecture represents a proportionate regulatory response to scale. It addresses the solvency, conduct, and systemic dimensions of stablecoin infrastructure. It does not address the settlement dimension. A euro-denominated EMT transaction between two institutional counterparties settles on the blockchain network underlying the token, not through the Eurosystem's payment infrastructure. The transaction produces no TARGET2 position. The national central banks of both jurisdictions have no operational visibility into the transaction as a settlement event.</p>
+
+                <h2 id="bypass">III. The Bypass and Its Mechanism</h2>
+                <p>The bypass this paper identifies is a structural consequence of authorising private payment infrastructure for cross-border settlement within a monetary union whose stability architecture depends on the visibility and manageability of those flows.</p>
+                <p>Consider two institutional counterparties, one based in Milan and one in Frankfurt, settling a &euro;150 million bilateral position. Under current banking infrastructure, this transaction generates TARGET2 settlement positions at the Banca d'Italia and Deutsche Bundesbank respectively. The Eurosystem has the transaction in its operational view. The same settlement conducted using a MiCA-authorised euro-denominated EMT produces a confirmed transaction on the underlying distributed ledger and no TARGET2 position. The national central banks observe no reserve movement. The transaction is pseudonymously public on the distributed ledger and operationally invisible to the Eurosystem's settlement infrastructure.</p>
+                <p>The ratio is the wrong measure at current volumes. TARGET2's systemic function is not uniformly distributed across its daily volume. The flows that matter for the union's fiscal stability are the cross-border capital movements that concentrate during sovereign stress; and those flows are disproportionately represented in the institutional settlement layer. If institutional cross-border settlement during a period of sovereign spread widening migrates from TARGET2 to stablecoin infrastructure, the monitoring gap is not proportional to aggregate volume displacement. It is proportional to the stress-period institutional flow displacement.</p>
+
+                <h2 id="tpi">IV. Sovereign Stress, the TPI, and the Loss of the Absorption Mechanism</h2>
+                <p>The Transmission Protection Instrument, announced on 21 July 2022, authorises the Governing Council to conduct secondary market purchases of eligible member state sovereign debt in jurisdictions experiencing spread widening that the Council judges to be disorderly and unjustified by country-specific fundamentals (ECB, 2022). The conditionality framework attached to TPI activation requires the ECB to assess whether spread dynamics are self-reinforcing; a judgment that depends on real-time data about the capital flows spread widening is producing across the settlement system.</p>
+                <p>TARGET2 imbalance data provides the most granular available indicator of the direction and velocity of intra-union capital movement at the frequency the TPI assessment requires. If institutional capital is moving from Italian banking system exposure to German banking system exposure at a rate inconsistent with fundamental deterioration, TARGET2 will show that movement in the settlement cycle in which it occurs. A euro stablecoin settlement layer of institutional scale introduces a parallel channel for precisely this capital movement that TARGET2 currently captures without TARGET2 visibility. The TPI cannot protect against spread dynamics it cannot see.</p>
+
+                <h2 id="boe">V. The Bank of England as Adjacent Case</h2>
+                <p>The Bank of England functions in this series as the adjacent case study: the major European currency authority outside the eurozone, managing the stablecoin transition without the ECB's institutional framework but also without the ECB's structural constraints.</p>
+                <p>For the Bank of England, the stablecoin challenge is a standard monetary sovereignty question. The Bank of England can extend RTGS settlement access to authorised non-bank payment system participants through the New Payments Architecture framework. It can accelerate the digital pound programme. None of these responses requires the consent of multiple national central banks, a Governing Council representing twenty member states, or the political architecture of a monetary union in which fiscal competences remain national while monetary competence is shared.</p>
+                <p>The ECB's response to partial TARGET2 bypass is constrained by each of those factors simultaneously. Extending settlement access to MiCA-authorised EMT issuers on TARGET2 would require modification of the TARGET2 legal framework through a process requiring agreement across member states. The comparison makes the ECB's structural constraint visible with precision. The eurozone has transferred monetary sovereignty to a supranational institution without transferring the fiscal sovereignty that would enable that institution to respond to the failure modes of its own payment infrastructure.</p>
+
+                <h2 id="conclusion">Conclusion</h2>
+                <p>TARGET2's accumulated imbalances are the quantified record of a fiscal function the eurozone performs through its payment infrastructure because it cannot perform it through any other mechanism. Germany's Bundesbank claim of approximately &euro;1.1 trillion, Italy's Banca d'Italia liability of approximately &euro;597 billion, and Spain's Banco de Espa&ntilde;a liability of approximately &euro;478 billion are the accumulated product of sovereign stress absorption across two decades of monetary union, conducted through a settlement system that made the stress visible, manageable, and implicitly guaranteed by the Eurosystem's balance sheet.</p>
+                <p>MiCA creates the regulatory conditions for euro-denominated stablecoin infrastructure at institutional scale. The infrastructure it authorises settles outside TARGET2. During sovereign stress conditions, when TARGET2's fiscal function is most critical and the ECB's monitoring capacity most consequential for policy calibration, those movements will be precisely the flows the TPI's activation framework requires the ECB to see. The Transmission Protection Instrument was designed for a closed settlement environment. The environment MiCA is authorising within the eurozone's own regulatory perimeter is not closed.</p></div>
+        <div class="paper-references"><h2>References</h2><ul>
+                    <li>Banca d'Italia. (2025). TARGET balances. <em>Statistical Data Warehouse</em>.</li>
+                    <li>Banco de Espa&ntilde;a. (2025). TARGET2 balance. <em>Statistical Bulletin</em>.</li>
+                    <li>Cecchetti, S., McCauley, R., &amp; McGuire, P. (2012). <em>Interpreting TARGET2 balances</em> (BIS Working Paper No. 393).</li>
+                    <li>Deutsche Bundesbank. (2012). <em>Monthly Report, September 2012</em>.</li>
+                    <li>Deutsche Bundesbank. (2025). TARGET2 balance. <em>Monthly Statistical Report</em>.</li>
+                    <li>European Central Bank. (2022, July 21). <em>ECB introduces the Transmission Protection Instrument</em> [Press release].</li>
+                    <li>European Central Bank. (2023, October 18). <em>Digital euro: Governing Council decides to move to preparation phase</em> [Press release].</li>
+                    <li>European Central Bank. (2024). <em>TARGET Annual Report 2023</em>.</li>
+                    <li>European Parliament and Council. (2023). Regulation (EU) 2023/1114 on markets in crypto-assets (MiCA). <em>Official Journal of the European Union</em>, L 150, 40&#8211;205.</li>
+                    <li>Sinn, H.-W., &amp; Wollmershäuser, T. (2012). Target loans, current account balances and capital flows. <em>International Tax and Public Finance</em>, 19(4), 468&#8211;508.</li>
+                    <li>Whelan, K. (2014). TARGET2 and central bank balance sheets. <em>Economic Policy</em>, 29(77), 79&#8211;137.</li>
+                </ul></div>
+        
+        <nav class="paper-series-nav"><h3>THE UNION'S FAULT LINES</h3><div class="paper-series-links">
+                    <span class="paper-series-link current"><span class="num">No.&nbsp;1</span>The Settlement Gap: TARGET2, MiCA, and the Hidden Fiscal Architecture of European Monetary Union</span>
+                    <span class="paper-series-link" style="color:#2e2c2a;"><span class="num" style="color:#2a3a4a;">No.&nbsp;2</span>Forthcoming &middot; Sovereign Spread Dynamics Under Partial TARGET2 Bypass</span>
+                </div></nav>
+        <div class="paper-foot"><a href="rueff.html">&#8592; Return to profile</a></div>
+    </div></main>
+    <footer class="footer">
+        <span>The Cantillon Institute &middot; Est. 2021</span>
+        <span>cantillon.institute</span>
+    </footer>
+</body>
+</html>

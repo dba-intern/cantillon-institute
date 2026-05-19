@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reserve Channel &mdash; The Cantillon Institute</title>
+    <meta name="description" content="Federal Reserve monetary policy transmission through the reserve channel depends on a structural correspondence: the institutions that hold reserve-eligible assets and the institutions that create credit are the same institutions. The GENIUS Act authorizes a new class of money-creating institution that holds reserve-eligible assets at scale while possessing no authority to create credit. This paper traces the precise mechanism through which stablecoin reserve accumulation severs that correspondence. Working Paper No. 1, P.W. Eccles, The Transmission Problem.">
+    <link rel="canonical" href="https://cantillon.institute/eccles-paper-01.html">
+    <meta property="og:title" content="The Reserve Channel: Stablecoin Architecture and the Monetary Policy Transmission Mechanism the GENIUS Act Opens &mdash; The Cantillon Institute">
+    <meta property="og:description" content="How the GENIUS Act severs the foundational correspondence of Federal Reserve reserve channel transmission. Working Paper No. 1, P.W. Eccles.">
+    <meta property="og:url" content="https://cantillon.institute/eccles-paper-01.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cantillon.institute/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"The Reserve Channel: Stablecoin Architecture and the Monetary Policy Transmission Mechanism the GENIUS Act Opens","author":{"@type":"Person","name":"Preston W. Eccles","affiliation":{"@type":"Organization","name":"The Cantillon Institute"}},"publisher":{"@type":"Organization","name":"The Cantillon Institute","url":"https://cantillon.institute"},"datePublished":"2025","url":"https://cantillon.institute/eccles-paper-01.html","sameAs":"https://cantillon.institute/papers/eccles-paper-01.pdf","about":["Federal Reserve floor system IORB stablecoin","reserve channel monetary transmission","Keister McAndrews floor system","GENIUS Act Federal Reserve transmission","stablecoin deposit displacement credit creation","FRB/US model stablecoin","ON RRP stablecoin counterparty"],"description":"The GENIUS Act authorizes a new class of money-creating institution that holds reserve-eligible assets at scale while possessing no authority to create credit. This paper traces how stablecoin reserve accumulation severs the correspondence the floor system requires.","isPartOf":{"@type":"PublicationVolume","name":"The Transmission Problem","publisher":{"@type":"Organization","name":"The Cantillon Institute"}}}
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-page { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+        .paper-header { padding: 4rem 0 3rem; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .paper-series-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; font-weight: 700; text-transform: uppercase; }
+        .paper-number { font-size: 11px; letter-spacing: 0.1em; color: #4a4845; text-transform: uppercase; }
+        .paper-header h1 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; color: #e8e4da; margin-bottom: 1.5rem; }
+        .paper-byline { font-size: 14px; color: #5a5855; margin-bottom: 2rem; letter-spacing: 0.04em; }
+        .paper-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .paper-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 13px; font-weight: 700; color: #0b0c0d; background: #378ADD; border-radius: 4px; padding: 0.55rem 1rem; letter-spacing: 0.04em; transition: opacity 0.2s ease; }
+        .paper-download:hover { opacity: 0.85; }
+        .paper-back-link { font-size: 13px; color: #378ADD; letter-spacing: 0.06em; border-bottom: 0.5px solid #378ADD; padding-bottom: 1px; }
+        .paper-abstract-block { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-abstract-block .label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-abstract-block blockquote { font-size: 16px; color: #7a7870; line-height: 1.85; font-style: italic; border-left: 2px solid #1d3a52; padding-left: 1.25rem; margin: 0; }
+        .paper-nav { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-nav .nav-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-nav ol { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+        .paper-nav a { font-size: 14px; color: #6a6860; transition: color 0.2s ease; line-height: 1.5; text-decoration:none; }
+        .paper-nav a:hover { color: #e8e4da; }
+        .paper-body { padding: 3.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-body h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; color: #e8e4da; margin-top: 3rem; margin-bottom: 1.25rem; scroll-margin-top: 5rem; }
+        .paper-body h2:first-child { margin-top: 0; }
+        .paper-body p { font-size: 17px; color: #a8a49a; line-height: 1.9; margin-bottom: 1.5rem; max-width: 660px; }
+        .paper-body em { font-style: italic; color: #c0bdb5; }
+        .paper-body strong { font-weight: 700; color: #c8c4bc; }
+        .paper-references { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-references h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.06em; color: #e8e4da; margin-bottom: 1.5rem; text-transform: uppercase; }
+        .paper-references ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .paper-references li { font-size: 14px; color: #6a6860; line-height: 1.75; padding-left: 1.5rem; text-indent: -1.5rem; }
+        .paper-footnote { padding: 1.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-footnote p { font-size: 14px; color: #4a4845; font-style: italic; line-height: 1.7; }
+        .paper-series-nav { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-nav h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.04em; color: #e8e4da; margin-bottom: 1.25rem; }
+        .paper-series-links { display: flex; flex-direction: column; gap: 0.5rem; }
+        .paper-series-link { display: flex; align-items: baseline; gap: 1rem; font-size: 14px; color: #5a5855; text-decoration: none; }
+        .paper-series-link .num { font-size: 11px; color: #378ADD; font-weight: 700; letter-spacing: 0.1em; flex-shrink: 0; min-width: 32px; }
+        .paper-series-link.current { color: #e8e4da; }
+        .paper-foot { padding: 2.5rem 0; }
+        .paper-foot a { font-size: 13px; color: #378ADD; letter-spacing: 0.08em; border-bottom: 0.5px solid #378ADD; padding-bottom: 2px; }
+        @media (max-width: 640px) { .paper-page { padding: 0 1.25rem; } .paper-header { padding: 2.5rem 0 2rem; } .paper-body p { font-size: 16px; } .paper-body h2 { font-size: 20px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="/" class="nav-logo">The Cantillon Institute</a>
+            <div class="nav-links">
+                <a href="papers.html">Papers</a>
+                <a href="briefs.html">Briefs</a>
+                <a href="/#fellows">Fellows</a>
+                <a href="about.html">About</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="paper-page">
+            <div class="paper-header">
+                <div class="paper-series-meta">
+                    <span class="paper-series-label">The Transmission Problem</span>
+                    <span class="paper-number">Working Paper No. 1 &middot; P.W. Eccles &middot; 2025</span>
+                </div>
+                <h1>The Reserve Channel: Stablecoin Architecture and the Monetary Policy Transmission Mechanism the GENIUS Act Opens</h1>
+                <p class="paper-byline">Preston W. Eccles &middot; Fellow, The Cantillon Institute &middot; Washington D.C.</p>
+                <div class="paper-actions">
+                    <a href="papers/eccles-paper-01.pdf" class="paper-download" download>PDF &#8595; Download</a>
+                    <a href="eccles.html" class="paper-back-link">P.W. Eccles at The Cantillon Institute &#8594;</a>
+                </div>
+            </div>
+
+            <div class="paper-abstract-block">
+                <span class="label">Abstract</span>
+                <blockquote>Federal Reserve monetary policy transmission through the reserve channel depends on a structural condition established by the Federal Reserve Act of 1913 and formalised in the floor system constructed after 2008: the institutions that hold reserve-eligible assets and the institutions that create credit are the same institutions. This correspondence is not incidental. It is the mechanism through which adjustments to the interest rate on reserve balances propagate into credit conditions, asset prices, and aggregate demand. The GENIUS Act authorises a new class of money-creating institution, the payment stablecoin issuer, that holds reserve-eligible assets at scale while possessing no authority and no operational capacity to create credit. This paper traces the precise mechanism through which stablecoin reserve accumulation severs the correspondence the floor system requires, maps the conditions under which that severance becomes quantitatively material to policy transmission, and identifies the specific instruments in the Federal Reserve's operational toolkit that have no capacity to address the resulting gap. The analysis draws on the Bernanke-Blinder credit channel framework, the Keister-McAndrews formalisation of the floor system, and current reserve balance data from the Federal Reserve H.4.1 statistical release. The GENIUS Act does not represent a marginal adjustment to the monetary architecture. It opens the reserve channel to participation by institutions the transmission mechanism was not designed to accommodate. The Federal Reserve has published no analysis of this interaction.</blockquote>
+            </div>
+
+            <nav class="paper-nav" aria-label="Paper sections">
+                <span class="nav-label">Contents</span>
+                <ol>
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#floor-system">2. The Floor System and Its Foundational Assumption</a></li>
+                    <li><a href="#what-genius-authorizes">3. What the GENIUS Act Authorises and What That Structure Produces</a></li>
+                    <li><a href="#distortion">4. Three Transmission Distortion Mechanisms</a></li>
+                    <li><a href="#toolkit">5. The Toolkit, the ON RRP Facility, and the Boundary the Act Creates</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ol>
+            </nav>
+
+            <div class="paper-body">
+
+                <h2 id="introduction">1. Introduction</h2>
+                <p>The Federal Reserve's floor system is, at its operating core, a simple mechanism. The Fed pays member banks interest on the balances they hold at Federal Reserve Banks. This rate, the interest on reserve balances (IORB), functions as the effective floor beneath the federal funds rate because no institution with access to IORB will lend overnight at a rate below it. The Federal Open Market Committee adjusts the IORB rate. The adjustment propagates through the overnight market into short-term lending rates, into longer-term credit conditions through term structure expectations, and into the broader economy through channels that monetary economists have mapped in detail since Bernanke and Blinder (1988).</p>
+                <p>The mechanism works because the banks that hold reserve balances are the same banks that make loans. When the Fed raises IORB, it raises the return on holding reserves and raises, simultaneously, the opportunity cost of deploying those reserves into credit. The signal and the credit creation function are co-located on the same institutional balance sheet. This co-location is not a historical accident. It is the load-bearing assumption of the transmission channel.</p>
+                <p>The GENIUS Act of 2025 (S.1582, 119th Cong.) authorises nonbank payment stablecoin issuers to hold reserves in cash, short-term Treasury securities, and, under specific conditions, balances at Federal Reserve Banks. A stablecoin issuer holding $200 billion in Treasury bills is not a bank. It does not create credit. It does not intermediate between depositors and borrowers. Its reserve assets sit in the same instruments the Fed uses to conduct monetary policy, but the institution holding those assets participates in none of the transmission channels those instruments are designed to carry.</p>
+                <p>This paper describes, with precision, what that structural condition produces.</p>
+
+                <h2 id="floor-system">2. The Floor System and Its Foundational Assumption</h2>
+                <p>The Federal Reserve operated under a corridor system from its founding through the financial crisis of 2008. In a corridor system, the Fed supplied reserves to the banking system in quantities calibrated to produce a target federal funds rate. Scarcity of reserves was the mechanism. The Fed managed a quantity, and that quantity determined the rate.</p>
+                <p>The quantitative easing programmes initiated in November 2008 flooded the system with reserves. Total reserve balances expanded from approximately $10 billion in August 2008 to approximately $800 billion by early 2009 (Federal Reserve H.4.1, 2009). Congress authorised the payment of interest on reserve balances in October 2008, effective immediately (Emergency Economic Stabilisation Act, 2008). The floor system was operational by necessity before it was operational by design.</p>
+                <p>Keister and McAndrews (2009) formalised the floor system's operating logic. Banks with access to IORB will not lend federal funds below the IORB rate, because doing so would be irrational; they can earn IORB by holding reserves instead. The IORB rate therefore constitutes a floor beneath the market rate regardless of the total quantity of reserves outstanding. Total reserve balances currently stand at approximately $3.26 trillion (Federal Reserve H.4.1, December 2024). The precise quantity is largely irrelevant to policy transmission. What matters is the rate the Fed pays on those balances and the institutional response to that rate.</p>
+                <p>The institutional response is the load-bearing element. Ihrig, Meade, and Weinbach (2015) describe the floor system's transmission logic in terms that make the foundational assumption explicit: the banks that receive IORB-equivalent returns are the banks that make lending decisions. An increase in IORB raises the return on holding reserves and raises the opportunity cost of deploying reserves as loans. That opportunity cost transmission is the primary channel through which IORB changes propagate into credit conditions. The mechanism requires that the institutions earning IORB-equivalent returns have a credit creation function to forgo.</p>
+                <p>Payment stablecoin issuers authorised under the GENIUS Act do not have that function. They cannot make loans. They are not chartered to intermediate credit. They hold reserve-eligible assets and issue dollar-pegged tokens against those holdings. The return on reserve assets is not an opportunity cost relative to lending. It is the totality of their revenue model. The signal the Fed sends through IORB rate adjustments reaches their balance sheets and stops.</p>
+
+                <h2 id="what-genius-authorizes">3. What the GENIUS Act Authorises and What That Structure Produces</h2>
+                <p>The GENIUS Act defines a payment stablecoin as a digital asset used primarily as a means of payment or settlement, denominated in or pegged to a fixed monetary value, and redeemable on demand at par (GENIUS Act, §2(22), 2025). Permitted reserve assets include United States currency, demand deposits at insured depository institutions, Treasury bills with maturity of 93 days or less, repurchase agreements collateralised by Treasury securities, and shares in government money market funds (GENIUS Act, §4(a)(1)(A), 2025). The Act explicitly prohibits payment stablecoin issuers from paying yield to holders.</p>
+                <p>Two structural consequences follow from these provisions. Neither has appeared in Federal Reserve public communications.</p>
+                <p>The first is a reserve asset accumulation mechanism without a corresponding credit creation function. Every dollar that moves from a bank deposit into a payment stablecoin undergoes the following transformation: the user's bank deposit is redeemed, the stablecoin issuer deploys the resulting cash into Treasury bills or equivalent instruments, and a stablecoin token exists in circulation representing a claim on those assets. The bank deposit that previously supported credit creation has been extinguished and replaced by a Treasury bill position at a nonbank institution. No loan has been made against the converted funds. No credit has been created.</p>
+                <p>The second is a structural incentive for maximum reserve accumulation. The Act's prohibition on yield to holders means the stablecoin issuer earns the full return on reserve assets and passes none to token holders. The larger the reserve pool, the larger the revenue. The competitive logic of the framework pushes issuers toward maximum reserve accumulation, which is maximum absorption of assets from the transmission-capable banking system.</p>
+                <p>Current scale makes the trajectory visible. Tether's Q3 2024 reserve attestation reports $102.5 billion in US Treasury bill holdings, placing Tether among the largest single holders of short-duration Treasury securities globally (Tether, 2024). Circle's USDC maintains reserves of approximately $43.5 billion, held primarily in a government money market fund (Circle, 2024). Total stablecoin market capitalisation as of December 2024 stands at approximately $214 billion, representing roughly 0.9 percent of M2 as measured by the Federal Reserve (CoinGecko, 2024; Federal Reserve H.6, December 2024). Standard Chartered (2024) projects stablecoin market capitalisation reaching $2 trillion within three years of legislative passage. Citigroup (2024) projects $3.7 trillion under base case adoption assumptions.</p>
+
+                <h2 id="distortion">4. Three Transmission Distortion Mechanisms</h2>
+                <p>The Brayton, Levin, Tryon, and Williams (1997) FRB/US model, the primary large-scale macroeconomic model used by Federal Reserve Board staff for policy analysis, embeds specific assumptions about how monetary policy propagates through the economy. It assumes that reserve-eligible assets are held primarily by institutions that participate in credit intermediation, and that changes in short-term rates propagate through term structure expectations into longer-term credit conditions. None of these assumptions accommodate a large pool of reserve-eligible assets held by institutions with no credit function.</p>
+                <p>Three specific distortion mechanisms follow from the GENIUS Act's architecture.</p>
+                <p>The first is IORB signal degradation. When the Fed raises IORB, it raises the opportunity cost of lending for banks that hold reserve balances. For a stablecoin issuer holding Treasury bills, the equivalent rate signal carries no such opportunity cost, because there is no lending alternative to forgo. A 50-basis-point IORB increase changes nothing in a stablecoin issuer's balance sheet optimisation because the optimisation function contains no credit creation variable. As the fraction of reserve-eligible assets held by non-credit-creating institutions rises, the fraction responsive to the IORB signal falls in proportion.</p>
+                <p>The second is deposit displacement. When a dollar of bank deposits converts into a stablecoin, the banking system loses a liability and a corresponding asset simultaneously. The reserve balance or cash that supported that deposit transfers to the stablecoin issuer's reserve pool. The banking system has lost a deposit that, under the capital-constrained lending model that replaced formal reserve requirements after March 2020 (Federal Reserve, 2020), supported some multiple of credit creation. The stablecoin issuer has acquired an asset that supports none. The Fed's existing tools cannot reverse this structural credit withdrawal. Open market operations add reserves to the banking system; they cannot restore the deposit base of banks that have lost deposits to stablecoin conversion.</p>
+                <p>The third is velocity distortion. Programmable stablecoins settled on distributed ledger infrastructure execute transactions at finality speeds no existing bank payment rail matches; settlement on major stablecoin networks currently ranges from seconds to under two minutes at costs measured in fractions of a cent per transaction (BIS, 2023). The velocity assumptions embedded in M2-based monetary aggregates used in Federal Reserve analysis do not accommodate this. Stablecoin balances are excluded from M1 and M2 as currently defined. The Federal Reserve acknowledged in a 2022 technical note that existing monetary aggregate definitions do not capture digital payment instruments (Federal Reserve Board, 2022). That definitional gap remains unresolved.</p>
+
+                <h2 id="toolkit">5. The Toolkit, the ON RRP Facility, and the Boundary the Act Creates</h2>
+                <p>The Federal Reserve's operational toolkit consists of four primary instruments: the IORB rate, the overnight reverse repurchase agreement (ON RRP) rate, open market operations, and the discount window. Each operates through channels that require participation by credit-creating institutions to complete the transmission cycle.</p>
+                <p>The ON RRP facility allows eligible counterparties, including money market funds, government-sponsored enterprises, and primary dealers, to place cash at the Federal Reserve overnight in exchange for Treasury collateral. ON RRP outstanding peaked at $2.554 trillion in December 2022 and declined to approximately $239 billion as of December 2024 (Federal Reserve, 2024), reflecting the normalisation of excess liquidity.</p>
+                <p>The GENIUS Act does not specify whether payment stablecoin issuers may access the ON RRP facility. The interaction between that status quo preservation, ON RRP eligibility, and the Fed's operational framework for this new counterparty class has received no public analysis from the Federal Reserve. This is not an administrative detail awaiting resolution. It is a structural boundary problem with consequences that bifurcate cleanly. If stablecoin issuers gain master account access and ON RRP eligibility, they become participants in the Fed's rate corridor architecture with a balance sheet the corridor was not designed to accommodate. If stablecoin issuers are denied master account access, the reserve assets they hold remain in Treasury bill markets the Fed manages through open market operations whose calibration they distort.</p>
+                <p>The discount window is a lending facility available to depository institutions. Stablecoin issuers chartered under the GENIUS Act's nonbank framework have no access to it. Open market operations add or remove reserve balances from the banking system; they do not affect the reserve assets of stablecoin issuers that hold Treasury bills outright. The Federal Reserve has no existing instrument that reaches a private monetary layer holding reserve-equivalent assets outside the banking system.</p>
+                <p>Braun (2016) documents the institutional tendency of central banks to analyse monetary innovations through the lens of existing framework compatibility rather than framework disruption. The stablecoin case follows this pattern precisely. The Fed's analytical posture has been to ask whether stablecoins are safe within the existing framework, not whether the existing framework remains functional as stablecoins scale. These are different questions. The second carries the more consequential answer.</p>
+                <p>At $214 billion in total market capitalisation, the transmission distortions described in this paper are not currently quantitatively material. The Fed's existing toolkit is adequate to the current situation not because the toolkit addresses the structural gap but because the structural gap is not yet large enough to require addressing. At $1 trillion, the stablecoin reserve pool represents approximately 4.2 percent of M2. At $3.7 trillion, it approaches parity with total current reserve balances held by all depository institutions at Federal Reserve Banks. By the time the degradation is empirically identifiable, the structural cause will be embedded in regulatory architecture the GENIUS Act will have established.</p>
+
+                <h2 id="conclusion">Conclusion</h2>
+                <p>The floor system rests on a correspondence between reserve asset holding and credit creation that the GENIUS Act's architecture systematically erodes. The rate signal the Fed transmits through IORB reaches the reserve assets of stablecoin issuers and terminates there, because stablecoin issuers have no credit function through which the signal propagates further. The deposit displacement effect removes from the banking system, permanently and at scale, the deposit liabilities against which credit has historically been extended. The velocity distortion removes a growing fraction of monetary transactions from the measurement frameworks through which the Fed observes money stock and circulation.</p>
+                <p>The floor system was constructed to handle an abundance of reserves distributed across credit-creating institutions. What it encounters in the GENIUS Act architecture is not an abundance problem. It is a participation problem: a growing share of reserve-equivalent assets held by institutions that do not participate in the mechanism those reserves are designed to carry. The Federal Reserve's models assume participation. The GENIUS Act removes the condition that makes participation structural. Subsequent papers in this series trace that problem through each remaining transmission channel the Fed relies upon.</p>
+            </div>
+
+            <div class="paper-references">
+                <h2>References</h2>
+                <ul>
+                    <li>Bernanke, B. S., &amp; Blinder, A. S. (1988). Credit, money, and aggregate demand. <em>American Economic Review</em>, 78(2), 435&#8211;439.</li>
+                    <li>BIS. (2023). <em>CBDCs and stablecoins: Analysis of payment system performance</em> (BIS Working Paper No. 1075). Bank for International Settlements.</li>
+                    <li>Braun, B. (2016). Speaking to the people? Money, trust, and central bank legitimacy in the age of quantitative easing. <em>Review of International Political Economy</em>, 23(6), 1064&#8211;1092.</li>
+                    <li>Brayton, F., Levin, A., Tryon, R., &amp; Williams, J. C. (1997). <em>The evolution of macro models at the Federal Reserve Board</em> (FEDS 1997-29). Federal Reserve Board.</li>
+                    <li>Circle. (2024, December). <em>USDC reserve report</em>. Circle Internet Financial.</li>
+                    <li>Citigroup. (2024). <em>Digital dollars: Stablecoin growth projections and policy implications</em>. Citi Global Perspectives and Solutions.</li>
+                    <li>CoinGecko. (2024, December). <em>Global cryptocurrency market capitalisation</em>. CoinGecko.</li>
+                    <li>Emergency Economic Stabilisation Act of 2008, Pub. L. No. 110-343, 122 Stat. 3765.</li>
+                    <li>Federal Reserve. (2009, January). <em>H.4.1: Factors affecting reserve balances</em>. Board of Governors.</li>
+                    <li>Federal Reserve. (2020, March 15). <em>Federal Reserve actions to support the flow of credit to households and businesses</em> [Press release]. Board of Governors.</li>
+                    <li>Federal Reserve. (2024, December). <em>H.4.1: Factors affecting reserve balances</em>. Board of Governors.</li>
+                    <li>Federal Reserve Board. (2022). <em>Money stock measures: Technical questions and answers</em>. Board of Governors.</li>
+                    <li>Federal Reserve Board. (2023, September). <em>Statement on stablecoin legislation</em>. Board of Governors.</li>
+                    <li>Federal Reserve H.6. (2024, December). <em>Money stock measures</em>. Board of Governors.</li>
+                    <li>GENIUS Act, S.1582, 119th Cong. (2025). Pub. L. 119-27.</li>
+                    <li>Ihrig, J., Meade, E., &amp; Weinbach, G. (2015). <em>Rewriting monetary policy 101</em> (FEDS Notes 2015-10-27). Board of Governors.</li>
+                    <li>Keister, T., &amp; McAndrews, J. (2009). <em>Why are banks holding so many excess reserves?</em> (Staff Report No. 380). Federal Reserve Bank of New York.</li>
+                    <li>Kiley, M. T., &amp; Roberts, J. M. (2017). Monetary policy in a low interest rate world. <em>Brookings Papers on Economic Activity</em>, 48(1), 317&#8211;396.</li>
+                    <li>Standard Chartered. (2024). <em>Digital assets outlook 2025: Stablecoin market structure and growth projections</em>. Standard Chartered Global Research.</li>
+                    <li>Tether. (2024, October). <em>Tether Q3 2024 reserve attestation report</em>. Tether Operations Limited.</li>
+                </ul>
+            </div>
+
+            <div class="paper-footnote">
+                <p>The Cantillon Institute is an independent research institution. Working papers represent the views of the named fellow and are circulated for comment and discussion. They do not represent the position of any institution with which fellows are or have been affiliated.</p>
+            </div>
+
+            <nav class="paper-series-nav" aria-label="Series navigation">
+                <h3>THE TRANSMISSION PROBLEM</h3>
+                <div class="paper-series-links">
+                    <span class="paper-series-link current"><span class="num">No.&nbsp;1</span>The Reserve Channel: Stablecoin Architecture and the Monetary Policy Transmission Mechanism the GENIUS Act Opens</span>
+                    <span class="paper-series-link" style="color:#2e2c2a;"><span class="num" style="color:#2a3a4a;">No.&nbsp;2</span>Forthcoming &middot; The Bank Lending Channel Under Private Monetary Layer Competition</span>
+                </div>
+            </nav>
+
+            <div class="paper-foot"><a href="eccles.html">&#8592; Return to Preston W. Eccles</a></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <span>The Cantillon Institute &middot; Est. 2021</span>
+        <span>cantillon.institute</span>
+    </footer>
+</body>
+</html>

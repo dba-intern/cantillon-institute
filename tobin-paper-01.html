@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What the GENIUS Act Means for Trust-Held Assets &mdash; The Cantillon Institute</title>
+    <meta name="description" content="The GENIUS Act creates a new legal category for payment stablecoins; neither a security, nor a commodity, nor a bank deposit; without amending the Internal Revenue Code. The consequence for trust-held assets is immediate. Intentionally Defective Grantor Trusts drafted before July 2025 have investment authorisation language that does not contemplate a federally recognised payment instrument excluded from all existing asset classifications. This paper maps four specific IDGT exposure points. GENIUS Act passed 308-122 in the House, 68-30 in the Senate, signed July 18 2025. Working Paper No. 1, G.W. Tobin, The Architecture of Preservation.">
+    <link rel="canonical" href="https://cantillon.institute/tobin-paper-01.html">
+    <meta property="og:title" content="What the GENIUS Act Means for Trust-Held Assets &mdash; The Cantillon Institute">
+    <meta property="og:url" content="https://cantillon.institute/tobin-paper-01.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cantillon.institute/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-page { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+        .paper-header { padding: 4rem 0 3rem; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .paper-series-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; font-weight: 700; text-transform: uppercase; }
+        .paper-number { font-size: 11px; letter-spacing: 0.1em; color: #4a4845; text-transform: uppercase; }
+        .paper-header h1 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; color: #e8e4da; margin-bottom: 1.5rem; }
+        .paper-byline { font-size: 14px; color: #5a5855; margin-bottom: 2rem; }
+        .paper-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .paper-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 13px; font-weight: 700; color: #0b0c0d; background: #378ADD; border-radius: 4px; padding: 0.55rem 1rem; transition: opacity 0.2s ease; }
+        .paper-download:hover { opacity: 0.85; }
+        .paper-back-link { font-size: 13px; color: #378ADD; border-bottom: 0.5px solid #378ADD; padding-bottom: 1px; }
+        .paper-abstract-block { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-abstract-block .label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-abstract-block blockquote { font-size: 16px; color: #7a7870; line-height: 1.85; font-style: italic; border-left: 2px solid #1d3a52; padding-left: 1.25rem; margin: 0; }
+        .paper-nav { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-nav .nav-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-nav ol { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+        .paper-nav a { font-size: 14px; color: #6a6860; transition: color 0.2s ease; line-height: 1.5; text-decoration:none; }
+        .paper-nav a:hover { color: #e8e4da; }
+        .paper-body { padding: 3.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-body h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; color: #e8e4da; margin-top: 3rem; margin-bottom: 1.25rem; scroll-margin-top: 5rem; }
+        .paper-body h2:first-child { margin-top: 0; }
+        .paper-body p { font-size: 17px; color: #a8a49a; line-height: 1.9; margin-bottom: 1.5rem; max-width: 660px; }
+        .paper-body em { font-style: italic; color: #c0bdb5; }
+        .paper-body strong { font-weight: 700; color: #c8c4bc; }
+        .paper-references { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-references h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e8e4da; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+        .paper-references ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .paper-references li { font-size: 14px; color: #6a6860; line-height: 1.75; padding-left: 1.5rem; text-indent: -1.5rem; }
+        .paper-series-nav { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-nav h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; color: #e8e4da; margin-bottom: 1.25rem; letter-spacing: 0.04em; }
+        .paper-series-links { display: flex; flex-direction: column; gap: 0.5rem; }
+        .paper-series-link { display: flex; align-items: baseline; gap: 1rem; font-size: 14px; color: #5a5855; text-decoration: none; }
+        .paper-series-link .num { font-size: 11px; color: #378ADD; font-weight: 700; letter-spacing: 0.1em; flex-shrink: 0; min-width: 32px; }
+        .paper-series-link.current { color: #e8e4da; }
+        .paper-foot { padding: 2.5rem 0; }
+        .paper-foot a { font-size: 13px; color: #378ADD; border-bottom: 0.5px solid #378ADD; padding-bottom: 2px; }
+        @media (max-width: 640px) { .paper-page { padding: 0 1.25rem; } .paper-body p { font-size: 16px; } .paper-body h2 { font-size: 20px; } }
+</style>
+</head>
+<body>
+    <header><nav class="nav"><a href="/" class="nav-logo">The Cantillon Institute</a><div class="nav-links"><a href="papers.html">Papers</a><a href="briefs.html">Briefs</a><a href="/#fellows">Fellows</a><a href="about.html">About</a><a href="glossary.html">Glossary</a></div></nav></header>
+    <main><div class="paper-page">
+        <div class="paper-header">
+            <div class="paper-series-meta">
+                <span class="paper-series-label">The Architecture of Preservation</span>
+                <span class="paper-number">Working Paper No. 1 &middot; G.W. Tobin &middot; 2026</span>
+            </div>
+            <h1>What the GENIUS Act Means for Trust-Held Assets: Stablecoin Treatment Under Existing IDGT Structures and Where the Ambiguity Creates Exposure</h1>
+            <p class="paper-byline">Gideon W. Tobin &middot; Fellow, The Cantillon Institute &middot; Bermuda</p>
+            <div class="paper-actions">
+                <a href="papers/tobin-paper-01.pdf" class="paper-download" download>PDF &#8595; Download</a>
+                <a href="tobin.html" class="paper-back-link">G.W. Tobin at The Cantillon Institute &#8594;</a>
+            </div>
+        </div>
+        <div class="paper-abstract-block">
+            <span class="label">Abstract</span>
+            <blockquote>The Guiding and Establishing National Innovation for U.S. Stablecoins Act, signed into law on July 18, 2025, establishes the first federal regulatory framework for payment stablecoins in the United States. The Act creates a new legal category: neither a security under federal securities law, nor a commodity under the Commodity Exchange Act, nor a bank deposit eligible for Federal Deposit Insurance Corporation protection. It does not amend the Internal Revenue Code. The Treasury Department's advance notice of proposed rulemaking, issued September 19, 2025, confirmed this with statutory precision: the Act "does not address the federal income tax characterisation of payment stablecoins or any other issues relevant to the application of the Internal Revenue Code to payment stablecoin transactions" (Federal Register, 2025). The consequence for trust-held assets is immediate and, in most of the estate planning community, unacknowledged. Intentionally Defective Grantor Trusts drafted before July 2025 contain investment authorisation language, trustee authority provisions, and asset classification frameworks that do not contemplate a federally recognised payment instrument that is simultaneously not a security, not a commodity, not a deposit, and not legal tender, yet is required to maintain one-for-one reserve backing with United States dollars and short-term Treasury instruments. This paper maps four specific exposure points in existing IDGT structures: definitional gaps in investment authorisation language; transactional tax event exposure borne by the grantor; trustee authority and fiduciary risk under ambiguous document language; and the substitution mechanics that are the IDGT's structural centrepiece.</blockquote>
+        </div>
+        <nav class="paper-nav">
+            <span class="nav-label">Contents</span>
+            <ol>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#definitional">I. The GENIUS Act's Definitional Architecture: A New Asset Class Without an IRC Home</a></li>
+                <li><a href="#idgt-silence">II. The IDGT Document and Its Silence</a></li>
+                <li><a href="#transactional">III. Transactional Exposure Within the Grantor Trust</a></li>
+                <li><a href="#trustee">IV. Trustee Authority, Fiduciary Duty, and the GENIUS Act's New Compliance Requirements</a></li>
+                <li><a href="#forward-looking">V. What Forward-Looking Counsel Is Already Drafting</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ol>
+        </nav>
+        <div class="paper-body">
+            <h2 id="intro">Introduction</h2>
+            <p>The GENIUS Act passed the Senate on June 17, 2025, by a vote of 68 to 30. It passed the House on July 17, 2025, by a vote of 308 to 122. President Trump signed it into law the following day. The Trump administration positioned the Act as the centrepiece of its commitment to establish the United States as the preeminent jurisdiction for digital asset activity, and specifically as a mechanism for reinforcing dollar primacy through the global payment layer (White House, 2025).</p>
+            <p>None of the substantial analysis produced in the months following enactment was directed at the estate planning community. The commentary focused on issuer licensing, reserve requirements, banking agency jurisdiction, and the competitive implications for fintech firms. This is the correct first-order analysis for those audiences. It is also incomplete. The clients that estate planners serve are not issuers. They are holders; ultra-high-net-worth individuals and family offices that have accumulated stablecoin positions within existing wealth structures, or that are now being asked by their advisers and bankers to consider payment stablecoins as part of a modernised liquidity and distribution infrastructure.</p>
+
+            <h2 id="definitional">I. The GENIUS Act's Definitional Architecture: A New Asset Class Without an IRC Home</h2>
+            <p>The GENIUS Act defines a payment stablecoin as a digital asset designed to be used as a means of payment or settlement, which the issuer is obligated to convert, redeem, or repurchase for a fixed monetary value (Guiding and Establishing National Innovation for U.S. Stablecoins Act of 2025, Sec. 2). Three statutory exclusions follow. First, payment stablecoins are removed from the category of "security" under federal securities laws; the no-interest and no-yield prohibition built into the Act eliminates the "expectation of profit" element of the <em>Howey</em> test (Winston &amp; Strawn, 2025). Second, they are removed from the category of "commodity" under the Commodity Exchange Act. Third, structurally rather than explicitly, they are removed from the category of bank deposits; they are not FDIC-insured.</p>
+            <p>The Act does, however, amend the United States Bankruptcy Code to grant payment stablecoin holders first priority over all other creditors in an issuer insolvency proceeding, and it explicitly excludes required reserve assets from the debtor's estate in such proceedings (Guiding and Establishing National Innovation for U.S. Stablecoins Act of 2025, Sec. 11; Mayer Brown, 2025).</p>
+            <p>What the Act does not do is the operative point for this paper. The Treasury Department confirmed in its September 19, 2025 advance notice of proposed rulemaking with unusual directness: "The GENIUS Act does not address the federal income tax characterisation of payment stablecoins or any other issues relevant to the application of the Internal Revenue Code to payment stablecoin transactions" (Federal Register, 2025). The IRS position established in Notice 2014-21 therefore remains operative. Digital assets, including payment stablecoins, are treated as property for federal income tax purposes. Every disposition of a payment stablecoin is a taxable event requiring recognition of gain or loss.</p>
+
+            <h2 id="idgt-silence">II. The IDGT Document and Its Silence</h2>
+            <p>The Intentionally Defective Grantor Trust derives its utility from a deliberate structural tension in the Internal Revenue Code. Under IRC sections 671 through 679, the trust is structured to be "defective" for income tax purposes; the grantor bears the income tax liability on all trust income; while removing assets from the grantor's taxable estate. The grantor's payment of income tax on trust earnings is itself a tax-free wealth transfer (Rev. Rul. 85-13; Blattmachr &amp; Gans, 2002).</p>
+            <p>The document analysis begins with investment authorisation language in three common forms. Documents drafted before approximately 2010 authorise the trustee to hold "stocks, bonds, cash, and other securities." A payment stablecoin is not a stock, not a bond, and has been expressly excluded from the securities classification. Whether it constitutes "cash" is an interpretive question; cash in trust administration refers to currency and demand deposits with banking institutions, and a payment stablecoin is neither.</p>
+            <p>Documents drafted between 2010 and 2022 commonly add "cash equivalents." The GENIUS Act's reserve requirement means payment stablecoin issuers must back outstanding stablecoins one-for-one with precisely these instruments. The payment stablecoin is, in economic substance, a claim on a pool of cash equivalents. But the stablecoin is not the underlying instrument; it is a claim against the issuer to convert at par. Whether that claim constitutes a "cash equivalent" for purposes of trustee authority under a document drafted in 2018 is an interpretive question that becomes a surcharge proceeding if the trust suffers a loss and a beneficiary examines the trustee's authority.</p>
+            <p>Documents drafted after 2020 increasingly include an explicit "digital asset" or "cryptocurrency" authorisation. Almost none anticipated the creation of a federally recognised payment stablecoin that is explicitly not a security, not a commodity, and not a deposit, while being required to maintain one-for-one dollar backing and subject to mandatory asset-freezing capability at the issuer level. Interpretive questions in trust administration are fiduciary decisions. A trustee who concludes, without adequate legal support, that existing authorisation language covers payment stablecoin holdings has made a determination challengeable by beneficiaries, examinable in surcharge proceedings, and scrutinisable by taxing authorities.</p>
+
+            <h2 id="transactional">III. Transactional Exposure Within the Grantor Trust</h2>
+            <p>Under grantor trust rules, the trust's income, deductions, and credits are reported on the grantor's individual tax return. Transactions between the grantor and the trust are disregarded for federal income tax purposes; a sale of an asset from grantor to trust in exchange for a promissory note does not trigger gain recognition (Rev. Rul. 85-13). This feature does not, however, eliminate the tax event problem created by the property treatment of payment stablecoins when the trust transacts with third parties.</p>
+            <p>When the trust holds payment stablecoins and uses them to make payments to third parties, the IRS requires recognition of gain or loss at the time of each disposition, based on the difference between fair market value at disposition and adjusted tax basis. Because GENIUS-compliant payment stablecoins are designed and required to maintain stable value, the gain or loss on any individual transaction is, in most cases, negligible. The compliance obligation is not. An IDGT holding 10,000 units of a GENIUS-compliant payment stablecoin acquired at an average cost of $0.9998 per unit that uses those stablecoins to settle 500 payment obligations in a calendar year generates 500 separate reportable events, a total taxable gain of $1,000, and an obligation to identify the cost basis of each lot disposed. The gain itself is not the problem. The obligation is.</p>
+            <p>A second dimension concerns the instalment note structure common to IDGT funding transactions. Where a grantor has sold an appreciating asset to the IDGT in exchange for a promissory note, and the trust subsequently acquires a payment stablecoin position, note payments made in stablecoins rather than dollars constitute a taxable disposition by the trust. The stablecoin is property, and its transfer in satisfaction of a debt obligation is a realisation event. The Treasury's September 2025 ANPRM specifically invited comment on whether guidance would be appropriate, but acknowledged explicitly that no guidance had been issued and that the property characterisation under Notice 2014-21 remains operative (Federal Register, 2025).</p>
+
+            <h2 id="trustee">IV. Trustee Authority, Fiduciary Duty, and the GENIUS Act's New Compliance Requirements</h2>
+            <p>The trustee authority question has two distinct dimensions: the authority to acquire payment stablecoins and the authority to use them transactionally once held. The Uniform Prudent Investor Act, adopted across forty-seven states, requires trustees to invest and manage trust assets as a prudent investor would (Uniform Prudent Investor Act, 1994). A prudent investor analysis of a payment stablecoin position in 2026 requires, at minimum: assessment of the absence of FDIC deposit insurance; review of the issuer's reserve composition and monthly public disclosure; evaluation of counterparty risk; analysis of the bankruptcy priority structure created by Section 11 of the GENIUS Act; and examination of operational risk associated with digital asset custody. None of these considerations appears in a trust document drafted before July 18, 2025.</p>
+            <p>The freezing and burning provision deserves the clearest statement. Permitted payment stablecoin issuers are legally required to maintain the technical capability to render a payment stablecoin position inoperable, without notice to the holder and without the triggering event being within the holder's control or knowledge, upon receipt of a lawful government order (White House, 2025). A trustee who holds payment stablecoins without having identified and documented this risk, and without having made required disclosures to beneficiaries where the document's terms require disclosure of material asset risks, has created a gap in the fiduciary record.</p>
+
+            <h2 id="forward-looking">V. What Forward-Looking Counsel Is Already Drafting</h2>
+            <p>New IDGT documents prepared by current practice include four provisions absent from templates in use before July 2025. First, an explicit payment stablecoin authorisation clause tracking the GENIUS Act's statutory definitions directly, authorising the trustee to acquire, hold, and transfer payment stablecoins issued by a permitted payment stablecoin issuer, each as defined in the Guiding and Establishing National Innovation for U.S. Stablecoins Act of 2025, as amended from time to time. Second, a digital asset custody protocol provision specifying the custody standard, requiring the trustee to document the custodian identity and terms, and establishing the standard of care applicable to monitoring issuer compliance. Third, a transactional tax administration clause identifying the grantor's obligation to track and report gain or loss on payment stablecoin transactions conducted by the trust and designating responsibility for cost basis record-keeping. Fourth, a substitution mechanics clarification specifying the valuation methodology applicable to substitutions involving payment stablecoin positions and confirming that the grantor's substitution right extends to those positions, subject to the basis-tracking requirement.</p>
+            <p>For existing documents, the remediation path depends on the trust's jurisdiction and the document's amendment provisions. Where non-judicial settlement agreements are available, as they are in Delaware, Nevada, South Dakota, and a number of other trust situs jurisdictions, the amendment can be accomplished without court involvement and without triggering gift or estate tax consequences from the modification.</p>
+
+            <h2 id="conclusion">Conclusion</h2>
+            <p>The GENIUS Act's significance for the estate planning community is not located in its framework for permitted issuers. The significance lies in what the Act accomplished by exclusion: it created a federally recognised category of payment instrument that is explicitly not a security, not a commodity, and not a bank deposit, without amending the Internal Revenue Code and without providing a legal home for that instrument within the asset classification frameworks of trust documents drafted under existing law.</p>
+            <p>The Treasury's September 2025 ANPRM identified the IRC characterisation question as unresolved and invited public comment on the priority items for future guidance. As of the date of this paper, that guidance has not been issued. The IRS property treatment under Notice 2014-21 remains operative. The fiduciary framework for trustee authority over payment stablecoins is being established not by regulation but by document practice, case by case, client by client. The clients who navigate it successfully will be those whose advisers understood, before the examination or the dispute, that a federal statute governing the payment stablecoin infrastructure layer had made their existing trust documents incomplete.</p>
+        </div>
+        <div class="paper-references">
+            <h2>References</h2>
+            <ul>
+                <li>Akers, S. F., Miller, G. A., &amp; Boyle, B. A. (2004). <em>Grantor trusts: Tax and estate planning issues</em>. Heckerling Institute on Estate Planning, University of Miami.</li>
+                <li>Atkins, P. (2025, July 18). <em>Statement on enactment of the GENIUS Act</em>. U.S. Securities and Exchange Commission.</li>
+                <li>Blattmachr, J. G., &amp; Gans, M. M. (2002). The strange and conventional world of the "defective" trust. <em>Trusts &amp; Estates</em>, 141(3), 32&#8211;40.</li>
+                <li>Cohen &amp; Company. (2025, October). GENIUS Act offers stablecoin guidance; comment period now open.</li>
+                <li>Covington &amp; Burling. (2025, July 25). The GENIUS Act becomes law: Key provisions from the federal stablecoin regulatory framework.</li>
+                <li>Federal Register. (2025, September 19). GENIUS Act implementation: Advance notice of proposed rulemaking. 90 Fed. Reg. 181.</li>
+                <li><em>Guiding and Establishing National Innovation for U.S. Stablecoins Act of 2025</em>, Pub. L. No. 119-27, 139 Stat. 424 (2025).</li>
+                <li>Internal Revenue Service. (2014). <em>Notice 2014-21: IRS virtual currency guidance</em>. U.S. Department of the Treasury.</li>
+                <li>Latham &amp; Watkins. (2025). The GENIUS Act of 2025: Stablecoin legislation adopted in the US.</li>
+                <li>Mayer Brown. (2025, July 18). GENIUS Act signed into law: US enacts federal stablecoin legislation.</li>
+                <li>Rev. Rul. 85-13, 1985-1 C.B. 184.</li>
+                <li>Uniform Prudent Investor Act (1994). National Conference of Commissioners on Uniform State Laws.</li>
+                <li>White House. (2025, July 18). <em>Fact sheet: President Donald J. Trump signs GENIUS Act into law</em>.</li>
+                <li>Winston &amp; Strawn. (2025, July 18). Real GENIUS: Landmark U.S. federal payment stablecoin legislation.</li>
+            </ul>
+        </div>
+        <nav class="paper-series-nav">
+            <h3>THE ARCHITECTURE OF PRESERVATION</h3>
+            <div class="paper-series-links">
+                <span class="paper-series-link current"><span class="num">No.&nbsp;1</span>What the GENIUS Act Means for Trust-Held Assets: Stablecoin Treatment Under Existing IDGT Structures</span>
+                <span class="paper-series-link" style="color:#2e2c2a;"><span class="num" style="color:#2a3a4a;">No.&nbsp;2</span>Forthcoming &middot; The Amendment Workstream: IDGT Modification Across Jurisdictions</span>
+            </div>
+        </nav>
+        <div class="paper-foot"><a href="tobin.html">&#8592; Return to Gideon W. Tobin</a></div>
+    </div></main>
+    <footer class="footer"><span>The Cantillon Institute &middot; Est. 2021</span><span>cantillon.institute</span></footer>
+</body>
+</html>

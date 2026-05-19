@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Finality Illusion: Settlement Architecture, Probabilistic Consensus, and the GENIUS Act&rsquo;s Foundational Assumption &mdash; The Cantillon Institute</title>
+    <meta name="description" content="The GENIUS Act defines payment stablecoins by economic function while remaining silent on technical architecture. That silence is not neutral. Every redemption obligation, every assumption about operational integrity, depends on transaction finality that blockchain networks do not guarantee deterministically. This paper maps the gap between the finality the Act assumes and the finality consensus mechanisms actually provide. Working Paper No. 1, K.R. Black, The Protocol Layer.">
+    <link rel="canonical" href="https://cantillon.institute/black-paper-01.html">
+    <meta property="og:title" content="The Finality Illusion: Settlement Architecture, Probabilistic Consensus, and the GENIUS Act&rsquo;s Foundational Assumption &mdash; The Cantillon Institute">
+    <meta property="og:description" content="The GENIUS Act defines payment stablecoins by economic function while remaining silent on technical architecture. That silence is not neutral. Every redemption obligation, every assumption about operational integrity, depends on transaction finality that blockchain networks do not guarantee deterministically. This paper maps the gap between the finality the Act assumes and the finality consensus mechanisms actually provide. Working Paper No. 1, K.R. Black, The Protocol Layer.">
+    <meta property="og:url" content="https://cantillon.institute/black-paper-01.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cantillon.institute/og-image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">{}</script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-page { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+        .paper-header { padding: 4rem 0 3rem; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .paper-series-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; font-weight: 700; text-transform: uppercase; }
+        .paper-number { font-size: 11px; letter-spacing: 0.1em; color: #4a4845; text-transform: uppercase; }
+        .paper-header h1 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: clamp(28px, 5vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; color: #e8e4da; margin-bottom: 1.5rem; }
+        .paper-byline { font-size: 14px; color: #5a5855; margin-bottom: 2rem; letter-spacing: 0.04em; }
+        .paper-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .paper-download { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 13px; font-weight: 700; color: #0b0c0d; background: #378ADD; border-radius: 4px; padding: 0.55rem 1rem; letter-spacing: 0.04em; transition: opacity 0.2s ease; }
+        .paper-download:hover { opacity: 0.85; }
+        .paper-back-link { font-size: 13px; color: #378ADD; letter-spacing: 0.06em; border-bottom: 0.5px solid #378ADD; padding-bottom: 1px; }
+        .paper-abstract-block { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-abstract-block .label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-abstract-block blockquote { font-size: 16px; color: #7a7870; line-height: 1.85; font-style: italic; border-left: 2px solid #1d3a52; padding-left: 1.25rem; margin: 0; }
+        .paper-nav { padding: 2rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-nav .nav-label { font-size: 11px; letter-spacing: 0.14em; color: #378ADD; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem; display:block; }
+        .paper-nav ol { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+        .paper-nav a { font-size: 14px; color: #6a6860; transition: color 0.2s ease; line-height: 1.5; text-decoration:none; }
+        .paper-nav a:hover { color: #e8e4da; }
+        .paper-body { padding: 3.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-body h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; color: #e8e4da; margin-top: 3rem; margin-bottom: 1.25rem; scroll-margin-top: 5rem; }
+        .paper-body h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; color: #c8c4bc; margin-top: 2.25rem; margin-bottom: 0.9rem; }
+        .paper-body h2:first-child { margin-top: 0; }
+        .paper-body p { font-size: 17px; color: #a8a49a; line-height: 1.9; margin-bottom: 1.5rem; max-width: 660px; }
+        .paper-body em { font-style: italic; color: #c0bdb5; }
+        .paper-body strong { font-weight: 700; color: #c8c4bc; }
+        .paper-body ol, .paper-body ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        .paper-body li { font-size: 17px; color: #a8a49a; line-height: 1.9; margin-bottom: 0.5rem; }
+        .paper-references { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-references h2 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.06em; color: #e8e4da; margin-bottom: 1.5rem; text-transform: uppercase; }
+        .paper-references ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+        .paper-references li { font-size: 14px; color: #6a6860; line-height: 1.75; padding-left: 1.5rem; text-indent: -1.5rem; }
+        .paper-footnote { padding: 1.5rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-footnote p { font-size: 14px; color: #4a4845; font-style: italic; }
+        .paper-series-nav { padding: 3rem 0; border-bottom: 0.5px solid #1d1f21; }
+        .paper-series-nav h3 { font-family: 'Barlow Condensed', system-ui, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 0.04em; color: #e8e4da; margin-bottom: 1.25rem; }
+        .paper-series-links { display: flex; flex-direction: column; gap: 0.5rem; }
+        .paper-series-link { display: flex; align-items: baseline; gap: 1rem; font-size: 14px; color: #5a5855; text-decoration: none; }
+        .paper-series-link .num { font-size: 11px; color: #378ADD; font-weight: 700; letter-spacing: 0.1em; flex-shrink: 0; min-width: 32px; }
+        .paper-series-link.current { color: #e8e4da; }
+        .paper-foot { padding: 2.5rem 0; }
+        .paper-foot a { font-size: 13px; color: #378ADD; letter-spacing: 0.08em; border-bottom: 0.5px solid #378ADD; padding-bottom: 2px; }
+        @media (max-width: 640px) { .paper-page { padding: 0 1.25rem; } .paper-body p, .paper-body li { font-size: 16px; } .paper-body h2 { font-size: 20px; } }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="/" class="nav-logo">The Cantillon Institute</a>
+            <div class="nav-links">
+                <a href="papers.html">Papers</a>
+                <a href="briefs.html">Briefs</a>
+                <a href="/#fellows">Fellows</a>
+                <a href="about.html">About</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="paper-page">
+            <div class="paper-header">
+                <div class="paper-series-meta">
+                    <span class="paper-series-label">The Protocol Layer</span>
+                    <span class="paper-number">Working Paper No. 1 &middot; K.R. Black &middot; 2026</span>
+                </div>
+                <h1>The Finality Illusion: Settlement Architecture, Probabilistic Consensus, and the GENIUS Act&rsquo;s Foundational Assumption</h1>
+                <p class="paper-byline">Kai R. Black &middot; Fellow, The Cantillon Institute &middot; Lisbon</p>
+                <div class="paper-actions">
+                    <a href="papers/black-paper-01.pdf" class="paper-download" download>PDF &#8595; Download</a>
+                    <a href="black.html" class="paper-back-link">Kai R. Black at The Cantillon Institute &#8594;</a>
+                </div>
+            </div>
+            <div class="paper-abstract-block">
+                <span class="label">Abstract</span>
+                <blockquote>The GENIUS Act defines payment stablecoins by economic function: a dollar-denominated instrument redeemable at par, backed by high-quality liquid assets, operated by a licensed issuer. The definition is silent on technical architecture. That silence is not neutral. Every redemption obligation in the Act, every requirement for par settlement, every assumption about the operational integrity of the payment rail beneath the instrument, depends on a condition the Act does not define and the underlying systems do not guarantee: transaction finality. Blockchain networks do not produce deterministic finality. They produce probabilistic finality; a statistical condition in which the irreversibility of a settled transaction is a function of elapsed time, block depth, validator participation, and network conditions, not a binary state that legislation can mandate. This paper maps the gap between the finality the GENIUS Act assumes and the finality blockchain consensus mechanisms actually provide. It examines the redemption mechanics the Act requires, the settlement architecture the underlying networks produce, and the failure mode that emerges when legislative obligation meets probabilistic reality at scale.</blockquote>
+            </div>
+            <nav class="paper-nav" aria-label="Paper sections">
+                <span class="nav-label">Contents</span>
+                <ol>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#finality">I. What Finality Means: The Technical Condition the Act Does Not Define</a></li>
+                    <li><a href="#landscape">II. The Consensus Landscape: Finality Across the Architecture the Act Does Not Name</a></li>
+                    <li><a href="#redemption">III. The Redemption Obligation Against the Probabilistic Record</a></li>
+                    <li><a href="#failure-mode">IV. The Failure Mode the Framework Cannot See</a></li>
+                    <li><a href="#blind-spot">V. The Regulatory Architecture's Structural Blind Spot</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li></ol>
+            </nav>
+            <div class="paper-body">
+                <h2 id="intro">Introduction</h2>
+                <p>I have been building on-chain infrastructure since 2016. In that time I have watched the DAO hack, two DeFi summers, three algorithmic stablecoin collapses, and more bridge exploits than I can list without a spreadsheet. I have also watched legislators produce framework after framework that describes what these systems do in economic terms while remaining systematically agnostic about how they do it.</p>
+                <p>The GENIUS Act is the most consequential iteration of that pattern. It establishes a federal licensing framework for payment stablecoin issuers, mandates 1:1 reserve backing in high-quality liquid assets, and requires that licensed issuers honour redemption requests at par (Guiding and Establishing National Innovation for U.S. Stablecoins Act, 2025, &sect;4(a)). The Act defines a payment stablecoin as a digital asset designed to be used as a means of payment or settlement that the issuer represents will maintain a stable value relative to a fixed monetary value. The definition covers the economic promise. It says nothing about the technical substrate on which that promise must be kept.</p>
+                <p>This is the GENIUS Act's foundational error. The Act assumes that when a payment stablecoin transaction is recorded on a blockchain, that transaction has settled. In the sense the Act requires, settled means final, irreversible, and legally discharged. Blockchain networks do not produce that state. They produce a probabilistic approximation of it that improves over time and degrades under specific conditions.</p>
+
+                <h2 id="finality">I. What Finality Means: The Technical Condition the Act Does Not Define</h2>
+                <p>In traditional payment systems, settlement finality is a defined legal and operational state. The Bank for International Settlements describes settlement finality as the irrevocable and unconditional transfer of an asset or financial instrument, or the discharge of an obligation by the infrastructure or its participants, in accordance with the terms of the underlying contract (BIS Committee on Payment and Settlement Systems, 2003, p. 1). Under Fedwire, a funds transfer is final and irrevocable at the moment the Federal Reserve credits the receiving institution's account. The legal condition is instantaneous and deterministic.</p>
+                <p>Blockchain networks operate differently. In a proof-of-work system, a transaction is not final at inclusion. It is final when the probability of a competing chain of equal or greater length superseding the chain on which the transaction appears becomes negligible. Nakamoto (2008) demonstrated that this probability decreases exponentially with the number of subsequent blocks. At six confirmations on Bitcoin's network, the probability of a successful double-spend attack by an adversary controlling 10 percent of hash power falls below 0.1 percent (Nakamoto, 2008, &sect;11). The transaction is not irreversible. It is irreversible enough.</p>
+                <p>"Irreversible enough" is not a legal standard. It is an engineering tolerance. The gap between those two descriptions is where the GENIUS Act breaks.</p>
+                <p>Proof-of-stake systems introduce a different finality model. Ethereum's post-Merge consensus mechanism, Casper FFG, achieves finality when a checkpoint block receives justification and finalisation votes from validators representing at least two-thirds of total staked ETH (Buterin &amp; Griffith, 2017, &sect;4). Once finalised, a block cannot be reverted without the attacking party burning at least one-third of total staked ETH through the slashing mechanism. As of April 2026, the total staked ETH supply exceeded 34 million ETH, placing the cost of finality reversal above $60 billion at prevailing prices. That is a meaningful economic deterrent. It is not a legal guarantee. Ethereum's finality timeline under normal conditions is approximately 12.8 minutes.</p>
+
+                <h2 id="landscape">II. The Consensus Landscape: Finality Across the Architecture the Act Does Not Name</h2>
+                <p>The GENIUS Act does not specify which blockchain networks a licensed payment stablecoin may use. This means the finality conditions applicable to a GENIUS Act-licensed instrument range across every major public blockchain network, from the relatively robust to the demonstrably fragile.</p>
+                <p>Bitcoin's proof-of-work consensus produces probabilistic finality with a six-confirmation standard of approximately 60 minutes. As of April 2026, Bitcoin's hash rate exceeded 800 exahashes per second, placing the capital cost of a sustained 51 percent attack beyond the reach of any non-state actor (Cambridge Centre for Alternative Finance, 2026).</p>
+                <p>Ethereum mainnet experienced a finality delay lasting approximately 25 minutes on May 11, 2023, when a surge in attestation load triggered a cascading issue in minority client implementations (Ethereum Foundation, 2023). The GENIUS Act's framework contains no provision for what a licensed issuer's redemption obligations are during a period in which the settlement network is not finalising transactions.</p>
+                <p>Solana has experienced at least six major network outages between 2021 and 2024, including a 17-hour outage in September 2021 (Solana Foundation, 2022). Ethereum Classic suffered 51 percent attacks in August 2020 in which attackers reorganised 3,693 blocks in the first incident and 4,000 blocks in the second (Messari Research, 2020). The GENIUS Act distinguishes between these networks on no technical criterion relevant to settlement finality.</p>
+
+                <h2 id="redemption">III. The Redemption Obligation Against the Probabilistic Record</h2>
+                <p>The GENIUS Act's redemption requirements establish a clear legal standard. Licensed issuers must honour redemption requests at par value. The regulatory framework is expected to operationalise this as a T+1 standard, consistent with existing money market fund redemption frameworks. The T+1 standard assumes that the transaction triggering the redemption request has settled.</p>
+                <p>This creates a direct conflict. An issuer processing a redemption under T+1 constraints faces a choice between accepting the stablecoin transfer after two confirmations to meet the redemption timeline, or waiting for six confirmations and potentially violating the T+1 standard. The Act does not resolve this conflict. The Act does not acknowledge it exists.</p>
+                <p>Karame, Androulaki, and Capkun (2012) demonstrated that double-spend attacks on Bitcoin requiring only one confirmation are feasible with modest computational resources. A $10 million redemption request processed after two confirmations presents a materially different risk profile than a $50 transaction. The GENIUS Act's redemption obligations are denomination-agnostic. The finality risk is not.</p>
+
+                <h2 id="failure-mode">IV. The Failure Mode the Framework Cannot See</h2>
+                <p>The GENIUS Act's finality problem is structurally invisible in normal operating conditions. The failure mode appears when conditions are not normal; and the conditions that produce abnormal finality events are precisely the conditions most likely to accompany a stress event in the stablecoin market.</p>
+                <p>Consider the mechanism. A stablecoin issuer faces a reserve adequacy concern. Redemption demand spikes. Transaction volume on the underlying network spikes. Mempool congestion increases. Gas fees rise sharply. Block inclusion times lengthen. Network finality slows. The issuer is processing high-value redemptions against transactions that have not reached full probabilistic finality, because the T+1 window is closing and the network is congested.</p>
+                <p>In March 2023, USDC lost its dollar peg following disclosure of $3.3 billion in reserve deposits held at Silicon Valley Bank (Circle Internet Financial, 2023). USDC traded as low as $0.877 on secondary markets. The Ethereum network experienced elevated gas prices and extended block times during the peak redemption period. The GENIUS Act's regulatory framework, had it been in force, would have required par redemptions processed within commercially reasonable time against a network operating under precisely the conditions that degrade finality.</p>
+                <p>The stablecoin market has experienced significant stress events in five of its first seven years. This is not a market with an obscure tail risk. It is a market with a recurring stress pattern that the GENIUS Act's finality assumptions cannot accommodate.</p>
+
+                <h2 id="blind-spot">V. The Regulatory Architecture's Structural Blind Spot</h2>
+                <p>The GENIUS Act's silence on finality is not an oversight that can be corrected by guidance. It reflects a structural feature of how the Act was drafted: by defining payment stablecoins through economic function while remaining agnostic about technical architecture, the Act made finality impossible to regulate within its own framework.</p>
+                <p>The prudential regulators are not equipped to address it. The Fed's payment system oversight framework was built for Fedwire, ACH, and CHIPS; deterministic settlement systems with defined finality conditions. It has not developed a framework for probabilistic settlement risk.</p>
+                <p>Goodhart (1975) observed that any statistical regularity used as a control target tends to collapse once pressure is placed upon it. The finality guarantee that makes T+1 redemption operationally feasible in normal conditions is the same guarantee that degrades under the stress conditions that would trigger large-scale redemptions.</p>
+
+                <h2 id="conclusion">Conclusion</h2>
+                <p>The GENIUS Act is enacted. The licensed payment stablecoin market it creates is growing. Issuers operate on multiple networks with materially different finality characteristics. The regulatory framework is agnostic about those differences because the framework was designed to govern economic outcomes, not technical mechanisms.</p>
+                <p>When the next stress event arrives, licensed issuers will face a convergence of conditions the Act did not anticipate: elevated redemption volume, network congestion, degraded finality, and a T+1 obligation that the settlement infrastructure beneath them cannot meet on its own terms. The issuers will be solvent. The reserves will exist. The dollar will be there. The blockchain will not cooperate on the timeline the law requires.</p>
+                <p>The gap between those two conditions is not a regulatory gap that prudential oversight can close after the fact. It is a structural gap embedded in the Act's foundational architecture at the point of drafting. The oracle problem, which governs how the dollar peg itself is technically determined within the stablecoin system, is the next mechanism this series examines.</p></div>
+            <div class="paper-references"><h2>References</h2><ul>
+                    <li>Bank for International Settlements, CPSS. (2003). <em>Recommendations for securities settlement systems</em>. BIS.</li>
+                    <li>Buterin, V., &amp; Griffith, V. (2017). <em>Casper the friendly finality gadget</em>. arXiv:1710.09437.</li>
+                    <li>Cambridge Centre for Alternative Finance. (2026). <em>Cambridge Bitcoin Electricity Consumption Index</em>. University of Cambridge.</li>
+                    <li>Chainalysis. (2022, May 19). <em>The collapse of Terra: How the blockchain data tells the story</em>.</li>
+                    <li>Circle Internet Financial. (2023, March 11). <em>An update on USDC and Silicon Valley Bank</em>.</li>
+                    <li>Coin Metrics. (2021, August 5). <em>BSV 51% attack post-mortem</em>.</li>
+                    <li>Ethereum Foundation. (2023, May 12). <em>Ethereum mainnet finality incident post-mortem</em>.</li>
+                    <li>Federal Reserve Board. (2022). <em>Stablecoins: Growth potential and impact on banking</em>. FEDS Notes.</li>
+                    <li>Goodhart, C. A. E. (1975). Problems of monetary management: The UK experience. In <em>Papers in monetary economics</em> (Vol. 1). Reserve Bank of Australia.</li>
+                    <li>Guiding and Establishing National Innovation for U.S. Stablecoins Act, S. 1582, 119th Cong. Pub. L. 119-27 (2025).</li>
+                    <li>Karame, G. O., Androulaki, E., &amp; Capkun, S. (2012). Double-spending fast payments in Bitcoin. In <em>Proceedings ACM CCS 2012</em> (pp. 906&#8211;917).</li>
+                    <li>Messari Research. (2020, August 10). <em>Ethereum Classic suffers third 51% attack in a month</em>.</li>
+                    <li>Nakamoto, S. (2008). <em>Bitcoin: A peer-to-peer electronic cash system</em>.</li>
+                    <li>Securities and Exchange Commission. (2023). <em>Money market fund reforms</em> (Release No. IC-34959).</li>
+                    <li>Solana Foundation. (2022, June 1). <em>Mainnet beta outage report: May 2022</em>.</li>
+                    <li>Yakovenko, A. (2018). <em>Solana: A new architecture for a high performance blockchain v0.8.13</em>.</li>
+                </ul></div>
+            <div class="paper-footnote"><p>The Cantillon Institute is an independent research institute. Working papers represent the views of the named fellow and do not constitute investment advice or legal opinion.</p></div>
+            <nav class="paper-series-nav"><h3>THE PROTOCOL LAYER</h3><div class="paper-series-links">
+                    <span class="paper-series-link current"><span class="num">No.&nbsp;1</span>The Finality Illusion: Settlement Architecture, Probabilistic Consensus, and the GENIUS Act's Foundational Assumption</span>
+                    <span class="paper-series-link" style="color:#2e2c2a;"><span class="num" style="color:#2a3a4a;">No.&nbsp;2</span>Forthcoming &middot; The Oracle Problem: How the Dollar Peg Is Technically Determined and Why the GENIUS Act Assumes a Price Feed That Does Not Exist</span>
+                </div></nav>
+            <div class="paper-foot"><a href="black.html">&#8592; Return to Kai R. Black</a></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <span>The Cantillon Institute &middot; Est. 2021</span>
+        <span>cantillon.institute</span>
+    </footer>
+</body>
+</html>
